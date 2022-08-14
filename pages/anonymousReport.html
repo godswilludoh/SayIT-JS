@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayIT Website</title>
+    <link rel="stylesheet" href="/css/anonymousReport.css" />
+    <script
+      src="https://kit.fontawesome.com/ec08909fa5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Adenigba Ahmed part starts from here -->
+    <!-- The navbar shouldn't be tampered with to ensure its uniformity across all webpages -->
+    <nav>
+      <section class="logoLogoHeading">
+        <div class="sayITLogo">
+          <img src="/Images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
+        </div>
+        <h1 class="logoHeading">
+          Say<span class="IT">IT</span>
+        </h1>
+      </section>
+
+      <label for="click" class="menu_button">
+        <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="click" />
+      
+
+      <ul class="navLinkWrapper">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">WHY US</a></li>
+        <li><a href="#">REPORT</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#" class="active">SIGNUP/SIGNIN</a></li>
+      </ul>
+    </nav>
+
+     <!-- Next  Section -->
+     <main class="container_anon">
+        <form>
+            <h2>Welcome</h2>
+            <div class="form">
+              <div class="anon_form">
+                <label>Sector</label>
+                <div class="">
+                  <select name="" id="form-group"> 
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>              
+              </div>
+              <div class="anon_form">
+                <label>Which company, organization or individual is this about?</label>
+                <div class="">
+                  <input type="text"/>
+                </div>
+              </div>
+              <div class="anon_form">
+                <label>Are you affiliated to the above selected?</label>
+                <div class="form-group">
+                  <select>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                  </select>
+                </div>   
+              </div>
+              <div class="anon_form">
+                <label>What do you want to report?</label>
+                <div class="form-group">
+                  <textarea></textarea>
+                </div>   
+              </div>
+              <div class="anon_form">
+                <label>Upload document</label>
+                <div class="form-group"> 
+                  <input type="file"/>
+                  <p>Docx, Image, Audio and Videos</p>
+                </div>  
+              </div>
+              <button>SUBMIT</button>
+            </div>           
+        </form>
+    </main>
+ 
+  </body>
+</html>

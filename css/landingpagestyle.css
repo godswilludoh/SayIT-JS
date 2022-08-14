@@ -81,9 +81,9 @@ nav .menu_button i {
   cursor: pointer;
   display: none;
 }
-
 /* Nav bar css ends here */
 
+/* fOR THE IMAGE ON THE LANDING PAGE */
 .photoPeople {
   height: 744px;
   background-image: url("https://images.pexels.com/photos/2361103/pexels-photo-2361103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -92,6 +92,110 @@ nav .menu_button i {
   background-position: center;
   transition: 0.3s ease;
 }
+
+
+/* WHAT WE DO SECTION CSS STARTS HERE */
+.whatWedo{
+  margin-top: 100px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.whatWeDoHeading{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ed4d02;
+  margin-bottom: 20px;
+}
+
+.whatWeDoparagraph{
+  text-align: justify;
+  line-height: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+
+.whatWedoButton{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.whatWedoButton .btn{
+  text-decoration: none;
+  padding: 15px;
+  color: #ed4d02;
+  border: 2px solid #ed4d02;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.whatWedoButton .btn:hover{
+  background-color: #ed4d02;
+  color: #ffff;
+}
+
+.whatWedoButton .btn.active{
+  background-color: #ed4d02;
+  color: #ffff;
+}
+/* WHAT WE DO SECTION CSS ENDS HERE */
+
+
+/* FREquenTLY ASKED QUESTION CSS STARTS HERE */
+.frequentlyAskedQuestion{
+  margin-top: 200px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frequentlyAskedQtnHeading{
+  color: #ed4d02;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.overallCardContainer{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.cardContainer{
+  background: #facab4;
+  padding: 20px;
+  border-bottom-right-radius: 50px;
+}
+
+.cardTitles{
+  text-align: start;
+  padding: 15px;
+  color: #ffffff;
+}
+
+.cardparagraphs{
+  text-align: justify;
+}
+
+.diffcardContainer{
+  background: #d4d2d0;
+  padding: 20px;
+  border-bottom-right-radius: 50px;
+}
+/* FREQUENTLY ASKED QUESTION CSS ENDS HERE */
+
+
+
+
+
+
 
 /* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
 /* Working on the mobile responsiveness screen 940 and below */
@@ -138,5 +242,4 @@ nav .menu_button i {
 
 
 }
-
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */

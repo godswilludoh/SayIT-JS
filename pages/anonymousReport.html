@@ -43,73 +43,58 @@
 
      <main>
       <div class="container">
-        <div class="welcome">Welcome</div>
         <form>
+          <h2 class="welcome">Welcome</h2>
           <div class="user-details">
             <div class="form-box">
               <label for="sector">Sector</label>
               <select name="sector" id="form-group" required> 
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="finance">Finance</option>
+                <option value="education" selected>Education</option>
+                <option value="sports">Sports</option>
+                <option value="health">Health</option>
+                <option value="energy">Energy</option>
+                <option value="transportation">Transportation</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="oil and gas">Oil and gas</option>
+                <option value="banking">Banking</option>
+                <option value="technology">Technology></option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
               </select>
+            </div>
+
+            <div class="form-box">
+              <label for="report-org">Which company, organization or individual is this about?</label>
+              <input type="text" id="report-org" name="report-org"/>
+            </div>
+
+            <div class="form-box">
+              <label for="affiliation">Are you affiliated to the above selected?</label>
+              <select name="affiliation" id="form-group" required>
+                <option value="yes">Yes</option>
+                <option value="no" selected>No</option>
+              </select>
+            </div>
+
+            <div class="form-box">
+              <label for="report-info">What do you want to report?</label>
+              <textarea id="report-infor" name="report-info" required></textarea>
+            </div>
+
+            <div class="form-box">
+              <label for="upload">Upload document</label>
+              <input type="file" id="upload" name="upload" required/>
+              <p>Docx, Image, Audio and Videos</p>
+            </div>
+
+            <button class="btn">SUBMIT</button>                
+             
             </div>
           </div>
         </form>
       </div>
      </main>
 
-
-     <!-- <main class="container_anon">
-        <form>
-            <h2>Welcome</h2>
-            <div class="form">
-              <div class="anon_form">
-                <label>Sector</label>
-                <div class="">
-                  <select name="" id="form-group"> 
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>              
-              </div>
-              <div class="anon_form">
-                <label>Which company, organization or individual is this about?</label>
-                <div class="">
-                  <input type="text"/>
-                </div>
-              </div>
-              <div class="anon_form">
-                <label>Are you affiliated to the above selected?</label>
-                <div class="form-group">
-                  <select>
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                  </select>
-                </div>   
-              </div>
-              <div class="anon_form">
-                <label>What do you want to report?</label>
-                <div class="form-group">
-                  <textarea></textarea>
-                </div>   
-              </div>
-              <div class="anon_form">
-                <label>Upload document</label>
-                <div class="form-group"> 
-                  <input type="file"/>
-                  <p>Docx, Image, Audio and Videos</p>
-                </div>  
-              </div>
-              <button>SUBMIT</button>
-            </div>           
-        </form>
-    </main> -->
- 
   </body>
 </html>

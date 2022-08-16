@@ -111,11 +111,13 @@ nav .menu_button i {
   margin-bottom: 20px;
 }
 
-.whatWedo .whatWeDoParagraph{
+.whatWeDoparagraph{
   text-align: justify;
-  padding: 10px;
+  line-height: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  
 }
-
 
 .whatWedoButton{
   margin-top: 20px;
@@ -143,63 +145,6 @@ nav .menu_button i {
   color: #ffff;
 }
 /* WHAT WE DO SECTION CSS ENDS HERE */
-/* --------------------------------- */
-
-
-/* MEDIA QUERY FOR WHAT WE DO STARts HERE  */
-@media (max-width: 940px) {
-  .whatWedoButton{
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-
-  .whatWedoButton .btn{
-    text-decoration: none;
-    padding: 10px;
-    color: #ed4d02;
-    border: 2px solid #ed4d02;
-    border-radius: 10px;
-    font-weight: 400;
-  }
- 
-}
-
-@media (max-width: 500px){
-  .whatWedoButton .btn{
-    text-decoration: none;
-    padding: 10px;
-    color: #ed4d02;
-    border: 2px solid #ed4d02;
-    border-radius: 10px;
-    font-size: 14px;
-  }
-
-}
-
-@media (max-width: 800px){
-  .whatWedoButton{
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .whatWedoButton .btn{
-    text-decoration: none;
-    padding: 5px;
-    color: #ed4d02;
-    border: 2px solid #ed4d02;
-    border-radius: 10px;
-    font-weight: 500;
-  }
-
-
-}
-/* MEDIA QUERY FOR WHAT WE DO ENDS HERE  */
-
 
 
 /* FREquenTLY ASKED QUESTION CSS STARTS HERE */
@@ -246,19 +191,8 @@ nav .menu_button i {
 }
 /* FREQUENTLY ASKED QUESTION CSS ENDS HERE */
 
-/* ---------------------------------------------- */
-/* MEDIA QUERY FOR FREQUENTLY ASKED QUESTION CSS STARts HERE  */
-@media (max-width: 940px) {
-  .overallCardContainer{
-    display: block;
-  }
 
-  .cardContainer,
-  .diffcardContainer{
-    margin-bottom: 25px;
-  }
-}
-/* MEDIA QUERY FOR FREQUENTLY ASKED QUESTION CSS ENDS HERE  */
+
 
 
 
@@ -304,12 +238,6 @@ nav .menu_button i {
   nav .navLinkWrapper li a {
     font-size: 20px;
     display: block;
-  }
-
-  nav .navLinkWrapper li a.active,
-  nav .navLinkWrapper li a:hover{
-    background: none;
-    color: #ed4d02;
   }
 
 

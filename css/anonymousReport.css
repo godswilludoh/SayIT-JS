@@ -84,7 +84,7 @@ nav .menu_button i {
 /* Nav bar css ends here */
 
 /* Anonymous Report Form Section */
-.container_anon{
+/* .container_anon{
     padding: 200px;
     min-height: 980px;
     background: #EDF4F4
@@ -140,7 +140,7 @@ button{
   border-radius: 10px;
   background: #ED4D02;
   color: #F5F5F5
-}
+} */
 /* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
 /* Working on the mobile responsiveness screen 940 and below */
 @media (max-width: 940px) {

@@ -389,9 +389,7 @@ footer{
   font-size: 36px;
 }
 
-/* .footer_header{
-  padding-left: 50px;
-} */
+
 ul{
   font-size: 16px;
   font-weight: 700;
@@ -417,4 +415,14 @@ ul{
 
 .footerLinkDocs li a:hover{
  color: #6E6660;
+}
+
+.copyright{
+  border-top: 2px solid #444444;
+  margin: 0 70px;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 40px;
 }

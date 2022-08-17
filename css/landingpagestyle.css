@@ -320,6 +320,8 @@ nav .menu_button i {
 }
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */
 
+
+
 /* HOW IT WORKS SECTION */
 .howItWorks{
   background:#F0F0EF;
@@ -332,7 +334,6 @@ nav .menu_button i {
   font-weight: 800;
   color: #ED4D02;
   text-align: center;
-
 }
 
 #flexContainerWorks{
@@ -343,34 +344,49 @@ nav .menu_button i {
   gap: 10rem;
 }
 
+
 .WhistleblowImage{
   background: url(/Images/whistleblowing.png) no-repeat center center ;
   width: 100%;
 }
 
-#gridContainer{
-  line-height: 1.8;
-}
-
-.how_text, .works_SayIT{
-  font-size: 18px;
-  font-weight: 900;
-  padding: 0;
-}
-
-.how_img{
-  /* display: inline; */
-  /* margin-bottom:10px; */
-}
-
-.how_paragraph{
-  font-size: 17px;
-  padding-bottom: 30px;
-}
-
-.work_flex{
+.goalSection{
   display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
+
+.contentTitle{
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.contentParagraph{
+  line-height: 1.5rem;
+  font-size: 14px;
+  text-align: justify;
+}
+
+@media (max-width: 940px){
+  #flexContainerWorks{
+    display:block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer */
 footer{

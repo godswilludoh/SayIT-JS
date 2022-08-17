@@ -97,7 +97,7 @@ nav .menu_button i {
 }
 
 h2{
-  font-size:35px;
+  font-size:30px;
   font-weight: 700;
 }
 
@@ -117,22 +117,26 @@ label{
 }
 
 select, input{
-  width:100%;
-  height: 2.5rem;
+  width:90%;
+  height: 3rem;
   outline:none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size:18px;
+  font-weight: 600;
   border-color: #ED4D02B2;
+  border-width: 3px;
   background-color: #EDF3F4;
+  padding-left: 20px;
 }
 
 textarea{
-  width:100%;
+  width:90%;
   height: 15rem;
   outline:none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1.5rem;
   border-color: #ED4D02B2;
+  border-width: 3px;
   background-color: #EDF3F4;
 }
 
@@ -141,7 +145,7 @@ input[type="text"]{
 }
 
 button{
-  width: 100%;
+  width: 90%;
   height: 2.5rem;
   display: block;
 }

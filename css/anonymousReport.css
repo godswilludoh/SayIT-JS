@@ -204,8 +204,30 @@ button{
     font-size: 20px;
     display: block;
   }
-
-
 }
 
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE
+/****Media Queries ****/
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px){
+  .container{
+    padding: 10rem 5rem 1rem;   
+  }
+
+  label{
+    display: block;
+  }
+
+  select, input{
+    width: 100%;
+  }
+  
+  textarea{
+    width: 100%;
+  }
+
+  button{
+    width: 100%;
+  }
+}
+

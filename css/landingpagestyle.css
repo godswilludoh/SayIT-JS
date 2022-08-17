@@ -1,5 +1,5 @@
 /*for the font importing from google*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -329,7 +329,7 @@ nav .menu_button i {
 
 #worksText{
   font-size:25px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ED4D02;
   text-align: center;
 
@@ -350,4 +350,24 @@ nav .menu_button i {
 
 #gridContainer{
   line-height: 1.8;
+}
+
+.how_text, .works_SayIT{
+  font-size: 18px;
+  font-weight: 900;
+  padding: 0;
+}
+
+.how_img{
+  /* display: inline; */
+  /* margin-bottom:10px; */
+}
+
+.how_paragraph{
+  font-size: 17px;
+  padding-bottom: 30px;
+}
+
+.work_flex{
+  display: flex;
 }

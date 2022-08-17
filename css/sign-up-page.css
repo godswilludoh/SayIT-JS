@@ -237,3 +237,61 @@ nav .menu_button i {
   font-size: 16px;
   line-height: 40px;
 }
+
+/* Responsiveness for mobile devices */
+/* Normal screen sizes */
+@media (min-width: 769px) and (max-width: 1200px){
+  .text-area {
+    padding: 12px;
+    width: 70%;
+    margin-bottom: 40px;    
+  }
+
+  #createAccount{
+    padding: 12px 30px;
+    width: 70%;
+ 
+  }
+
+  .side {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 50%;
+    padding-left: 50px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px){
+  .text-area {
+    padding: 12px;
+    width: 77%;
+    margin-bottom: 40px;    
+  }
+
+  #createAccount{
+    padding: 12px 30px;
+    width: 77%; 
+  }
+  .side {
+    display: none;
+  }
+}
+
+/* Smartphones */
+@media(min-width: 0px) and (max-width:500px){
+  .text-area {
+    padding: 12px;
+    width: 77%;
+    margin-bottom: 40px;    
+  }
+
+  #createAccount{
+    padding: 12px 30px;
+    width: 77%; 
+  }
+  .side {
+    display: none;
+  }
+}

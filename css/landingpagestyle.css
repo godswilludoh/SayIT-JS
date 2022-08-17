@@ -105,15 +105,19 @@ nav .menu_button i {
 
 .whatWeDoHeading{
   text-align: center;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
   color: #ed4d02;
   margin-bottom: 20px;
 }
 
 .whatWedo .whatWeDoParagraph{
-  text-align: justify;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  line-height:1.8rem;
   padding: 10px;
+
 }
 
 
@@ -219,7 +223,7 @@ nav .menu_button i {
 
 .overallCardContainer{
   display: flex;
-  gap: 10px;
+  gap: 30px;
   margin-bottom: 100px;
 }
 
@@ -315,3 +319,35 @@ nav .menu_button i {
 
 }
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */
+
+/* HOW IT WORKS SECTION */
+.howItWorks{
+  background:#F0F0EF;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+#worksText{
+  font-size:25px;
+  font-weight: 700;
+  color: #ED4D02;
+  text-align: center;
+
+}
+
+#flexContainerWorks{
+  display:flex;
+  margin: 10px 10px;
+  padding: 50px 40px;
+  justify-items: flex-end;
+  gap: 10rem;
+}
+
+.WhistleblowImage{
+  background: url(/Images/whistleblowing.png) no-repeat center center ;
+  width: 100%;
+}
+
+#gridContainer{
+  line-height: 1.8;
+}

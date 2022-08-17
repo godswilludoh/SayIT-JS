@@ -214,12 +214,19 @@ button{
     padding: 10rem 5rem 1rem;   
   }
 
+  h2{
+    font-size:25px;
+    font-weight: 700;
+  }
+
   label{
     display: block;
+    font-size: 18px;
   }
 
   select, input{
     width: 100%;
+    font-size: 15px;
   }
   
   textarea{
@@ -231,3 +238,23 @@ button{
   }
 }
 
+/* Smartphones */
+@media(min-width: 0px) and (max-width:500px){
+  .container{
+    padding: 10rem 3rem;   
+  }
+
+  h2{
+    font-size:20px;
+    font-weight: 700;
+  }
+
+  label{
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  select, input{
+    font-size:13px;
+  }
+}

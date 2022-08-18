@@ -33,7 +33,7 @@
       <ul class="navLinkWrapper">
         <li><a href="/index.html">HOME</a></li>
         <li><a href="#">BLOG</a></li>
-        <li><span><img src="/Images/logout.png" alt="logout"/></span> <a href="/pages/loginpage.html" class="logout">LOGOUT</a></li>
+        <li class="logout"><span class="logout-section"><img src="/Images/logout.png" alt="logout"/> <a href="/pages/loginpage.html" class="logout-text">LOGOUT</a></span></li>
       </ul>
     </nav>
 
@@ -44,8 +44,22 @@
       <div class="container">
         <div class="registered-container">
             <div class="reportStatus">
-                <p>Card</p>
+              
+              <div class="status-post">
+                <div class="status-post_info">
+                  <div class="status-post_date">
+                    <span>Thursday</span>
+                    <span>August 18 2022</span>
+                  </div>
+                  <h1 class="status-post_title">Pending</h1>
+                  <p class="status-post_text">
+                    I discovered that the management of my organization take part in insider trading, setting up the stock market to favor them.
+                  </p>
+                  <a href="#"  class="status-post_cta">Read more</a>
+                </div>
+              </div>
             </div>
+
             <div class="registered_form">
                 <form>
                     <h2 class="welcome">Welcome, <span class="registered_user">Adeola</span></h2>
@@ -94,10 +108,10 @@
                                     <option value="no" selected>No</option>
                                 </select>
                             </div>
-                            <div class="form-box">
+                            <div class="form-box upload">
                                 <label for="upload">Upload document</label>
                                 <input type="file" id="upload" name="upload" required/>
-                                <p>Docx, Image, Audio and Videos</p>
+                                <p class="upload-doc">Docx, Image, Audio and Videos</p>
                             </div>
                       </div>
           

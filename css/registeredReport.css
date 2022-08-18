@@ -62,11 +62,16 @@ nav .navLinkWrapper li a {
   color: #ed4d02;
 }
 
+nav .navLinkWrapper .logout-text{
+  color: #000;
+}
+
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #ed4d02;
   color: #ffff;
 }
+
 
 /*For removing the Id click from the background */
 #click {
@@ -86,7 +91,7 @@ nav .menu_button i {
 /* Anonymous Report Form Section */
 
 .container{
-  padding: 10rem 0;
+  padding: 10rem 2rem;
   min-height: 100vh;
   display: flex;
   justify-content:center;
@@ -96,9 +101,86 @@ nav .menu_button i {
   line-height:1.8;
 }
 
+.registered-container{
+  display: flex;
+  gap: 20px;
+}
+
+.reportStatus{
+  width: 50%;
+}
+
+.status-post{
+  width: 80%;
+  /* max-width: 88rem; */
+  padding: 2rem 3rem;
+  background-color:#fff;
+  box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+  display: flex;
+  align-items:center;
+  border-radius: .8rem;
+}
+
+.status-post_date span{
+  display: block;
+  color: #6E6660;
+  font-size:1.2rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+.status-post_title{
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  color: #ED4D02B2;
+}
+
+.status-post_text{
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.status-post_cta{
+  display: inline-block;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color:#fff;
+  border-radius: .5rem;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #ED4D02 0%, #ED4D02B2 100%);
+}
+
+.status-post_cta:hover{
+  background-image: linear-gradient(to right, #ED4D02B2 0%, #ED4D02 100%);
+}
+
+@media screen and (max-width: 1068px){
+  .status-post{
+    max-width: 80rem;
+  }
+}
+
+@media screen and (max-width: 868px){
+  .status-post{
+   padding: 2.5rem;
+   flex-direction: column;
+  }
+}
+
+.registered_form{
+  width: 50%;
+}
+
 h2{
   font-size:30px;
   font-weight: 700;
+}
+
+.registered_user{
+    color: #ED4D02B2;
+    font-size:30px;
 }
 
 label{
@@ -117,7 +199,7 @@ label{
 }
 
 select, input{
-  width:90%;
+  width:100%;
   height: 3rem;
   outline:none;
   border-radius: 10px;
@@ -130,7 +212,7 @@ select, input{
 }
 
 textarea{
-  width:90%;
+  width:100%;
   height: 15rem;
   outline:none;
   border-radius: 10px;
@@ -140,12 +222,24 @@ textarea{
   background-color: #EDF3F4;
 }
 
-input[type="text"]{
+.auth-form{
+    display: flex;
+    justify-content:space-around;
+    align-items:space-around;
+    gap: 30px;
+}
+
+input[type="text"] {
   padding-left: 1rem;
 }
 
+.upload-doc{
+  font-size: 16px;
+  font-weight: 600;
+}
+
 button{
-  width: 90%;
+  width: 100%;
   height: 2.5rem;
   display: block;
 }
@@ -154,7 +248,7 @@ button{
   background-color: #ED4D02;
   color: #F5F5F5;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
   cursor: pointer;
   font-size:18px;

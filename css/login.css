@@ -94,18 +94,29 @@ form{
   gap: 2rem;
 }
 
-input{
+.input{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
-  border: 1px solid  #ed4d02;
+  border: 1px solid  #ED4D02B2;
+  outline:none;
+  font-family: 'Font Awesome 5 Free'; 
+  font-weight: 700;
+}
+
+input{
+  border: 0;
+  width: 20rem;
   outline:none;
 }
 
-#button{
-  background-color: #ed4d02;
+button{
+  border-radius: 2rem;
+  padding: 0.8rem;
+  background-color: #ED4D02B2;
   font-weight: bold;
   color: white;
+  border: 1px solid  #ED4D02B2;
 }
 
 a{
@@ -116,6 +127,7 @@ a{
 #admin-login{
   color: darkgray;
 }
+
 .other_links{
   text-align: center;
   padding: 10px 0;
@@ -197,11 +209,12 @@ footer{
     padding: 1rem;
   }
 
-  input{
-    border-radius: 2rem;
-    padding: 0.8rem;
+  .input{
     width: 20rem;
-    border: 1px solid  #ed4d02;
+  }
+
+  input{
+    width: 10rem;
   }
 
 }

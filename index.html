@@ -1,77 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SayIT Login Page</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-</head>
-<body>
-    <!-- Navbar Section -->
-    <!-- The navbar shouldnt be tampered with to ensure it uniformality across all webpages -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayIT Website</title>
+    <link rel="stylesheet" href="/css/landingpagestyle.css" />
+    <!-- <link rel="icon" href="./Images/SAYIT.jpeg" type="image/png"> -->
+    <script
+      src="https://kit.fontawesome.com/ec08909fa5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Adenigba Ahmed part starts from here -->
+    <!-- The navbar shouldn't be tampered with to ensure its uniformity across all webpages -->
     <nav>
-        <!-- logo and Name Section -->
-        <section class="logoLogoHeading">
-          <div class="sayITLogo">
-            <img src="./Images/sayIT-TS-01 1.png" height="80px" width="80px" alt="logo of the SayIT platform" />
-          </div>
-          <h1 class="logoHeading">
-            Say<span class="IT">IT</span>
-          </h1>
-        </section>
-  
-        <label for="click" class="menu_button">
-          <i class="fas fa-bars"></i>
-        </label>
-        <input type="checkbox" id="click" />
-  
-        <!-- Links and button Section -->
-        <ul class="navLinkWrapper">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">WHY US</a></li>
-          <li><a href="#">REPORT</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#" class="active">SIGNUP/SIGNIN</a></li>
-        </ul>
+      <section class="logoLogoHeading">
+        <div class="sayITLogo">
+          <img
+            src="./Images/SAYIT.jpeg"
+            height="80px"
+            width="100px"
+            alt="logo of the SayIT platform"
+          />
+        </div>
+        <h1 class="logoHeading">Say<span class="IT">IT</span></h1>
+      </section>
+
+      <label for="click" class="menu_button">
+        <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="click" />
+
+      <ul class="navLinkWrapper">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="#">WHY US</a></li>
+        <li><a href="./pages/anonymousReport.html">REPORT</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li>
+          <a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a>
+        </li>
+      </ul>
     </nav>
 
-    <header>
+    <!-- Next  Section (section housing the landing page photo) -->
+    <section class="photoPeople"></section>
 
-        <!-- Image Section -->
-        <div class="lock_image">
-            <img src="images/2913133-removebg-preview 1.png" alt="">
+    <!-- What We Do Section -->
+    <section class="whatWedo">
+      <h3 class="whatWeDoHeading">WHAT WE DO</h3>
+
+      <p class="whatWeDoParagraph">
+        SayIT Whistleblowing Application is a web based application that helps
+        increase transparency and accountability in the society.The platform
+        provides a means for users to report cases both anonymously or by
+        revealing their identities.
+        <br />The reports made are passed to agents that partner with the
+        platform.
+      </p>
+
+      <div class="whatWedoButton">
+        <a href="/pages/sign-up-page.html" class="btn">GET STARTED</a>
+        <a href="/pages/anonymousReport.html" class="btn" class="active">REPORT ANONYMOUSLY</a>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="frequentlyAskedQuestion">
+      <h3 class="frequentlyAskedQtnHeading">
+        FREQUENTLY ASKED QUESTIONS (FAQ's)
+      </h3>
+
+      <!-- Cards for the frequently asked question -->
+      <section class="overallCardContainer">
+        <div class="cardContainer">
+          <h4 class="cardTitles">WHY SHOULD I USE SayIT?</h4>
+          <p class="cardParagraphs">
+            This website uses state of the art security software to anonymize
+            your internet connection as you submit files or correspond with
+            reporters. This way your identity is protected both from the
+            reporters who receive the files and from others who might be
+            monitoring or intercepting your communications.
+          </p>
         </div>
 
-        <!-- Form Section -->
-        <div class="login_form">
-            <form action="">
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="text" placeholder=" &#xf007; Username" >
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="password" placeholder=" &#xf023; Password">
-                <input type="button" value="LOGIN" id="button">
-            </form>
+        <div class="diffcardContainer">
+          <h4 class="cardTitles">DOES SUBMISSION INVOLVES DANGER?</h4>
+          <p class="cardParagraphs">
+            Sharing confidential information is never without risk. SayIT will
+            try, as much as possible, to protect your communication and to
+            provide information about the risks. The system makes finding the
+            source of a leak difficult. Our receivers are journalists that have
+            been trained in the use of state-of-the-art security tools and
+            procedures.
+          </p>
+        </div>
 
-            <!-- Additional Info Section -->
-            <div class="other_links">
-                <p id="sign-up">
-                    Don't have an Account? 
-                    <a href="#">SIGN UP</a>
-                </p>
-                <p id="admin-login"><a href="#">Admin Login</a></p>
+        <div class="cardContainer">
+          <h4 class="cardTitles">HOW ARE AGENTS SELECTED?</h4>
+          <p class="cardParagraphs">
+            Sharing confidential information is never without risk. SayIT will
+            try, as much as possible, to protect your communication and to
+            provide information about the risks. The system makes finding the
+            source of a leak difficult. Our receivers are journalists that have
+            been trained in the use of state-of-the-art security tools and
+            procedures.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- HOW IT WORKS SECTION STARTS -->
+    <section class="howItWorks">
+      <h2 id="worksText">HOW IT WORKS</h2>
+      
+      <div id="flexContainerWorks">
+        <p class="WhistleblowImage">
+          <!-- <img src="/Images/whistleblowing.png" alt="WhistleblowImage"> -->
+        </p>
+
+        <div id="gridContainer">
+          <section class="goalSection">
+            <div class="loGo">
+              <img src="/Images/goal.png" alt="logo here" class="how_img" />
             </div>
-        </div>
-    </header>
+            <div class="conTent">
+              <h3 class="contentTitle">OUR GOALS</h3>
+              <p class="contentParagraph">
+                <span class="works_SayIT">SayIT</span> is a platform that allows
+                people to send information of public interest to security
+                agencies and civil society organizations through secure
+                technologies that protect the identity of the source.Using
+                transparency and civil participation, it aims to build a fairer
+                and more democratic society.
+              </p>
+            </div>
+          </section>
 
-    <!-- Links and copyright Section -->
+          <section class="goalSection">
+            <div class="loGo">
+              <img src="/Images/dubbing.png" alt="logo here" class="how_img" />
+            </div>
+
+            <div class="conTent">
+              <h3 class="contentTitle">WE ARE YOUR VOICE</h3>
+              <p class="contentParagraph">
+                The information received through
+                <span class="works_SayIT">SayIT</span> will be verified,
+                analyzed and published by the partners of our alliance, made up
+                of Security Agencies and Civil society organizations. The main
+                goal is that the impact of the information revealed is amplified
+                i.e. sent to Agencies for approvals.
+              </p>
+            </div>
+          </section>
+
+          <section class="goalSection">
+            <div class="loGo">
+              <img src="/Images/unknown.png" alt="logo here" class="how_img" />
+            </div>
+
+            <div class="conTent">
+              <h3 class="contentTitle">SECURITY</h3>
+              <p class="contentParagraph">
+                Anonymity is an integral part of our project. It is essential
+                that all instructions on this site are followed closely so that
+                the identity of the whistleblower is protected.
+              </p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section  -->
     <footer>
-        <p>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms Of Use</a>
-        </p>
-        <p>
-            &copy2022. All Rights Reserved | Designed By TechStars
-        </p>
+      <div class="footer_section">
+        <div class="footer_header">
+          <p class="logoHeading">Say<span class="IT">IT</span></p>
+        </div>
+        <div>
+          <ul class="footerLinkDocs">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Follow us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        ©2022. All rights Reserved | Designed by Tech Stars
+      </p>
     </footer>
-    
-</body>
+  </body>
 </html>
+

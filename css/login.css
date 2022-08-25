@@ -94,7 +94,7 @@ form{
   gap: 2rem;
 }
 
-input{
+.input{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
@@ -102,10 +102,19 @@ input{
   outline:none;
 }
 
+input{
+  border: 0;
+  width: 20rem;
+  outline:none;
+}
+
 #button{
+  border-radius: 2rem;
+  border: 1px solid  #ed4d02;
   background-color: #ed4d02;
   font-weight: bold;
   color: white;
+  padding: 0.8rem;
 }
 
 a{
@@ -197,11 +206,15 @@ footer{
     padding: 1rem;
   }
 
-  input{
+  .input{
     border-radius: 2rem;
     padding: 0.8rem;
     width: 20rem;
     border: 1px solid  #ed4d02;
+  }
+
+  input{
+    width: 15rem;
   }
 
 }

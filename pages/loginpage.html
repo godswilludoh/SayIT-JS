@@ -47,9 +47,22 @@
         <!-- Form Section -->
         <div class="login_form">
             <form action="">
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="text" placeholder=" &#xf007; Username" >
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="password" placeholder=" &#xf023; Password">
-                 <a style="cursor: pointer" href="/pages/registeredReport.html"><input type="button" value="LOGIN" id="button"></a>
+
+                <!-- Username Input Section -->
+                <div class="input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+
+                <!-- Password Input Section -->
+                <div class="input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <!-- Login Button Section -->
+                <button type="submit" id="button">LOGIN</button>
+
             </form>
 
             <!-- Additional Info Section -->
@@ -66,7 +79,7 @@
         </div>
     </header>
 
-    <!-- Links and copyright Section -->
+    <!-- Link and copyright Section -->
     <footer>
         <p>
             <a href="#">Privacy Policy</a> | <a href="#">Terms Of Use</a>

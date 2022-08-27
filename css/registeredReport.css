@@ -50,7 +50,7 @@ body{
 }
 
 .sidebar-lists{
-  margin: 2.5rem 1rem;
+  margin: 2.5rem .5rem;
 }
 
 .sidebar-lists li{
@@ -89,7 +89,7 @@ body{
 
 .sidebar-lists li:hover .dropdown-menu{
   display: block;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 button{
@@ -102,7 +102,7 @@ button{
   background-color: #fff;
   border: 1px solid #B4B1AF;
   border-radius: 5px;
-  margin: 4rem 3rem;
+  margin: 4rem 3rem 1.5rem 3rem;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;

@@ -6,128 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SayIT Website</title>
     <link rel="stylesheet" href="/css/registeredReport.css" />
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script
       src="https://kit.fontawesome.com/ec08909fa5.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <!-- Adenigba Ahmed part starts from here -->
-    <!-- The navbar shouldn't be tampered with to ensure its uniformity across all webpages -->
-    <nav>
-      <section class="logoLogoHeading">
-        <div class="sayITLogo">
-          <img src="/Images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
+    <div class="main-container">
+      <section class="sidebar-container">
+        <div class="logo">
+          <h2 class="heading"><img src="/Images/SAYIT.jpeg" alt="logo"/>Say<span class="it">IT</span></h2>
         </div>
-        <h1 class="logoHeading">
-          Say<span class="IT">IT</span>
-        </h1>
+        <ul class="sidebar-lists">
+          <li class="sidebar-items"><a href="#"><box-icon type='solid' name='dashboard'></box-icon>
+            Dashboard</a></li>
+          <li class="sidebar-items"><a href="#"><box-icon name='message-square-edit'></box-icon>
+            Make Report</a></li>
+          <li class="sidebar-items"><a href="#"><box-icon type='solid' name='message-square-dots'></box-icon>
+            Blog</a></li>
+          <li class="sidebar-items"><a href="#"><box-icon type='solid' name='user'></box-icon>
+            Profile</a></li>
+        </ul>
+
+        <button class="btn"> <box-icon name='log-out'></box-icon></i> Logout</button>
       </section>
 
-      <label for="click" class="menu_button">
-        <i class="fas fa-bars"></i>
-      </label>
-      <input type="checkbox" id="click" />
-      
 
-      <ul class="navLinkWrapper">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li class="logout"><span class="logout-section"><img src="/Images/logout.png" alt="logout"/> <a href="/pages/loginpage.html" class="logout-text">LOGOUT</a></span></li>
-      </ul>
-    </nav>
 
-     <!-- Anonymous Form  Section -->
-
-     <main>
-
-      <div class="container">
-        <div class="registered-container">
-            <div class="reportStatus">
-              
-              <div class="status-post">
-                <div class="status-post_info">
-                  <div class="status-post_date">
-                    <span>Thursday</span>
-                    <span>August 18 2022</span>
-                  </div>
-                  <h1 class="status-post_title">Pending</h1>
-                  <p class="status-post_text">
-                    I discovered that the management of my organization take part in insider trading, setting up the stock market to favor them.
-                  </p>
-                  <a href="#"  class="status-post_cta">Read more</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="registered_form">
-                <form>
-                    <h2 class="welcome">Welcome, <span class="registered_user">Adeola</span></h2>
-                    <div class="user-details">
-                      <div class="form-box">
-                        <label for="sector">Sector</label>
-                        <select name="sector" id="form-group" required> 
-                          <option value="finance">Finance</option>
-                          <option value="education" selected>Education</option>
-                          <option value="sports">Sports</option>
-                          <option value="health">Health</option>
-                          <option value="energy">Energy</option>
-                          <option value="transportation">Transportation</option>
-                          <option value="agriculture">Agriculture</option>
-                          <option value="oil and gas">Oil and gas</option>
-                          <option value="banking">Banking</option>
-                          <option value="technology">Technology></option>
-                          <option value="entertainment">Entertainment</option>
-                          <option value="others">Others</option>
-                        </select>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="report-org">Which company, organization or individual is this about?</label>
-                        <input type="text" id="report-org" name="report-org"/>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="affiliation">Are you affiliated to the above selected?</label>
-                        <select name="affiliation" id="form-group" required>
-                          <option value="yes">Yes</option>
-                          <option value="no" selected>No</option>
-                        </select>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="report-info">What do you want to report?</label>
-                        <textarea id="report-infor" name="report-info" required></textarea>
-                      </div>
-    
-                      <div class="auth-form">
-                            <div class="anon-question">
-                                <label for="anon-question">Do you wish to be Anonymous?</label>
-                                <select name="anon-question" id="anon-question">
-                                    <option value="yes">Yes</option>
-                                    <option value="no" selected>No</option>
-                                </select>
-                            </div>
-                            <div class="form-box upload">
-                                <label for="upload">Upload document</label>
-                                <input type="file" id="upload" name="upload" required/>
-                                <p class="upload-doc">Docx, Image, Audio and Videos</p>
-                            </div>
-                      </div>
-          
-                    
-          
-                      <button class="btn">SUBMIT</button>                
-                       
-                      </div>
-                    </div>
-                  </form>
-            </div>
+      <section class="dashboard-interface">
+        <div class="top">
+          <div class="info-display">
+            <p>Dashboard</p>
+          </div>
+          <div class="time">
+            <p class="time-one">MM : HH</p>
+            <p class="time-two">DD : MM : YYYY</p>
+          </div>
         </div>
-       
-        
-      </div>
-     </main>
-
+      </section>
+    </div>
   </body>
 </html>

@@ -7,352 +7,159 @@
   font-family: 'Inter', sans-serif;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
+} */
+
+body{
+  background-color: #FFFFFF;
 }
 
-/* Nav Bar Css starts here */
-nav {
-  /* margin-top: 20px; */
-  height: 80px;
+/*Main container*/
+.main-container{
   display: flex;
-  justify-content: space-between;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: fixed;
-  width: 100%;
 }
 
-.logoLogoHeading {
+/* Sidebar CSS*/
+.sidebar-container{
+  width: 300px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  border-right: .5px solid #B4B1AF;
+}
+
+.sidebar-container .logo{
   display: flex;
-  margin-left: 75px;
-  color: #6E6660
-}
-
-.IT {
-  color: #ed4d02;
-}
-
-.logoHeading {
-  padding-top: 20px;
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.navLinkWrapper {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  margin-right: 75px;
-  margin-bottom: 5px;
+  padding: 30px 0 0 30px;
+  margin-right: 15px;
 }
 
-.navLinkWrapper li {
-  text-decoration: none;
-  padding: 10px;
-  list-style: none;
+.sidebar-container img{
+  width: 50px;
 }
 
-nav .navLinkWrapper li a {
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ed4d02;
-}
-
-nav .navLinkWrapper .logout-text{
-  color: #000;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #ed4d02;
-  color: #ffff;
-}
-
-
-/*For removing the Id click from the background */
-#click {
-  display: none;
-}
-
-/* for the collapse menu button */
-nav .menu_button i {
-  color: #ed4d02;
-  font-size: 25px;
-  cursor: pointer;
-  display: none;
-}
-
-/* Nav bar css ends here */
-
-/* Anonymous Report Form Section */
-
-.container{
-  padding: 10rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  justify-content:center;
-  align-items:top;
-  width: 100%;
-  background-color: #EDF3F4;
-  line-height:1.8;
-}
-
-.registered-container{
-  display: flex;
-  gap: 20px;
-}
-
-.reportStatus{
-  width: 50%;
-}
-
-.status-post{
-  width: 80%;
-  /* max-width: 88rem; */
-  padding: 2rem 3rem;
-  background-color:#fff;
-  box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
-  display: flex;
-  align-items:center;
-  border-radius: .8rem;
-}
-
-.status-post_date span{
-  display: block;
+.heading{
   color: #6E6660;
-  font-size:1.2rem;
-  font-weight: 600;
-  margin: .5rem 0;
+  font-size: 25px;
+  font-weight: 700;
 }
 
-.status-post_title{
-  font-size: 2rem;
-  margin: 1.5rem 0 2rem;
-  text-transform: uppercase;
-  color: #ED4D02B2;
+.it{
+  color: #ED4D02
 }
 
-.status-post_text{
-  margin-bottom: 3rem;
-  font-size: 1rem;
+.sidebar-lists{
+  margin: 2.5rem 1rem;
 }
 
-.status-post_cta{
-  display: inline-block;
-  padding: .5rem 2rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-  color:#fff;
-  border-radius: .5rem;
+.sidebar-lists li{
+  list-style: none;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  /* display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  margin: auto; */
+}
+
+.sidebar-lists li:hover{
+  cursor: pointer;
+  background: rgba(153, 157, 173, 0.22);
+  border-radius: 5px;
+}
+
+.icons{
+  width: 24px;
+  height: 24px;
+}
+
+.icons:hover{
+  color: #ED4D02;
+}
+
+.sidebar-lists li .icons{
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  line-height:30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 10px 0 25px;
+}
+
+
+.sidebar-lists li:hover .icons,
+.sidebar-lists li:hover a{
+  color: #ED4D02;
+}
+
+.sidebar-lists li a{
   text-decoration: none;
-  background-image: linear-gradient(to right, #ED4D02 0%, #ED4D02B2 100%);
-}
-
-.status-post_cta:hover{
-  background-image: linear-gradient(to right, #ED4D02B2 0%, #ED4D02 100%);
-}
-
-@media screen and (max-width: 1068px){
-  .status-post{
-    max-width: 80rem;
-  }
-}
-
-@media screen and (max-width: 868px){
-  .status-post{
-   padding: 2.5rem;
-   flex-direction: column;
-  }
-}
-
-.registered_form{
-  width: 50%;
-}
-
-h2{
-  font-size:30px;
-  font-weight: 700;
-}
-
-.registered_user{
-    color: #ED4D02B2;
-    font-size:30px;
-}
-
-label{
-  display: inline-block;
-  margin-bottom:1rem;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.user-details{
-  margin-top:1rem;
-}
-
-.form-box{
-  padding-bottom: 20px;
-}
-
-select, input{
-  width:100%;
-  height: 3rem;
-  outline:none;
-  border-radius: 10px;
-  font-size:18px;
-  font-weight: 600;
-  border-color: #ED4D02B2;
-  border-width: 3px;
-  background-color: #EDF3F4;
-  padding-left: 20px;
-}
-
-textarea{
-  width:100%;
-  height: 15rem;
-  outline:none;
-  border-radius: 10px;
-  padding: 1.5rem;
-  border-color: #ED4D02B2;
-  border-width: 3px;
-  background-color: #EDF3F4;
-}
-
-.auth-form{
-    display: flex;
-    justify-content:space-around;
-    align-items:space-around;
-    gap: 30px;
-}
-
-input[type="text"] {
-  padding-left: 1rem;
-}
-
-.upload-doc{
-  font-size: 16px;
-  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 button{
-  width: 100%;
+  display: block;  
+  width: 150px;
   height: 2.5rem;
-  display: block;
 }
 
 .btn{
-  background-color: #ED4D02;
-  color: #F5F5F5;
-  border: none;
-  border-radius: 10px;
-  outline: none;
+  background-color: #fff;
+  border: 1px solid #B4B1AF;
+  border-radius: 5px;
+  margin: 10rem 3rem;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
-  font-size:18px;
-  font-weight: 700;
 }
 
-.btn:hover{
-  background-color: #da4804;
-  font-size:19px;
+/* Dashboard Interface */
+.dashboard-interface {
+  width: calc(100% - 300px );
+  padding: 30px 0;
+  margin: 0 5rem;
 }
 
-/* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
-/* Working on the mobile responsiveness screen 940 and below */
-@media (max-width: 940px) {
-  .logoLogoHeading {
-    display: flex;
-    margin-left: 15px;
-  }
-
-  nav .menu_button{
-    margin-top: 20px;
-    margin-right: 20px ;
-  }
-
-  nav .menu_button i {
-    display: block;
-  }
-
-  nav .navLinkWrapper {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    display: block;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  /* For the Id integration with the hamburger, remember we change left from 0 to -100% in the nav ul*/
-  #click:checked ~ .navLinkWrapper {
-    left: 0%;
-  }
-
-  nav .navLinkWrapper li {
-    margin: 40px 0;
-  }
-
-  nav .navLinkWrapper li a {
-    font-size: 20px;
-    display: block;
-  }
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
 }
 
-/* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE
-/****Media Queries ****/
-/* Tablet */
-@media (min-width: 501px) and (max-width: 768px){
-  .container{
-    padding: 10rem 5rem 1rem;   
-  }
-
-  h2{
-    font-size:25px;
-    font-weight: 700;
-  }
-
-  label{
-    display: block;
-    font-size: 18px;
-  }
-
-  select, input{
-    width: 100%;
-    font-size: 15px;
-  }
-  
-  textarea{
-    width: 100%;
-  }
-
-  button{
-    width: 100%;
-  }
+.info-display{
+  font-size: 26px;
+  font-weight: 400;
 }
 
-/* Smartphones */
-@media(min-width: 0px) and (max-width:500px){
-  .container{
-    padding: 10rem 3rem;   
-  }
+.time{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
 
-  h2{
-    font-size:20px;
-    font-weight: 700;
-  }
+.time-one{
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px; 
+  width: 92px;
+  height: 42px;
+}
 
-  label{
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  select, input{
-    font-size:13px;
-  }
+.time-two{
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px; 
+  width: 150px;
+  height: 42px;
 }

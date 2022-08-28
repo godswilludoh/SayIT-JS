@@ -325,8 +325,8 @@ nav .menu_button i {
 /* HOW IT WORKS SECTION */
 .howItWorks{
   background:#F0F0EF;
-  padding-top: 80px;
   min-height: 100vh;
+  padding: 20px;
 }
 
 #worksText{
@@ -334,6 +334,8 @@ nav .menu_button i {
   font-weight: 800;
   color: #ED4D02;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 80px;
 }
 
 #flexContainerWorks{
@@ -345,10 +347,30 @@ nav .menu_button i {
 }
 
 
-.WhistleblowImage{
-  background: url(/Images/whistleblowing.png) no-repeat center center ;
+.image{
+  flex: 1;
+  background-image: url("/Images/manImage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s ease;
+  height: 100vh;
   width: 100%;
+  margin-left: 50px;
 }
+
+.containerWiththeimageandgridcontainer{
+  display: flex;
+  gap: 50px;
+}
+
+.gridContainer{
+  flex: 1;
+  width: calc(100% - 300px );
+  padding: 20px;
+}
+
+
 
 .goalSection{
   display: flex;
@@ -368,12 +390,18 @@ nav .menu_button i {
   text-align: justify;
 }
 
+
+/* MEDia QUERY FOR HOW IT WORKS SECTION */
 @media (max-width: 940px){
   #flexContainerWorks{
     display:block;
   }
 
+  .image{
+   display: none;
+  }
 }
+/* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */
 
 
 

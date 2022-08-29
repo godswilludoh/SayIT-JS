@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/ec08909fa5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/editprofile.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -125,10 +126,11 @@
         
         <!-- form section of the page -->
         <section class="formSection">
-        <form action="#">
-          <h3 class="formTitle">Name</h3>
+        <form>
+          <!-- FOR USERNAME -->
+          <h3 class="formTitle">User Name</h3>
           <div class="formGroup">
-            <input type="text" placeholder="Users Username" />
+            <input type="text" placeholder="please Input Your New Username" id="name" />
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
@@ -141,13 +143,13 @@
           <!-- FOR EMAIL -->
           <h3 class="formTitle">Email</h3>
           <div class="formGroup">
-            <input type="email" placeholder="Users Username" />
+            <input type="email" placeholder="Users Username" id="mail" />
           </div>
 
           <!-- FOR PHONE NUMBER -->
           <h3 class="formTitle">Change Phone Number</h3>
           <div class="formGroup">
-            <input type="text" placeholder="Enter your new number"/>
+            <input type="text" placeholder="Enter your new number" id="number"/>
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
@@ -158,18 +160,17 @@
           </div>
 
           <!-- FOR PASSWORD -->
-
           <h3 class="formTitle">Account Password</h3>
           <div class="formGroup">
-            <input type="text" placeholder="please enter your account password" />
+            <input type="text" placeholder="please enter your account password" id="password" />
           </div>
 
 
-          <!-- FOR THE UPDATE PROFILE AND BACH TO DASHBOARD BUTTON -->
+          <!-- FOR THE UPDATE PROFILE AND BACK TO DASHBOARD BUTTON -->
           <div class="buttonContainer">
-            <button class="butn">Update Profile</button>
+            <button class="butn" onclick="submitUsers()">Update Profile</button>
 
-            <a href="/pages/registeredReport.html" class="butn active">
+            <a href="/pages/registeredReport.html" class="butn active backToDashBoard">
               Back to Dashboard
             </a>
           </div>
@@ -177,7 +178,5 @@
         </section>       
       </section>
     </div>
-
-    <script src="/js/registeredReport.js"></script>
   </body>
 </html>

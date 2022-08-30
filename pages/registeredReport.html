@@ -117,8 +117,21 @@
           
                     
           
-                      <button class="btn">SUBMIT</button>                
+                      <button class="btn" onclick="openPopup()">SUBMIT</button>                
                        
+                      <div id="popup-container">
+                      <div class="popup" id="popup">
+                        <p id="paraOne">Thanks for Speaking Up!</p>
+                        <p id="paraTwo">Your Report Has Been Submitted</p>
+                        <p id="paraThree">ID: (AGENT CODE-S/N)</p>
+                        <p id="paraFour">Please take note of your Report ID</p>
+
+                        <div class="dashBoardBtn">
+                          <a href="../index.html">Dashboard</a>
+                        </div>
+                        
+                      </div>
+                    </div>
                       </div>
                     </div>
                   </form>
@@ -128,6 +141,16 @@
         
       </div>
      </main>
+
+     <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup(){
+        popup.classList.add("open-popup");
+
+      }
+
+     </script>
 
   </body>
 </html>

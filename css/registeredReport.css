@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -26,7 +26,7 @@ nav {
 .logoLogoHeading {
   display: flex;
   margin-left: 75px;
-  color: #6E6660
+  color: #6e6660;
 }
 
 .IT {
@@ -62,7 +62,7 @@ nav .navLinkWrapper li a {
   color: #ed4d02;
 }
 
-nav .navLinkWrapper .logout-text{
+nav .navLinkWrapper .logout-text {
   color: #000;
 }
 
@@ -71,7 +71,6 @@ nav ul li a.active {
   background-color: #ed4d02;
   color: #ffff;
 }
-
 
 /*For removing the Id click from the background */
 #click {
@@ -90,174 +89,175 @@ nav .menu_button i {
 
 /* Anonymous Report Form Section */
 
-.container{
+.container {
   padding: 10rem 2rem;
   min-height: 100vh;
   display: flex;
-  justify-content:center;
-  align-items:top;
+  justify-content: center;
+  align-items: top;
   width: 100%;
-  background-color: #EDF3F4;
-  line-height:1.8;
+  background-color: #edf3f4;
+  line-height: 1.8;
 }
 
-.registered-container{
+.registered-container {
   display: flex;
   gap: 20px;
 }
 
-.reportStatus{
+.reportStatus {
   width: 50%;
 }
 
-.status-post{
+.status-post {
   width: 80%;
   /* max-width: 88rem; */
   padding: 2rem 3rem;
-  background-color:#fff;
-  box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items:center;
-  border-radius: .8rem;
+  align-items: center;
+  border-radius: 0.8rem;
 }
 
-.status-post_date span{
+.status-post_date span {
   display: block;
-  color: #6E6660;
-  font-size:1.2rem;
+  color: #6e6660;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
-.status-post_title{
+.status-post_title {
   font-size: 2rem;
   margin: 1.5rem 0 2rem;
   text-transform: uppercase;
-  color: #ED4D02B2;
+  color: #ed4d02b2;
 }
 
-.status-post_text{
+.status-post_text {
   margin-bottom: 3rem;
   font-size: 1rem;
 }
 
-.status-post_cta{
+.status-post_cta {
   display: inline-block;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   text-transform: uppercase;
   font-size: 1rem;
-  color:#fff;
-  border-radius: .5rem;
+  color: #fff;
+  border-radius: 0.5rem;
   text-decoration: none;
-  background-image: linear-gradient(to right, #ED4D02 0%, #ED4D02B2 100%);
+  background-image: linear-gradient(to right, #ed4d02 0%, #ed4d02b2 100%);
 }
 
-.status-post_cta:hover{
-  background-image: linear-gradient(to right, #ED4D02B2 0%, #ED4D02 100%);
+.status-post_cta:hover {
+  background-image: linear-gradient(to right, #ed4d02b2 0%, #ed4d02 100%);
 }
 
-@media screen and (max-width: 1068px){
-  .status-post{
+@media screen and (max-width: 1068px) {
+  .status-post {
     max-width: 80rem;
   }
 }
 
-@media screen and (max-width: 868px){
-  .status-post{
-   padding: 2.5rem;
-   flex-direction: column;
+@media screen and (max-width: 868px) {
+  .status-post {
+    padding: 2.5rem;
+    flex-direction: column;
   }
 }
 
-.registered_form{
+.registered_form {
   width: 50%;
 }
 
-h2{
-  font-size:30px;
+h2 {
+  font-size: 30px;
   font-weight: 700;
 }
 
-.registered_user{
-    color: #ED4D02B2;
-    font-size:30px;
+.registered_user {
+  color: #ed4d02b2;
+  font-size: 30px;
 }
 
-label{
+label {
   display: inline-block;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
   font-size: 20px;
   font-weight: 700;
 }
 
-.user-details{
-  margin-top:1rem;
+.user-details {
+  margin-top: 1rem;
 }
 
-.form-box{
+.form-box {
   padding-bottom: 20px;
 }
 
-select, input{
-  width:100%;
+select,
+input {
+  width: 100%;
   height: 3rem;
-  outline:none;
+  outline: none;
   border-radius: 10px;
-  font-size:18px;
+  font-size: 18px;
   font-weight: 600;
-  border-color: #ED4D02B2;
+  border-color: #ed4d02b2;
   border-width: 3px;
-  background-color: #EDF3F4;
+  background-color: #edf3f4;
   padding-left: 20px;
 }
 
-textarea{
-  width:100%;
+textarea {
+  width: 100%;
   height: 15rem;
-  outline:none;
+  outline: none;
   border-radius: 10px;
   padding: 1.5rem;
-  border-color: #ED4D02B2;
+  border-color: #ed4d02b2;
   border-width: 3px;
-  background-color: #EDF3F4;
+  background-color: #edf3f4;
 }
 
-.auth-form{
-    display: flex;
-    justify-content:space-around;
-    align-items:space-around;
-    gap: 30px;
+.auth-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  gap: 30px;
 }
 
 input[type="text"] {
   padding-left: 1rem;
 }
 
-.upload-doc{
+.upload-doc {
   font-size: 16px;
   font-weight: 600;
 }
 
-button{
+button {
   width: 100%;
   height: 2.5rem;
   display: block;
 }
 
-.btn{
-  background-color: #ED4D02;
-  color: #F5F5F5;
+.btn {
+  background-color: #ed4d02;
+  color: #f5f5f5;
   border: none;
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  font-size:18px;
+  font-size: 18px;
   font-weight: 700;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #da4804;
-  font-size:19px;
+  font-size: 19px;
 }
 
 /* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
@@ -268,9 +268,9 @@ button{
     margin-left: 15px;
   }
 
-  nav .menu_button{
+  nav .menu_button {
     margin-top: 20px;
-    margin-right: 20px ;
+    margin-right: 20px;
   }
 
   nav .menu_button i {
@@ -307,52 +307,177 @@ button{
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE
 /****Media Queries ****/
 /* Tablet */
-@media (min-width: 501px) and (max-width: 768px){
-  .container{
-    padding: 10rem 5rem 1rem;   
+@media (min-width: 501px) and (max-width: 768px) {
+  .container {
+    padding: 10rem 5rem 1rem;
   }
 
-  h2{
-    font-size:25px;
+  h2 {
+    font-size: 25px;
     font-weight: 700;
   }
 
-  label{
+  label {
     display: block;
     font-size: 18px;
   }
 
-  select, input{
+  select,
+  input {
     width: 100%;
     font-size: 15px;
   }
-  
-  textarea{
+
+  textarea {
     width: 100%;
   }
 
-  button{
+  button {
     width: 100%;
   }
 }
 
 /* Smartphones */
-@media(min-width: 0px) and (max-width:500px){
-  .container{
-    padding: 10rem 3rem;   
+@media (min-width: 0px) and (max-width: 500px) {
+  .container {
+    padding: 10rem 3rem;
   }
 
-  h2{
-    font-size:20px;
+  h2 {
+    font-size: 20px;
     font-weight: 700;
   }
 
-  label{
+  label {
     font-size: 15px;
     font-weight: 500;
   }
 
-  select, input{
-    font-size:13px;
+  select,
+  input {
+    font-size: 13px;
   }
 }
+
+/* Popup card modal */
+#popup-container {
+  z-index: 2;
+  background-color: rgba(110, 102, 96, 0.3);
+}
+
+.popup {
+  background-color: #6e6660;
+  width: 600px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 50px 100px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup {
+  visibility: visible;
+  top: 100%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#paraOne {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-bottom: 5px;
+}
+
+#paraTwo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  color: rgba(237, 76, 2, 0.534);
+  margin-bottom: 5px;
+}
+
+#paraThree {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+#paraFour {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.dashBoardBtn a {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 80px;
+}
+
+#dashBoardBtn a:hover {
+  background-color: rgba(237, 77, 2, 0.7);
+  font-size: 19px;
+}
+
+@media (max-width: 940px) {
+  .popup {
+    width: 400px;
+    padding: 30px 40px;
+   
+    
+  }
+  #paraOne {
+    font-size: 14px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+
+  #paraTwo {
+    font-size: 20px;
+    line-height: 25px;
+  
+   
+ }
+ #paraThree {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+
+#paraFour {
+  font-size: 14px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-top: 5px;
+  margin-bottom: 15px;
+ 
+
+  }
+    .dashBoardBtn a {
+    padding: 15px 50px;
+    font-size: 15px;
+  }
+} 

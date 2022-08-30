@@ -16,7 +16,9 @@
     <div class="main-container">
       <section class="sidebar-container">
         <div class="logo">
-          <h2 class="heading"><img src="/Images/SAYIT.jpeg" alt="logo"/>Say<span class="it">IT</span></h2>
+          <h2 class="heading">
+            <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo"/></div>
+            <h1 class="heading">Say<span class="it">IT</span></h1>
         </div>
 
         <ul class="sidebar-lists">
@@ -34,7 +36,7 @@
           </li>
            
           <li class="sidebar-items">
-            <a href="#">
+            <a href="/pages/makeReport.html">
               <div class="sidebar-icons">
                 <div>
                   <box-icon name='message-square-edit'></box-icon>
@@ -48,7 +50,7 @@
 
 
           <li class="sidebar-items">
-            <a href="#">
+            <a href="/pages/blog-page.html">
               <div class="sidebar-icons">
                 <div>
                   <box-icon type='solid' name='message-square-dots'></box-icon>
@@ -142,85 +144,7 @@
                 <input type="text" placeholder="Enter Report ID"/>
               </div>
             </div>
-
-            <div class="registered_form">
-                <form>
-                    <h2 class="welcome">Welcome, <span class="registered_user">Adeola</span></h2>
-                    <div class="user-details">
-                      <div class="form-box">
-                        <label for="sector">Sector</label>
-                        <select name="sector" id="form-group" required> 
-                          <option value="finance">Finance</option>
-                          <option value="education" selected>Education</option>
-                          <option value="sports">Sports</option>
-                          <option value="health">Health</option>
-                          <option value="energy">Energy</option>
-                          <option value="transportation">Transportation</option>
-                          <option value="agriculture">Agriculture</option>
-                          <option value="oil and gas">Oil and gas</option>
-                          <option value="banking">Banking</option>
-                          <option value="technology">Technology></option>
-                          <option value="entertainment">Entertainment</option>
-                          <option value="others">Others</option>
-                        </select>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="report-org">Which company, organization or individual is this about?</label>
-                        <input type="text" id="report-org" name="report-org"/>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="affiliation">Are you affiliated to the above selected?</label>
-                        <select name="affiliation" id="form-group" required>
-                          <option value="yes">Yes</option>
-                          <option value="no" selected>No</option>
-                        </select>
-                      </div>
-          
-                      <div class="form-box">
-                        <label for="report-info">What do you want to report?</label>
-                        <textarea id="report-infor" name="report-info" required></textarea>
-                      </div>
-    
-                      <div class="auth-form">
-                            <div class="anon-question">
-                                <label for="anon-question">Do you wish to be Anonymous?</label>
-                                <select name="anon-question" id="anon-question">
-                                    <option value="yes">Yes</option>
-                                    <option value="no" selected>No</option>
-                                </select>
-                            </div>
-                            <div class="form-box upload">
-                                <label for="upload">Upload document</label>
-                                <input type="file" id="upload" name="upload" required/>
-                                <p class="upload-doc">Docx, Image, Audio and Videos</p>
-                            </div>
-                      </div>
-          
-                    
-          
-                      <button class="btn" onclick="openPopup()">SUBMIT</button>                
-                       
-                      <div id="popup-container">
-                      <div class="popup" id="popup">
-                        <p id="paraOne">Thanks for Speaking Up!</p>
-                        <p id="paraTwo">Your Report Has Been Submitted</p>
-                        <p id="paraThree">ID: (AGENT CODE-S/N)</p>
-                        <p id="paraFour">Please take note of your Report ID</p>
-
-                        <div class="dashBoardBtn">
-                          <a href="../index.html">Dashboard</a>
-                        </div>
-                        
-                      </div>
-                    </div>
-                      </div>
-                    </div>
-                  </form>
-            </div>
-        </div>
-       
+        </div>       
         
       </div>
      </main>
@@ -281,11 +205,8 @@
                 <td></td>
                 <td></td>
               </tr>
-            </table>
-            
+            </table>            
           </div>
-
-
         </div>
       </section>
     </div>

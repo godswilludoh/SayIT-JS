@@ -7,6 +7,7 @@
     <title>SayIT Login Page</title>
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="s" href="">
 </head>
 <body>
     <!-- Navbar Section -->
@@ -46,18 +47,22 @@
 
         <!-- Form Section -->
         <div class="login_form">
-            <form action="">
+            <form action="" id="form">
+
+                <!-- Error Message -->
+                <small id="error-message">Error Message</small>
 
                 <!-- Username Input Section -->
                 <div class="input">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" id="username" placeholder="Username">                    
                 </div>
 
                 <!-- Password Input Section -->
-                <div class="input">
+                <div class="input ">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="password" placeholder="Password">
+                   
                 </div>
 
                 <!-- Login Button Section -->
@@ -88,6 +93,9 @@
             &copy2022. All Rights Reserved | Designed By TechStars
         </p>
     </footer>
+
+    <script src="/js/login.js"></script>
     
 </body>
+</html>
 

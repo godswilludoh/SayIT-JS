@@ -84,6 +84,14 @@ nav .menu_button i {
 /* Nav bar css ends here */
 
 /* fOR THE IMAGE ON THE LANDING PAGE */
+
+/* .header{
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  overflow: hidden
+} */
+
 .photoPeople {
   height: 744px;
   background-image: url("https://images.pexels.com/photos/2361103/pexels-photo-2361103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -91,6 +99,7 @@ nav .menu_button i {
   background-repeat: no-repeat;
   background-position: center;
   transition: 0.3s ease;
+  /* opacity: 0.4; */
 }
 
 
@@ -323,7 +332,7 @@ nav .menu_button i {
 
 
 /* HOW IT WORKS SECTION */
-.howItWorks{
+.whyUs{
   background:#F0F0EF;
   min-height: 100vh;
   padding: 20px;
@@ -352,14 +361,14 @@ nav .menu_button i {
   background-image: url("/Images/manImage.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   transition: 0.3s ease;
-  height: 100vh;
-  width: 100%;
+  /* height: 100vh;
+  width: 100%; */
   margin-left: 50px;
 }
 
-.containerWiththeimageandgridcontainer{
+.imageContainer{
   display: flex;
   gap: 50px;
 }

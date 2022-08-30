@@ -98,9 +98,7 @@ button{
   height: 2.5rem;
 }
 
-.btn-logout{
-  position:absolute;
-  bottom: 5%;
+.btn{
   background-color: #fff;
   border: 1px solid #B4B1AF;
   border-radius: 5px;

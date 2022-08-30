@@ -85,11 +85,7 @@ header {
   flex-direction: row-reverse;
   justify-content: space-around; 
   align-items: center;
-  padding:10rem 0;
-}
-
-.login_form{
-  
+  padding:15rem 0 2rem 0;
 }
 
 .login-heading{
@@ -110,6 +106,7 @@ form{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
+  height: 60px;
   border: 1px solid  #ed4d02;
   outline:none;
   display: inline;
@@ -143,11 +140,14 @@ input::placeholder{
 /* styling for the submit button */
 #button{
   border-radius: 2rem;
+  height: 60px;
   border: 1px solid  #ed4d02;
   background-color: #ed4d02;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 17px;
   color: white;
   padding: 0.8rem;
+  cursor: pointer;
 }
 
 /* styling for the additional links */

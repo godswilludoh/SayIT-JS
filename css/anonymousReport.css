@@ -130,7 +130,7 @@ select, .form-input{
   width:100%;
   height: 3rem;
   outline:none;
-  border-radius: 10px;
+  border-radius: 1rem;
   font-size:18px;
   font-weight: 600;
   border: 2px solid #000000;
@@ -142,7 +142,7 @@ textarea{
   width:100%;
   height: 15rem;
   outline:none;
-  border-radius: 10px;
+  border-radius: 1rem;
   padding: 1.5rem;
   border: 2px solid #000000;
   background-color: #FFFFFF;
@@ -162,7 +162,7 @@ button{
   background-color: #ED4D02;
   color: #F5F5F5;
   border: none;
-  border-radius: 5px;
+  border-radius: 1rem;
   outline: none;
   cursor: pointer;
   font-size:18px;

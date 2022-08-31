@@ -1,51 +1,12 @@
-const form = document.getElementById("form");
-const username = document.getElementById("username");
-const password = document.getElementById("password");
+/** Form Submission **/
+// import { validatePassword } from './validation.js';
 
-
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    checkInputs();
-
-})
-
-function checkInputs() {
-    // get value from the inputs
-    const usernameValue = username.value.trim()
-    const passwordValue = password.value.trim()
-
-
-    if (usernameValue === '') {
-        // setting the error message
-        let errorMessage = "Username cannot be empty";
-
-        // targeting the DOM element to display the error message
-        let targetErrorMessage = document.getElementById("error-message")
-
-        // displaying the error message
-        targetErrorMessage.style.visibility = "visible"
-        targetErrorMessage.innerText = errorMessage;
-    }else{
-        // I don't the data of user from the sign-up page
-         
-    }
-    
-    if (passwordValue === '') {
-        // setting the error message
-        let errorMessage = "Password cannot be empty"
-
-        // targeting the DOM element to display the error message
-        let targetErrorMessage = document.getElementById("error-message")
-
-        // displaying the error message
-        targetErrorMessage.style.visibility = "visible"
-        targetErrorMessage.innerText = errorMessage;
-    }else{
-        // I don't the data of user from the sign-up page
-
-        
-    }
-}
-
+const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+	//redirecting to users dashboard page
+	event.preventDefault();
+	// const passwordField = form.elements['password'];
+	// if (validatePassword(passwordField)) {
+	window.location = 'registeredReport.html';
+	// }
+});

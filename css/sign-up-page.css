@@ -52,7 +52,7 @@ nav {
 
 nav .navLinkWrapper li a {
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px;
   font-weight: 700;
   text-decoration: none;
@@ -135,39 +135,33 @@ nav .menu_button i {
 
 /* signup-page wrapper*/
 
-.signup-page-wrapper {
+.signup-container{
   margin-top: 120px;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center; 
+  text-align: center;
 }
 
-/* signup-container */
-.signup-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
-/* signup form */
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  
-}
 .text-area {
   padding: 12px;
-  width: 50%;
+  width: 95%;
   height: 60px;
   outline:none;
-  margin-bottom: 30px;
-  border: 1px solid rgba(237, 77, 2, 0.7);
-  border-radius: 50px;
-  
+  margin-bottom: 0;
+  border: 1px solid  #ed4d02;
+  border-radius: 2rem;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"]{
+  padding-left: 2rem;
+  font-size:17px;
+  font-weight: 700;
+}
+
+input::placeholder{
+  color: #000000;
 }
 
 ::placeholder {
@@ -183,6 +177,35 @@ nav .menu_button i {
   padding-left: 10px;
   }
 
+  /* Validation styling */
+
+  .form-control{
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control i {
+    visibility: hidden;
+  }
+  
+  .form-control small {
+    visibility: hidden;
+  }
+  
+  .form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+  }
+  
+  .form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+  }
+  
+  .form-control.error small {
+    color: #e74c3c;
+    visibility: visible;
+  }
+
 #createAccount{
   padding: 12px 30px;
   width: 50%;
@@ -192,17 +215,11 @@ nav .menu_button i {
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
-  background: rgba(237, 77, 2, 0.7);
-  border-radius: 50px;
+  border: 1px solid  #ed4d02;
+  background-color: #ed4d02;
+  border-radius: 2rem;
   border: none;
-
-}
-
-#createAccount:hover {
   cursor: pointer;
-  background-color:  rgba(237, 77, 2, 0.7);
-  color: black;
-
 }
 
 .signup-container a {

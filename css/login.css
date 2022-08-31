@@ -54,7 +54,7 @@ nav {
 
 nav .navLinkWrapper li a {
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px;
   font-weight: 700;
   text-decoration: none;
@@ -85,19 +85,28 @@ header {
   flex-direction: row-reverse;
   justify-content: space-around; 
   align-items: center;
-  padding:10rem 0;
+  padding:15rem 0 2rem 0;
+}
+
+.login-heading{
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  color: #ED4D02;
 }
 
 form{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 40px;
 }
 
 .input{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
+  height: 60px;
   border: 1px solid  #ed4d02;
   outline:none;
   display: inline;
@@ -108,6 +117,16 @@ input{
   border: 0;
   width: 20rem;
   outline:none;
+}
+
+input[type="text"], input[type="password"]{
+  padding-left: 1rem;
+  font-size:17px;
+  font-weight: 700;
+}
+
+input::placeholder{
+  color: #000000;
 }
 
 /* styling for error message */
@@ -121,11 +140,14 @@ input{
 /* styling for the submit button */
 #button{
   border-radius: 2rem;
+  height: 60px;
   border: 1px solid  #ed4d02;
   background-color: #ed4d02;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 17px;
   color: white;
   padding: 0.8rem;
+  cursor: pointer;
 }
 
 /* styling for the additional links */
@@ -137,6 +159,7 @@ a{
 #admin-login{
   color: darkgray;
 }
+
 .other_links{
   text-align: center;
   padding: 10px 0;
@@ -146,17 +169,17 @@ a{
 
 .admin-login{
   display: flex;
-  gap: 20px;
+  gap: 4rem;
   justify-content:center;
   align-items: center;
-
+  padding: 40px 0 20px 0;
 }
 
 /* Styling for the footer section */
 footer{
   text-align: center;
   color: inherit;
-  padding: 2rem 0;
+  padding: 2px 0;
   line-height: 2rem;
   font-weight: bold;
 }
@@ -220,7 +243,7 @@ footer{
   }
 
   .input{
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 0.8rem;
     width: 20rem;
     border: 1px solid  #ed4d02;

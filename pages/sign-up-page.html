@@ -13,56 +13,85 @@
 </head>
 <body>
     <nav>
-        <section class="logoLogoHeading">
-          <div class="sayITLogo">
-            <img src="../images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
-          </div>
-          <h1 class="logoHeading">
-            Say<span class="IT">IT</span>
-          </h1>
-        </section>
-  
-        <label for="click" class="menu_button">
-          <i class="fas fa-bars"></i>
-        </label>
-        <input type="checkbox" id="click" />
-        
-  
-        <ul class="navLinkWrapper">
-          <li><a href="../index.html">HOME</a></li>
-          <li><a href="#">WHY US</a></li>
-          <li><a href="../pages/anonymousReport.html">REPORT</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
-        </ul>
-      </nav>
+      <section class="logoLogoHeading">
+        <div class="sayITLogo">
+          <img src="../images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
+        </div>
+        <h1 class="logoHeading">
+          Say<span class="IT">IT</span>
+        </h1>
+      </section>
+
+      <label for="click" class="menu_button">
+        <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="click" />
       
+
+      <ul class="navLinkWrapper">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../index.html#whyUs">WHY US</a></li>
+        <li><a href="../pages/anonymousReport.html">REPORT</a></li>
+        <li><a href="/pages/blog-page.html">BLOG</a></li>
+        <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
+      </ul>
+    </nav>
     
-      <!--form starts here-->
+  
+    <!--form starts here-->
 
-      <div class="signup-page-wrapper">
-        <div class="signup-container">
-          <form action="" class="signup-form">
-              <input type="text" class="text-area" placeholder="Full Name">
-              <input type="email" class="text-area" placeholder="Email">
-              <input type="text" class="text-area" placeholder="Username">
-              <input type="tel" class="text-area" placeholder="Phone Number">
-              <input type="password" class="text-area" placeholder="Password">
-              <input type="submit" value="Create Account" id="createAccount">
-          </form>
-          <div class="side">
-              <img src="../Images/Padlock image.png" alt="padlockImage">
+      <div class="signup-container">
+        <form action="" class="signup-form" id="form">
+
+          <div class="form-control">
+            <input type="email" class="text-area" id="email" placeholder="Email">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
           </div>
-      </div>
-      </div>
 
-      <!--form ends here-->
+          <div class="form-control">
+            <input type="text" class="text-area" id="username" placeholder="Username">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
 
-      <footer id="sign-up-footer">
-        <p class="footer-text">Privacy Policy | Terms of Use</p>
-        <p class="footer-text">&copy2022. All Rights Reserved | Designed By Tech Stars</p>
-      </footer>
-      
-      
+          <div class="form-control">
+            <input type="tel" class="text-area" id="phone-number" placeholder="Phone Number">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <input type="password" class="text-area" id="password" placeholder="Password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <input type="password" class="text-area" id="confirm-password" placeholder="Confirm Password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>    
+            <small>Error Message</small>
+          </div>
+
+          <button type="submit" id="createAccount">Create Account</button>
+        </form>
+    </div>
+
+    <!--form ends here-->
+
+    <footer id="sign-up-footer">
+      <p class="footer-text">Privacy Policy | Terms of Use</p>
+      <p class="footer-text">&copy2022. All Rights Reserved | Designed By Tech Stars</p>
+    </footer>
+    
+    <!-- Link to JavaScript -->
+    <script src="/js/sign-up.js"></script>
+
+
 </body>
 </html>

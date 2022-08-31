@@ -44,46 +44,67 @@
 		<!--form starts here-->
 
 		<div class="signup-container">
-			<form id="signup-form" class="signup-form">
-				<input
-					type="email"
-					name="email"
-					class="text-area"
-					placeholder="Email"
-					required
-				/>
-				<input
-					type="text"
-					name="username"
-					class="text-area"
-					placeholder="Username"
-					required
-				/>
-				<input
-					type="tel"
-					class="text-area"
-					name="tel"
-					placeholder="Phone Number"
-					required
-				/>
-				<input
-					type="password"
-					name="password"
-					class="text-area"
-					placeholder="Password"
-					required
-				/>
+			<form action="" class="signup-form" id="form">
+				<div class="form-control">
+					<input
+						type="email"
+						class="text-area"
+						id="email"
+						placeholder="Email"
+					/>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error Message</small>
+				</div>
 
-				<input
-					type="password"
-					name="confirmPassword"
-					class="text-area"
-					placeholder="Confirm Password"
-					required
-				/>
+				<div class="form-control">
+					<input
+						type="text"
+						class="text-area"
+						id="username"
+						placeholder="Username"
+					/>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error Message</small>
+				</div>
 
-				<!-- Error Message -->
-				<small></small>
+				<div class="form-control">
+					<input
+						type="tel"
+						class="text-area"
+						id="phone-number"
+						placeholder="Phone Number"
+					/>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error Message</small>
+				</div>
+
+				<div class="form-control">
+					<input
+						type="password"
+						class="text-area"
+						id="password"
+						placeholder="Password"
+					/>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error Message</small>
+				</div>
+
+				<div class="form-control">
+					<input
+						type="password"
+						class="text-area"
+						id="confirm-password"
+						placeholder="Confirm Password"
+					/>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error Message</small>
+				</div>
+
 				<button type="submit" id="createAccount">Create Account</button>
 			</form>
 		</div>
@@ -97,6 +118,7 @@
 			</p>
 		</footer>
 
-		<script type="module" src="/js/signup.js"></script>
+		<!-- Link to JavaScript -->
+		<script src="/js/sign-up.js"></script>
 	</body>
 </html>

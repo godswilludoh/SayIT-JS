@@ -31,7 +31,7 @@ html {
     gap:2rem;
     padding: 10px 5px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .category:first-child{
@@ -41,9 +41,19 @@ html {
 .blog_search-box input{
     border: 2px solid  rgb(255, 142, 3);
     border-radius: 5px;
-    padding: 2px;
-    margin: 5px 2px 0;
+    padding: 10px 5px;
+    width: 95%;
+    height: 35px;
+    margin: 5px 2px;
+    outline:none;
 }
+
+.blog_search-box input::placeholder{
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
 
 /* Blog Grid-Container section */
 .blog_grid-container{

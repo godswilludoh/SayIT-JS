@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="/css/sign-up-page.css" />
-    <script
-      src="https://kit.fontawesome.com/ec08909fa5.js"
-      crossorigin="anonymous"
-    ></script>
-</head>
-<body>
-    <nav>
-        <section class="logoLogoHeading">
-          <div class="sayITLogo">
-            <img src="../images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
-          </div>
-          <h1 class="logoHeading">
-            Say<span class="IT">IT</span>
-          </h1>
-        </section>
-  
-        <label for="click" class="menu_button">
-          <i class="fas fa-bars"></i>
-        </label>
-        <input type="checkbox" id="click" />
-        
-  
-        <ul class="navLinkWrapper">
-          <li><a href="../index.html">HOME</a></li>
-          <li><a href="../index.html#whyUs">WHY US</a></li>
-          <li><a href="../pages/anonymousReport.html">REPORT</a></li>
-          <li><a href="/pages/blog-page.html">BLOG</a></li>
-          <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
-        </ul>
-      </nav>
-      
-    
-      <!--form starts here-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="/css/sign-up-page.css" />
+		<script
+			src="https://kit.fontawesome.com/ec08909fa5.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav>
+			<section class="logoLogoHeading">
+				<div class="sayITLogo">
+					<img
+						src="../images/SAYIT.jpeg"
+						height="80px"
+						width="100px"
+						alt="logo of the SayIT platform"
+					/>
+				</div>
+				<h1 class="logoHeading">Say<span class="IT">IT</span></h1>
+			</section>
 
-        <div class="signup-container">
-          <form action="" class="signup-form">
-              <input type="email" class="text-area" placeholder="Email">
-              <input type="text" class="text-area" placeholder="Username">
-              <input type="tel" class="text-area" placeholder="Phone Number">
-              <input type="password" class="text-area" placeholder="Password">
-              <button type="submit" id="createAccount">Create Account</button>
-          </form>
-      </div>
+			<label for="click" class="menu_button">
+				<i class="fas fa-bars"></i>
+			</label>
+			<input type="checkbox" id="click" />
 
-      <!--form ends here-->
+			<ul class="navLinkWrapper">
+				<li><a href="../index.html">HOME</a></li>
+				<li><a href="../index.html#whyUs">WHY US</a></li>
+				<li><a href="../pages/anonymousReport.html">REPORT</a></li>
+				<li><a href="/pages/blog-page.html">BLOG</a></li>
+				<li>
+					<a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a>
+				</li>
+			</ul>
+		</nav>
 
-      <footer id="sign-up-footer">
-        <p class="footer-text">Privacy Policy | Terms of Use</p>
-        <p class="footer-text">&copy2022. All Rights Reserved | Designed By Tech Stars</p>
-      </footer>
-      
-      
-</body>
+		<!--form starts here-->
+
+		<div class="signup-container">
+			<form id="signup-form" class="signup-form">
+				<input
+					type="email"
+					name="email"
+					class="text-area"
+					placeholder="Email"
+					required
+				/>
+				<input
+					type="text"
+					name="username"
+					class="text-area"
+					placeholder="Username"
+					required
+				/>
+				<input
+					type="tel"
+					class="text-area"
+					name="tel"
+					placeholder="Phone Number"
+					required
+				/>
+				<input
+					type="password"
+					name="password"
+					class="text-area"
+					placeholder="Password"
+					required
+				/>
+
+				<input
+					type="password"
+					name="confirmPassword"
+					class="text-area"
+					placeholder="Confirm Password"
+					required
+				/>
+
+				<!-- Error Message -->
+				<small></small>
+				<button type="submit" id="createAccount">Create Account</button>
+			</form>
+		</div>
+
+		<!--form ends here-->
+
+		<footer id="sign-up-footer">
+			<p class="footer-text">Privacy Policy | Terms of Use</p>
+			<p class="footer-text">
+				&copy2022. All Rights Reserved | Designed By Tech Stars
+			</p>
+		</footer>
+
+		<script type="module" src="/js/signup.js"></script>
+	</body>
 </html>

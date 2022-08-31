@@ -93,6 +93,7 @@ header {
   font-size: 20px;
   text-align: center;
   color: #ED4D02;
+  margin-bottom: 40px;
 }
 
 form{
@@ -129,11 +130,11 @@ input::placeholder{
   color: #000000;
 }
 
+
 /* styling for error message */
-#error-message{
-  color: red;
-  font-size: 20px;
-  visibility: hidden;
+small{
+  color: #f00;
+  font-size: small;
 }
 
 
@@ -182,6 +183,8 @@ footer{
   line-height: 2rem;
   font-weight: bold;
 }
+
+
 
 /* RESPONSIVE DESIGN */
 /* Working on the mobile responsiveness screen 940 and below */

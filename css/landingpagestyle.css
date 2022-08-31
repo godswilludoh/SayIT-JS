@@ -1,11 +1,11 @@
 /*for the font importing from google*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -27,7 +27,7 @@ nav {
 .logoLogoHeading {
   display: flex;
   margin-left: 75px;
-  color: #6E6660
+  color: #6e6660;
 }
 
 .IT {
@@ -56,7 +56,7 @@ nav {
 
 nav .navLinkWrapper li a {
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px;
   font-weight: 700;
   text-decoration: none;
@@ -64,7 +64,7 @@ nav .navLinkWrapper li a {
 }
 
 nav ul li a:hover,
-nav ul li a.active {
+nav ul li a#active {
   background-color: #ed4d02;
   color: #ffff;
 }
@@ -85,90 +85,88 @@ nav .menu_button i {
 
 /* fOR THE IMAGE ON THE LANDING PAGE */
 
-.hero-image{
+.hero-image {
   padding: 5rem;
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/Images/dashboardImage.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/Images/dashboardImage.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 744px;
-  transition: 0.3s ease; 
+  transition: 0.3s ease;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-.hero-text{
+.hero-text {
   margin: 4rem auto 0;
   color: #fff;
   text-align: center;
 }
 
-.hero-text h1{
+.hero-text h1 {
   font-size: 40px;
   font-weight: 800;
   padding: 4rem;
 }
 
-.hero-text p{
+.hero-text p {
   font-size: 20px;
   font-weight: 500;
   line-height: 2rem;
   padding-bottom: 4rem;
 }
 
-.hero-btn{
-  padding: .8rem 1.2rem;
+.hero-btn {
+  padding: 0.8rem 1.2rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  color: #ED4D02;
-  background: #FFFFFF;
-  border: 2px solid #ED4D02;
+  color: #ed4d02;
+  background: #ffffff;
+  border: 2px solid #ed4d02;
   width: 50%;
   height: 100px;
   border-radius: 7.5px;
 }
 
-.hero-btn:hover{
- background:#ED4D02;
- color: #FFFFFF;
+.hero-btn:hover {
+  background: #ed4d02;
+  color: #ffffff;
 }
 /* WHAT WE DO SECTION CSS STARTS HERE */
-.whatWedo{
+.whatWedo {
   margin-top: 100px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
-.whatWeDoHeading{
+.whatWeDoHeading {
   text-align: center;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ed4d02;
   margin-bottom: 20px;
 }
 
-.whatWedo .whatWeDoParagraph{
+.whatWedo .whatWeDoParagraph {
   text-align: center;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 17px;
-  line-height:1.8rem;
+  line-height: 1.8rem;
   padding: 10px;
-
 }
 
-
-.whatWedoButton{
+.whatWedoButton {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.whatWedoButton .btn{
+.whatWedoButton .btn {
   text-decoration: none;
   padding: 15px;
   color: #ed4d02;
@@ -177,30 +175,28 @@ nav .menu_button i {
   font-weight: 700;
 }
 
-.whatWedoButton .btn:hover{
+.whatWedoButton .btn:hover {
   background-color: #ed4d02;
   color: #ffff;
 }
 
-.whatWedoButton .btn.active{
+.whatWedoButton .btn.active {
   background-color: #ed4d02;
   color: #ffff;
 }
 /* WHAT WE DO SECTION CSS ENDS HERE */
 /* --------------------------------- */
 
-
 /* MEDIA QUERY FOR WHAT WE DO STARts HERE  */
 @media (max-width: 940px) {
-  .whatWedoButton{
+  .whatWedoButton {
     margin-top: 40px;
     display: flex;
     justify-content: center;
     gap: 10px;
   }
 
-
-  .whatWedoButton .btn{
+  .whatWedoButton .btn {
     text-decoration: none;
     padding: 10px;
     color: #ed4d02;
@@ -208,11 +204,10 @@ nav .menu_button i {
     border-radius: 10px;
     font-weight: 400;
   }
- 
 }
 
-@media (max-width: 500px){
-  .whatWedoButton .btn{
+@media (max-width: 500px) {
+  .whatWedoButton .btn {
     text-decoration: none;
     padding: 10px;
     color: #ed4d02;
@@ -220,18 +215,17 @@ nav .menu_button i {
     border-radius: 10px;
     font-size: 14px;
   }
-
 }
 
-@media (max-width: 800px){
-  .whatWedoButton{
+@media (max-width: 800px) {
+  .whatWedoButton {
     margin-top: 40px;
     display: flex;
     justify-content: center;
     gap: 10px;
   }
 
-  .whatWedoButton .btn{
+  .whatWedoButton .btn {
     text-decoration: none;
     padding: 5px;
     color: #ed4d02;
@@ -239,71 +233,77 @@ nav .menu_button i {
     border-radius: 10px;
     font-weight: 500;
   }
-
-
 }
 /* MEDIA QUERY FOR WHAT WE DO ENDS HERE  */
 
-
-
 /* FREquenTLY ASKED QUESTION CSS STARTS HERE */
-.frequentlyAskedQuestion{
-  margin-top: 200px;
-  max-width: 1000px;
+
+.frequentlyAskedQuestion {
+  margin-top: 80px;
+  min-height: 50vh;
+}
+
+.frequentlyAskedQtnHeading {
+  font-size: 25px;
+  font-weight: 800;
+  color: #ed4d02;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.containerHousingAccordion {
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.frequentlyAskedQtnHeading{
-  color: #ed4d02;
-  text-align: center;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #1017ac14;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  font-size: 17px;
   font-weight: 700;
-  margin-bottom: 50px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
-.overallCardContainer{
-  display: flex;
-  gap: 30px;
-  margin-bottom: 100px;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
 }
 
-.cardContainer{
-  background: #facab4;
-  padding: 20px;
-  border-bottom-right-radius: 50px;
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
 
-.cardTitles{
-  text-align: start;
-  padding: 15px;
-  color: #ffffff;
-}
-
-.cardparagraphs{
+.panel p{
   text-align: justify;
+  padding: 15px;
 }
 
-.diffcardContainer{
-  background: #d4d2d0;
-  padding: 20px;
-  border-bottom-right-radius: 50px;
+.accordion:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 /* FREQUENTLY ASKED QUESTION CSS ENDS HERE */
-
-/* ---------------------------------------------- */
-/* MEDIA QUERY FOR FREQUENTLY ASKED QUESTION CSS STARts HERE  */
-@media (max-width: 940px) {
-  .overallCardContainer{
-    display: block;
-  }
-
-  .cardContainer,
-  .diffcardContainer{
-    margin-bottom: 25px;
-  }
-}
-/* MEDIA QUERY FOR FREQUENTLY ASKED QUESTION CSS ENDS HERE  */
-
 
 
 
@@ -315,9 +315,9 @@ nav .menu_button i {
     margin-left: 15px;
   }
 
-  nav .menu_button{
+  nav .menu_button {
     margin-top: 20px;
-    margin-right: 20px ;
+    margin-right: 20px;
   }
 
   nav .menu_button i {
@@ -351,45 +351,41 @@ nav .menu_button i {
   }
 
   nav .navLinkWrapper li a.active,
-  nav .navLinkWrapper li a:hover{
+  nav .navLinkWrapper li a:hover {
     background: none;
     color: #ed4d02;
   }
-
-
 }
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */
 
-
-
-/* HOW IT WORKS SECTION */
-.whyUs{
-  background:#F0F0EF;
-  min-height: 100vh;
-  padding: 20px;
+/* WHY US SECTION */
+#whyUs {
+  margin-top: 50px;
+  background: #f0f0ef;
+  min-height: 80vh;
+  padding: 5px 0 20px 0;
 }
 
-#worksText{
-  font-size:25px;
+#worksText {
+  font-size: 25px;
   font-weight: 800;
-  color: #ED4D02;
+  color: #ed4d02;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 80px;
 }
 
-#flexContainerWorks{
-  display:flex;
+#flexContainerWorks {
+  display: flex;
   margin: 10px 10px;
   padding: 50px 40px;
   justify-items: flex-end;
   gap: 10rem;
 }
 
-
-.image{
+.image {
   flex: 1;
-  background-image: url("/Images/manImage.png");
+  background-image: url("/Images/Amplifyyourvoice.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -399,87 +395,156 @@ nav .menu_button i {
   margin-left: 50px;
 }
 
-.imageContainer{
+.imageContainer {
   display: flex;
   gap: 50px;
 }
 
-.gridContainer{
+.gridContainer {
   flex: 1;
-  width: calc(100% - 300px );
+  width: calc(100% - 300px);
   padding: 20px;
 }
 
-
-
-.goalSection{
+.goalSection {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-.contentTitle{
+.contentTitle {
   font-size: 18px;
   font-weight: 700;
   padding-bottom: 10px;
 }
 
-.contentParagraph{
-  line-height: 1.5rem;
-  font-size: 14px;
-  text-align: justify;
+.contentParagraph {
+  line-height: 2rem;
+  font-size: 17px;
+  font-weight:600;
+  text-align:left;
+  margin-bottom: 10px;
+}
+
+/* WHY US SECTION ENDS HERE */
+
+
+/* HOW IT WORKS SECTION STARTS HERE */
+
+.howITWorksHeading{
+  font-size: 25px;
+  font-weight: 800;
+  color: #ed4d02;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+
+}
+
+.howITWOrks{
+  margin-top: 70px;
+  background: #f0f0ef;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 
-/* MEDia QUERY FOR HOW IT WORKS SECTION */
-@media (max-width: 940px){
-  #flexContainerWorks{
-    display:block;
+.imageContainerHowItWork{
+  display: flex;
+  gap: 20px;
+}
+
+.imageForMan{
+  flex: 2;
+  background-image: url("/Images/manImage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.3s ease;
+  /* height: 100vh;
+  width: 100%; */
+  margin-bottom: 50px;
+
+}
+
+.stepbyStepApproachContainer{
+  flex: 1;
+  width: calc(100% - 300px);
+  padding: 20px;
+  margin: 15px;
+
+}
+
+.stepBystepHeading{
+  text-align: center;
+}
+
+ .listContainer{
+  padding: 20px;
+
+}
+
+.listContainer li{
+  list-style: none;
+  padding: 20px;
+  background: #ed4d02;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* MEDIA QUERY FOR HOW IT WORKS */
+@media (max-width: 940px) {
+  .imageContainerHowItWork {
+    display: block;
   }
 
-  .image{
-   display: none;
+  .imageForMan {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+/* MEDia QUERY FOR HOW IT WORKS SECTION */
+@media (max-width: 940px) {
+  #flexContainerWorks {
+    display: block;
+  }
+
+  .image {
+    display: none;
   }
 }
 /* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
-footer{
-  background-color: #F6A883;
+footer {
+  background-color: #f6a883;
 }
 
-.footer_section{
+.footer_section {
   padding: 50px;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
 
-.logoHeading{
-  color: #6E6660;
+.logoHeading {
+  color: #6e6660;
   font-size: 36px;
 }
 
-
-ul{
+ul {
   font-size: 16px;
   font-weight: 700;
 }
 
-.footerLinkDocs{
+.footerLinkDocs {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -492,16 +557,16 @@ ul{
   list-style: none;
 }
 
-.footerLinkDocs li a{
+.footerLinkDocs li a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.footerLinkDocs li a:hover{
- color: #6E6660;
+.footerLinkDocs li a:hover {
+  color: #6e6660;
 }
 
-.copyright{
+.copyright {
   border-top: 2px solid #444444;
   margin: 0 70px;
   color: #444444;

@@ -1,10 +1,10 @@
 const form = document.getElementById("form");
-const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const phoneNumber = document.getElementById("phone-number");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -23,38 +23,24 @@ form.addEventListener("submit", (e) => {
 // declaring the function that will validate the form
 function checkInputs() {
     // get the values from the inputs
-    const nameValue = fullName.value.trim()
     const emailValue = email.value.trim()
     const phoneNumberValue = phoneNumber.value.trim()
     const usernameValue = username.value.trim()
     const passwordValue = password.value.trim()
     const confirmPasswordValue = confirmPassword.value.trim()
 
-    // conditional statement for the Name input
-    if(nameValue === "") {
-        // show error and add error class
-
-        setErrorFor(fullName, "Pls, enter your full name ")
-
-    }else{
-        // add success class
-        setSuccessFor(fullName)
-
-        
-    }
-
     // conditional statement for the Email input
+   
     if(emailValue === "") {
         // show error and add error class
 
         setErrorFor(email, "Pls, enter your email address ")
 
-    }else if(!isEmail(emailValue)) {
+    }else if(isEmail(emailValue)) {
+
         setErrorFor(email, "Invalid email")
     }else{
-        setSuccessFor(email)
-
-       
+        setSuccessFor(email)  
     }
 
     // conditional statement for the Phone Number input
@@ -105,7 +91,6 @@ function checkInputs() {
     }else if(isPasswordConfirm(passwordValue, confirmPasswordValue)) {
         setErrorFor(confirmPassword, "Confirm password does not match with password")
 
-        return false
     }else{
         setSuccessFor(confirmPassword)
 
@@ -136,7 +121,7 @@ function setSuccessFor(input) {
 // declaring the function that validate Email
 function isEmail(email) {
 
-    return(/^[a-zA-Z0-9.!#$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+    return ! /^[a-zA-Z0-9.!#$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)
 
 }
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SayIT Website</title>
-    <link rel="stylesheet" href="/css/registeredReport.css" />
+    <link rel="stylesheet" href="/css/makeReport.css" />
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script
       src="https://kit.fontawesome.com/ec08909fa5.js"
@@ -23,7 +23,7 @@
 
         <ul class="sidebar-lists">
           <li class="sidebar-items">
-            <a href="#">
+            <a href="/pages/registeredReport.html">
               <div class="sidebar-icons">
                   <div>
                     <box-icon type='solid' name='dashboard'></box-icon>
@@ -36,7 +36,7 @@
           </li>
            
           <li class="sidebar-items">
-            <a href="/pages/makeReport.html">
+            <a href="#">
               <div class="sidebar-icons">
                 <div>
                   <box-icon name='message-square-edit'></box-icon>
@@ -107,10 +107,10 @@
                 </li>
               </ul>
             </div>
-          </li>
+        </li>
         </ul>
 
-        <button class="btn"> 
+        <button class="btn-logout"> 
           <div class="sidebar-icons">
             <div>
               <box-icon name='log-out'></box-icon></i> 
@@ -125,7 +125,7 @@
       <section class="dashboard-interface">
         <div class="top">
           <div class="info-display">
-            <p>Dashboard</p>
+            <p>Make Report</p>
           </div>
           <div class="time">
             <p class="time-one">MM : HH</p>
@@ -135,78 +135,70 @@
         <div class="dashboard-container">
           <h2>👋 Welcome undefined!</h2>
 
-          <div class="user-table">
-            <div class="report-table">
-              <div class="report-text">
-                <p>My Reports</p>
-              </div>             
-              <div class="report-id">
-                <input type="text" placeholder="Enter Report ID"/>
-              </div>
-            </div>
-        </div>       
-        
-      </div>
-     </main>
-            <table>
-              <tr>
-                <th>S/N</th>
-                <th>Date reported</th>
-                <th>Sector</th>
-                <th>Anonymous</th>
-                <th>Attachment</th>
-                <th>Status</th>                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>            
+          <div class="report-interface">
+            <p class="report-heading">Report Form</p>
+            <form class="report-form">
+                <div class="form-group">
+                    <label for="sector">Sector</label><br>
+                    <select name="sector" required> 
+                        <option value="finance">Finance</option>
+                        <option value="education" selected>Education</option>
+                        <option value="sports">Sports</option>
+                        <option value="health">Health</option>
+                        <option value="energy">Energy</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="oil and gas">Oil and gas</option>
+                        <option value="banking">Banking</option>
+                        <option value="technology">Technology></option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="others">Others</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="report-org">Which company, organization or individual is this about?</label>
+                    <input type="text" id="report-org" name="report-org"/>
+                </div>
+
+                  <div class="form-group">
+                    <label for="affiliation">Are you affiliated to the above selected?</label>
+                    <select name="affiliation" required>
+                      <option value="yes">Yes</option>
+                      <option value="no" selected>No</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="report-info">What do you want to report?</label>
+                    <textarea id="report-info" name="report-info" required></textarea>
+                  </div>
+
+                  <div class="form-group report-anon">
+                    <div class="anon-select">
+                        <label for="anonymous">Do you wish to be Anonymous?</label>
+                        <select name="anonymous" required>
+                          <option value="yes">Yes</option>
+                          <option value="no" selected>No</option>
+                        </select>
+                    </div>
+                    <div class="upload">
+                        <label for="upload">Upload document</label>
+                        <input type="file" id="upload" name="upload" required/>
+                        <p>Docx, Image, Audio and Videos</p>
+                    </div>
+                  </div>
+
+                  <div class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">I affirm that the information provided is valid</label>
+                  </div>    
+                  
+                  <button class="btn-form">SUBMIT</button>    
+            </form>
           </div>
+
+
         </div>
       </section>
     </div>

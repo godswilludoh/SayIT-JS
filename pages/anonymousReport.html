@@ -34,7 +34,7 @@
         <li><a href="/index.html">HOME</a></li>
         <li><a href="#">WHY US</a></li>
         <li><a href="/pages/anonymousReport.html">REPORT</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="/pages/blog-page.html">BLOG</a></li>
         <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
       </ul>
     </nav>
@@ -44,13 +44,14 @@
      <main>
       <div class="container">
         <form>
-          <h2 class="welcome">Welcome</h2>
+          <h2 class="welcome">Report Form</h2>
           <div class="user-details">
             <div class="form-box">
-              <label for="sector">Sector</label><br>
+              <label for="sector">Which sector of the economy do you which to report?</label><br>
               <select name="sector" id="form-group" required> 
+                <option value="select"selected>Select</option>
                 <option value="finance">Finance</option>
-                <option value="education" selected>Education</option>
+                <option value="education">Education</option>
                 <option value="sports">Sports</option>
                 <option value="health">Health</option>
                 <option value="energy">Energy</option>
@@ -66,7 +67,7 @@
 
             <div class="form-box">
               <label for="report-org">Which company, organization or individual is this about?</label>
-              <input type="text" id="report-org" name="report-org"/>
+              <input class="form-input" type="text" id="report-org" name="report-org"/>
             </div>
 
             <div class="form-box">
@@ -87,6 +88,11 @@
               <input type="file" id="upload" name="upload" required/>
               <p>Docx, Image, Audio and Videos</p>
             </div>
+
+            <div class="form-box">
+              <input type="checkbox" name="checkbox">
+              <label for="checkbox">I affirm that the information provided is valid</label>
+            </div>    
 
             <button class="btn">SUBMIT</button>                
              

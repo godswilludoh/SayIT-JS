@@ -32,7 +32,7 @@
           <li><a href="../index.html">HOME</a></li>
           <li><a href="#">WHY US</a></li>
           <li><a href="../pages/anonymousReport.html">REPORT</a></li>
-          <li><a href="#">BLOG</a></li>
+          <li><a href="/pages/blog-page.html">BLOG</a></li>
           <li><a href="./loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
         </ul>
     </nav>
@@ -46,23 +46,29 @@
 
         <!-- Form Section -->
         <div class="login_form">
-            <form action="">
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="text" placeholder=" &#xf007; Administrator Username" >
-                <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="password" placeholder=" &#xf023; Password">
-                <input type="button" value="LOGIN" id="button">
+            <form action="" id="form">
+
+                <!-- Error Message -->
+                <small id="error-message">Error Message</small>
+
+                <!-- Username Input Section -->
+                <div class="input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="username" placeholder="Administrator name">                    
+                </div>
+
+                <!-- Password Input Section -->
+                <div class="input ">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password">
+                   
+                </div>
+
+                <!-- Login Button Section -->
+                <button type="submit" id="button">LOGIN</button>
+
             </form>
 
-            <!-- Additional Info Section -->
-            <!-- <div class="other_links">
-                <p id="sign-up">
-                    Don't have an Account? 
-                    <a href="/pages/sign-up-page.html">SIGN UP</a>
-                </p>
-                <div class="admin-login">
-                    <div id="admin-login"><a href="#">Admin Login</a></div> <div id="admin-login"><a href="./agentslogin.html">Agents Login</a></div> 
-                </div>
-               
-            </div> -->
         </div>
     </header>
 
@@ -76,5 +82,8 @@
         </p>
     </footer>
     
+    <script src="/js/login.js"></script>
+    
 </body>
+</html>
 

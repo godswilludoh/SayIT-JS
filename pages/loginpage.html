@@ -7,6 +7,7 @@
     <title>SayIT Login Page</title>
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="s" href="">
 </head>
 <body>
     <!-- Navbar Section -->
@@ -32,37 +33,35 @@
           <li><a href="../index.html">HOME</a></li>
           <li><a href="#">WHY US</a></li>
           <li><a href="../pages/anonymousReport.html">REPORT</a></li>
-          <li><a href="#">BLOG</a></li>
+          <li><a href="/pages/blog-page.html">BLOG</a></li>
           <li><a href="./loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
         </ul>
     </nav>
 
     <header>
-
-        <!-- Image Section -->
-        <div class="lock_image">
-            <img src="/Images/2913133-removebg-preview 1.png" alt="">
-        </div> 
-
         <!-- Form Section -->
         <div class="login_form">
-            <form action="">
+            <p class="login-heading">ENTER YOUR  DETAILS</p>
+            
+            <form action="" id="form">
+                <!-- Error Message -->
+                <small id="error-message">Error Message</small>
 
                 <!-- Username Input Section -->
                 <div class="input">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" id="username" placeholder="Username">                    
                 </div>
 
                 <!-- Password Input Section -->
-                <div class="input">
+                <div class="input ">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="password" placeholder="Password">
+                   
                 </div>
 
                 <!-- Login Button Section -->
                 <button type="submit" id="button">LOGIN</button>
-
             </form>
 
             <!-- Additional Info Section -->
@@ -79,7 +78,7 @@
         </div>
     </header>
 
-    <!-- Links and copyright Section -->
+    <!-- Link and copyright Section -->
     <footer>
         <p>
             <a href="#">Privacy Policy</a> | <a href="#">Terms Of Use</a>
@@ -88,6 +87,9 @@
             &copy2022. All Rights Reserved | Designed By TechStars
         </p>
     </footer>
+
+    <script src="/js/login.js"></script>
     
 </body>
+</html>
 

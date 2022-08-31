@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,7 +37,7 @@
         <li><a href="./index.html">HOME</a></li>
         <li><a href="#">WHY US</a></li>
         <li><a href="./pages/anonymousReport.html">REPORT</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="./pages/blog-page.html">BLOG</a></li>
         <li>
           <a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a>
         </li>
@@ -45,7 +45,19 @@
     </nav>
 
     <!-- Next  Section (section housing the landing page photo) -->
-    <section class="photoPeople"></section>
+    
+    
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Let’s build a society that is crime free!</h1>
+          <p>Ever wonder how the community will be if there’s little or no crimes recorded. <br>
+            Evil thrives when good people keep quiet and do nothing.<br> Be the change you want to see in the world.</p>
+            <a href="#" class="hero-btn">GET STARTED</a>
+          </div>
+      </div>
+      
+     
+    
 
     <!-- What We Do Section -->
     <section class="whatWedo">
@@ -54,15 +66,17 @@
       <p class="whatWeDoParagraph">
         SayIT Whistleblowing Application is a web based application that helps
         increase transparency and accountability in the society.The platform
-        provides a means for users to report cases both anonymously or by
-        revealing their identities.
+        provides a means for users to report cases both anonymously or creating an account
+        so as to track their report status.
         <br />The reports made are passed to agents that partner with the
         platform.
       </p>
 
       <div class="whatWedoButton">
-        <a href="/pages/sign-up-page.html" class="btn">GET STARTED</a>
-        <a href="/pages/anonymousReport.html" class="btn" class="active">REPORT ANONYMOUSLY</a>
+        <a href="/pages/sign-up-page.html" class="btn">Create Account</a>
+        <a href="/pages/anonymousReport.html" class="btn" class="active"
+          >REPORT ANONYMOUSLY</a
+        >
       </div>
     </section>
 
@@ -112,15 +126,15 @@
     </section>
 
     <!-- HOW IT WORKS SECTION STARTS -->
-    <section class="howItWorks">
-      <h2 id="worksText">HOW IT WORKS</h2>
-      
-      <div id="flexContainerWorks">
-        <p class="WhistleblowImage">
-          <!-- <img src="/Images/whistleblowing.png" alt="WhistleblowImage"> -->
-        </p>
+    <section class="whyUs">
+      <h2 id="worksText">WHY US</h2>
 
-        <div id="gridContainer">
+      <div class="imageContainer">
+        <div class="image">
+          <!-- image has been rendered in the .css file -->
+        </div>
+
+        <div class="gridContainer">
           <section class="goalSection">
             <div class="loGo">
               <img src="/Images/goal.png" alt="logo here" class="how_img" />
@@ -170,7 +184,6 @@
               </p>
             </div>
           </section>
-
         </div>
       </div>
     </section>

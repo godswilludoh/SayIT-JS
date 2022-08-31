@@ -85,23 +85,32 @@ header {
   flex-direction: row-reverse;
   justify-content: space-around; 
   align-items: center;
-  padding:10rem 0;
+  padding:15rem 0 2rem 0;
+}
+
+.login-heading{
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  color: #ED4D02;
 }
 
 form{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 40px;
 }
 
 .input{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
-  border: 1px solid  #ED4D02B2;
+  height: 60px;
+  border: 1px solid  #ed4d02;
   outline:none;
-  font-family: 'Font Awesome 5 Free'; 
-  font-weight: 700;
+  display: inline;
+  margin: 0;
 }
 
 input{
@@ -110,15 +119,38 @@ input{
   outline:none;
 }
 
-button{
-  border-radius: 2rem;
-  padding: 0.8rem;
-  background-color: #ED4D02B2;
-  font-weight: bold;
-  color: white;
-  border: 1px solid  #ED4D02B2;
+input[type="text"], input[type="password"]{
+  padding-left: 1rem;
+  font-size:17px;
+  font-weight: 700;
 }
 
+input::placeholder{
+  color: #000000;
+}
+
+/* styling for error message */
+#error-message{
+  color: red;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+
+/* styling for the submit button */
+#button{
+  border-radius: 2rem;
+  height: 60px;
+  border: 1px solid  #ed4d02;
+  background-color: #ed4d02;
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+/* styling for the additional links */
 a{
   text-decoration: none;
   color: inherit;
@@ -137,16 +169,17 @@ a{
 
 .admin-login{
   display: flex;
-  gap: 20px;
+  gap: 4rem;
   justify-content:center;
   align-items: center;
-
+  padding: 40px 0 20px 0;
 }
 
+/* Styling for the footer section */
 footer{
   text-align: center;
   color: inherit;
-  padding: 2rem 0;
+  padding: 2px 0;
   line-height: 2rem;
   font-weight: bold;
 }
@@ -210,11 +243,14 @@ footer{
   }
 
   .input{
+    border-radius: 1rem;
+    padding: 0.8rem;
     width: 20rem;
+    border: 1px solid  #ed4d02;
   }
 
   input{
-    width: 10rem;
+    width: 15rem;
   }
 
 }

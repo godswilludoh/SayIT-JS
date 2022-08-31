@@ -94,40 +94,40 @@ form {
   gap: 2rem;
 }
 
-input {
+.input{
   border-radius: 2rem;
   padding: 0.8rem;
   width: 25rem;
-  border: 1px solid #ed4d02;
-  outline: none;
+  border: 1px solid  #ed4d02;
+  outline:none;
 }
 
-#button {
+input{
+  border: 0;
+  width: 20rem;
+  outline:none;
+}
+
+/* styling for error message */
+#error-message{
+  color: red;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+/* styling for the submit button */
+#button{
+  border-radius: 2rem;
+  border: 1px solid  #ed4d02;
   background-color: #ed4d02;
   font-weight: bold;
   color: white;
+  padding: 0.8rem;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-#admin-login {
-  color: darkgray;
-}
-.other_links {
-  text-align: center;
-  padding: 10px 0;
-  line-height: 2rem;
-  font-weight: bold;
-}
-
-.admin-login {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 footer {
@@ -196,10 +196,14 @@ footer {
     padding: 1rem;
   }
 
-  input {
+  .input{
     border-radius: 2rem;
     padding: 0.8rem;
     width: 20rem;
-    border: 1px solid #ed4d02;
+    border: 1px solid  #ed4d02;
+  }
+
+  input{
+    width: 15rem;
   }
 }

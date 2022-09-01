@@ -27,6 +27,7 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
   border-right: 0.5px solid #b4b1af;
+  
 }
 
 .sidebar-container .logo {
@@ -109,10 +110,16 @@ button {
   cursor: pointer;
 }
 
+.btn-logout {
+  position:absolute;
+  bottom: 15%;
+}
+
 /* ADENIGBA CSS STARTS HERE */
 
 .usersEditSection{
     width: 700px;
+    margin: 0 auto;
 }
 
 
@@ -133,20 +140,21 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 10px 0;
+  margin: 10px auto;
   margin-bottom: 20px;
 }
 
 
 .formGroup Input {
   border: none;
-  height: 45px;
+  height: 55px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
   padding: 15px;
   font-size: 15px;
-  background: #b4b1af;
+  outline:none;
+  background: #B4B1AF;;
   opacity: 90%;
 }
 
@@ -172,19 +180,24 @@ button {
   text-align: center;
 }
 
+button{
+  height: 50px;
+  font-weight: 700;
+}
+
 .butn {
-  padding: 10px;
+  padding: 15px;
   color: #ed4d02;
   cursor: pointer;
   width: 195px;
   border: 1px solid #b4b1af;
   font-size: 14px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .active {
-  background: rgba(237, 77, 2, 0.7);
+  background:  #ED4D02;
   color: #fff;
 }
 

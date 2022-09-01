@@ -109,7 +109,7 @@ nav .menu_button i {
     transition: all 0.3s ease;
   }
 
-  /* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
+  /* For the Id integration with the hamburger, remember we change left from 0 to -100% in the nav ul*/
   #click:checked ~ .navLinkWrapper {
     left: 0%;
   }
@@ -142,6 +142,13 @@ nav .menu_button i {
   justify-content: center;
   align-items: center; 
   text-align: center;
+}
+
+.signup-heading{
+  color: #ED4D02;
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 3rem;
 }
 
 .text-area {
@@ -208,7 +215,7 @@ input::placeholder{
 
 #createAccount{
   padding: 12px 30px;
-  width: 50%;
+  width: 95%;
   height: 60px;
   font-style: normal;
   font-weight: 700;
@@ -220,6 +227,18 @@ input::placeholder{
   border-radius: 2rem;
   border: none;
   cursor: pointer;
+}
+
+.login{
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.login a{
+  text-decoration: none;
+  color: #000000;
 }
 
 .signup-container a {
@@ -264,55 +283,56 @@ small{
 @media (min-width: 769px) and (max-width: 1200px){
   .text-area {
     padding: 12px;
-    width: 70%;
-    margin-bottom: 40px;    
+    width: 80%;
   }
 
   #createAccount{
-    padding: 12px 30px;
-    width: 70%;
- 
+    padding: 12px;
+    width: 80%;
   }
 
-  .side {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    width: 50%;
-    padding-left: 50px;
+  .signup-heading{
+    text-align: center;
   }
+
 }
 
 /* Tablet */
 @media (min-width: 501px) and (max-width: 768px){
   .text-area {
     padding: 12px;
-    width: 77%;
-    margin-bottom: 40px;    
+    width: 80%;
+    margin: 0 30px;
   }
 
   #createAccount{
-    padding: 12px 30px;
-    width: 77%; 
+    padding: 12px;
+    width: 80%;
+    margin: 0 auto;
   }
-  .side {
-    display: none;
+
+  .signup-heading{
+    text-align: center;
   }
+
 }
 
 /* Smartphones */
 @media(min-width: 0px) and (max-width:500px){
+ 
   .text-area {
     padding: 12px;
-    width: 77%;
-    margin-bottom: 40px;    
+    width: 80%;
+    margin: 0 30px;
   }
 
   #createAccount{
-    padding: 12px 30px;
-    width: 77%; 
+    padding: 12px;
+    width: 80%;
+    margin: 0 auto;
   }
-  .side {
-    display: none;
+
+  .signup-heading{
+    text-align: center;
   }
 }

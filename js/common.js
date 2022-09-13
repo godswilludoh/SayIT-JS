@@ -10,6 +10,7 @@
 // 	localStorage.removeItem(key);
 // }
 
+//Working on time
 setInterval(() => {
 	const time = document.querySelector('.time-one');
 	let date = new Date();
@@ -31,6 +32,7 @@ setInterval(() => {
 	time.textContent = hours + ':' + minutes;
 }, 1000);
 
+//working on date
 const date = document.querySelector('.time-two');
 let today = new Date().getDate();
 let month = new Date().getMonth() + 1;

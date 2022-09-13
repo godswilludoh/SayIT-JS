@@ -80,74 +80,11 @@ nav .menu_button i {
   display: none;
 }
 
-header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 15rem 0 7rem 0;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.input{
-  border-radius: 2rem;
-  padding: 0.8rem;
-  width: 25rem;
-  border: 1px solid  #ed4d02;
-  outline:none;
-}
-
-input{
-  border: 0;
-  width: 20rem;
-  outline:none;
-}
-
-input[type="text"], input[type="password"]{
-  padding-left: 1rem;
-  font-size:17px;
-  font-weight: 700;
-}
-
-input::placeholder{
-  color: #000000;
-}
-
 /* styling for error message */
-#error-message{
+#error-message {
   color: red;
   font-size: 20px;
   visibility: hidden;
-}
-
-/* styling for the submit button */
-#button{
-  border-radius: 2rem;
-  height: 60px;
-  border: 1px solid  #ed4d02;
-  background-color: #ed4d02;
-  font-weight: 700;
-  font-size: 17px;
-  color: white;
-  padding: 0.8rem;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-footer {
-  text-align: center;
-  color: inherit;
-  padding: 2rem 0;
-  line-height: 2rem;
-  font-weight: bold;
 }
 
 /* RESPONSIVE DESIGN */
@@ -192,30 +129,104 @@ footer {
     font-size: 20px;
     display: block;
   }
+}
 
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8rem;
-  }
+form {
+  margin-bottom: 200px;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-  }
+.overallContainer {
+  padding-top: 50px;
+  display: flex;
+  /* height: 100vh; */
+}
 
-  .input{
-    border-radius: 2rem;
-    padding: 0.8rem;
-    width: 20rem;
-    border: 1px solid  #ed4d02;
-  }
+.theLoginSide {
+  flex: 2;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #dc6b36;
+  min-height: 100vh;
+}
 
-  input{
-    width: 15rem;
-  }
+.innerContainer {
+  margin-top: 100px;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.theImageSide {
+  flex: 1;
+  /* background: #d9d9d9; */
+}
+
+.theImageSide img {
+  margin-top: 150px;
+  margin-right: 30px;
+  margin-left: 30px;
+  background: #d9d9d9;
+}
+
+.formGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  margin-bottom: 20px;
+}
+
+.formGroup Input {
+  border: 1px solid #fff;
+  height: 60px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px 10px 5px 50px;
+  font-size: 15px;
+  display: block;
+  outline: 0;
+  background: #dc6b36;
+}
+
+.formGroup Input::placeholder {
+  color: #fff;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  font-size: 20px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logInButton {
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  background: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ed4d02;
+  cursor: pointer;
+}
+
+.innerContainer .agentTitle {
+  text-align: center;
+  margin-bottom: 100px;
+  font-weight: 800;
 }

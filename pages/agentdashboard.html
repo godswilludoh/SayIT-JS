@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SayIT Website||Edit page</title>
-    <link rel="stylesheet" href="/css/editprofile.css" />
+    <title>SayIT Website || Agent Dasboard</title>
+    <link rel="stylesheet" href="/css/registeredReport.css" />
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script
       src="https://kit.fontawesome.com/ec08909fa5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/editprofile.js"></script>
   </head>
   <body>
     <div class="main-container">
       <section class="sidebar-container">
         <div class="logo">
-          <h2 class="heading"><img src="/Images/SAYIT.jpeg" alt="logo"/>Say<span class="it">IT</span></h2>
+          <h2 class="heading">
+            <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo"/></div>
+            <h1 class="heading">Say<span class="it">IT</span></h1>
         </div>
-        
+
         <ul class="sidebar-lists">
           <li class="sidebar-items">
-            <a href="/pages/registeredReport.html">
+            <a href="#">
               <div class="sidebar-icons">
                   <div>
                     <box-icon type='solid' name='dashboard'></box-icon>
@@ -83,9 +84,11 @@
                       <div>
                         <box-icon type='solid' name='edit'></box-icon>
                       </div>
-                      <div>
-                        Edit Profile
-                      </div>                    
+                      <a href="./editprofile.html">
+                        <div>
+                          Edit Profile
+                        </div>
+                      </a>                    
                     </div>                   
                   </a>
                 </li>
@@ -104,10 +107,10 @@
                 </li>
               </ul>
             </div>
-        </li>
+          </li>
         </ul>
 
-        <button class="btn btn-logout"> 
+        <button class="btn"> 
           <div class="sidebar-icons">
             <div>
               <box-icon name='log-out'></box-icon></i> 
@@ -119,66 +122,96 @@
         </button>
       </section>
 
-      <section class="usersEditSection">
-        <h1 class="editSectionTitle">
-            Edit Profile
-        </h1>
+      <section class="dashboard-interface">
+        <div class="top">
+          <div class="info-display">
+            <p>Dashboard</p>
+          </div>
+          <div class="time">
+            <p class="time-one"></p>
+            <p class="time-two"> 01 : 09 : 2022</p>
+          </div>
+        </div>
+        <div class="dashboard-container">
+          <h2>👋 Welcome Samuel❗ </h2>
+
+          <div class="user-table">
+            <div class="report-table">
+              <div class="report-text">
+                <p>My Reports</p>
+              </div>             
+              <div class="report-id">
+                <input type="text" placeholder="Enter Report ID"/>
+              </div>
+            </div>
+        </div>       
         
-        <!-- form section of the page -->
-        <section class="formSection">
-        <form>
-          <!-- FOR USERNAME -->
-          <h3 class="formTitle">User Name</h3>
-          <div class="formGroup">
-            <input type="text" placeholder="Please Input Your New Username" id="name" required />
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-                ></path>
-              </svg>
-            </span>
+      </div>
+     </main>
+            <table>
+              <tr>
+                <th>S/N</th>
+                <th>Date reported</th>
+                <th>Sector</th>
+                <th>Anonymous</th>
+                <th>Attachment</th>
+                <th>Status</th>                
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>31/08/2022</td>
+                <td>Finance</td>
+                <td>Yes</td>
+                <td>Attachment 4</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>28/08/2022</td>
+                <td>Health</td>
+                <td>No</td>
+                <td>Attachment 3</td>
+                <td>Ongoing</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>01/07/2022</td>
+                <td>Oil and Gas</td>
+                <td>No</td>
+                <td>Attachment 2</td>
+                <td>Concluded</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>27/05/2022</td>
+                <td>Sport</td>
+                <td>No</td>
+                <td>Attachment 1</td>
+                <td>Concluded</td>
+              </tr>
+              <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> -->
+            </table>        
+            <a class="report-button" href="/pages/makeReport.html">Make New Report</a>    
           </div>
-
-          <!-- FOR EMAIL -->
-          <h3 class="formTitle">Email</h3>
-          <div class="formGroup">
-            <input type="email" placeholder="Please Enter Your Email" id="mail" required />
-          </div>
-
-          <!-- FOR PHONE NUMBER -->
-          <h3 class="formTitle">Change Phone Number</h3>
-          <div class="formGroup">
-            <input type="text" placeholder="Enter your new number" id="number" required/>
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-                ></path>
-              </svg>
-            </span>
-          </div>
-
-          <!-- FOR PASSWORD -->
-          <h3 class="formTitle">Account Password</h3>
-          <div class="formGroup">
-            <input type="password" placeholder="Please enter your account password" id="password" required />
-          </div>
-
-
-          <!-- FOR THE UPDATE PROFILE AND BACK TO DASHBOARD BUTTON -->
-          <div class="buttonContainer">
-            <button class="butn" onclick="submitUsers()">Update Profile</button>
-
-            <a href="/pages/registeredReport.html" class="butn active backToDashBoard">
-              Back to Dashboard
-            </a>
-          </div>
-        </form>
-        </section>       
+        </div>
       </section>
     </div>
+
+    <script src="/js/common.js"></script>
   </body>
 </html>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);"><path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z"></path></svg>

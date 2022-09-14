@@ -294,3 +294,132 @@ button{
     font-size: 16px;
     font-weight: 800;
   }
+
+
+  /* THE PROMPT MODAL */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #6e6660;
+  margin: 15% auto;
+  padding: 20px;
+  border: 10px solid #0000;
+  width: 40%; 
+  color: rgb(238, 244, 244);
+  box-shadow: 0px 4px 4px 0px #413b36;
+  border-radius: 20px 20px;
+  
+}
+
+
+/* The Close Button */
+.close {
+  color: #df0707d1;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* The notes in the popup */
+.ThanksSAYit {
+color: #444862a6;
+font-size: medium;
+margin-left: 30%;
+margin-top: 30px;
+}
+
+.your_Report{
+color: #ed4c02ac;
+font-size: xx-large;
+margin-left: 15%;
+}
+
+.agentID {
+  margin-left: 20%;
+  font-size: x-large;
+}
+
+.takeNote {
+color: #444862a6;
+font-size: small;
+margin-left: 30%;
+} 
+
+
+.returnHome{
+  padding: 5px;
+  margin-left: 35%;
+  border: 10px solid #0000;
+  background-color: #ed4c02b0;
+  color: #ffffff;
+  width: 150px;
+  box-shadow: 0px 4px 4px 0px #413b36;
+  border-radius: 10px 10px;
+}
+.returnHome:hover{
+  color: #44444473;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* MEDIA QUERY FOR SMART PHONES */
+@media (min-width: 370px) and (max-width: 700px) {
+  .modal{
+  display: none; 
+  position: fixed; 
+  z-index: 2; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  }
+  .modal-content{
+  margin-top: 50% ; 
+  padding: 10px;
+  width: 300px
+  
+  }
+  .ThanksSAYit{
+    font-size: small;
+    margin-left: 20%;
+  }
+  .your_Report{
+    font-size: large;
+  }
+  .agentID{
+    font-size: small;
+  }
+  .takeNote{
+    margin-left: 15%;
+    font-size: smaller;
+  }
+  .returnHome{
+    width: 75px;
+    margin-left: 30%;
+    padding: 1px;
+  }
+}
+/* MEDIA QUERY FOR TABLETS */
+ @media (min-width: 820px)and (max-width: 900px){ 
+  .modal-content{
+    width: 600px;
+    margin-top: 30%;
+  }
+}

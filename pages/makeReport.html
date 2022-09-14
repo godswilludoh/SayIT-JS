@@ -1,237 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SayIT Website</title>
-    <link rel="stylesheet" href="/css/makeReport.css" />
-    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-    <script
-      src="https://kit.fontawesome.com/ec08909fa5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="main-container">
-      <section class="sidebar-container">
-        <div class="logo">
-          <h2 class="heading">
-            <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo"/></div>
-            <h1 class="heading">Say<span class="it">IT</span></h1>
-        </div>
 
-        <ul class="sidebar-lists">
-          <li class="sidebar-items">
-            <a href="/pages/registeredReport.html">
-              <div class="sidebar-icons">
-                  <div>
-                    <box-icon type='solid' name='dashboard'></box-icon>
-                  </div>              
-                  <div>
-                   Dashboard
-                  </div>
-              </div>             
-            </a>
-          </li>
-           
-          <li class="sidebar-items">
-            <a href="#">
-              <div class="sidebar-icons">
-                <div>
-                  <box-icon name='message-square-edit'></box-icon>
-                </div>
-                <div>
-                  Make Report
-                </div>     
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SayIT Website</title>
+  <link rel="stylesheet" href="/css/makeReport.css" />
+  <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+  <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <section class="sidebar-container">
+      <div class="logo">
+        <h2 class="heading">
+          <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
+          <h1 class="heading">Say<span class="it">IT</span></h1>
+      </div>
+
+      <ul class="sidebar-lists">
+        <li class="sidebar-items">
+          <a href="/pages/registeredReport.html">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='dashboard'></box-icon>
               </div>
-            </a>
-          </li>
-
-
-          <li class="sidebar-items">
-            <a href="/pages/blog-page.html">
-              <div class="sidebar-icons">
-                <div>
-                  <box-icon type='solid' name='message-square-dots'></box-icon>
-                </div>
-                <div>
-                  Blog
-                </div>         
+              <div>
+                Dashboard
               </div>
-            </a>
-          </li>
+            </div>
+          </a>
+        </li>
 
-          <li class="sidebar-items">
-            <a href="#">
-              <div class="sidebar-icons">
-                <div>
-                  <box-icon type='solid' name='user'></box-icon>
-                </div>
+        <li class="sidebar-items">
+          <a href="#">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon name='message-square-edit'></box-icon>
+              </div>
+              <div>
+                Make Report
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+        <li class="sidebar-items">
+          <a href="/pages/blog-page.html">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='message-square-dots'></box-icon>
+              </div>
+              <div>
+                Blog
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="sidebar-items">
+          <a href="#">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='user'></box-icon>
+              </div>
               <div>
                 Profile
-              </div>       
+              </div>
               <div>
-                <box-icon name='chevron-down'></box-icon>    
-              </div>                  
-            </div>             
+                <box-icon name='chevron-down'></box-icon>
+              </div>
+            </div>
           </a>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">
-                    <div class="sidebar-icons">
-                      <div>
-                        <box-icon type='solid' name='edit'></box-icon>
-                      </div>
-                      <a href="./editprofile.html">
-                        <div>
-                          Edit Profile
-                        </div>
-                      </a>                    
-                    </div>                   
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="sidebar-icons">
-                      <div>
-                        <box-icon name='cog' type='solid' ></box-icon>
-                      </div>
-                      <div>
-                        Settings
-                      </div>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="sidebar-icons">
+                    <div>
+                      <box-icon type='solid' name='edit'></box-icon>
                     </div>
-                   
-                  </a>
-                </li>
-              </ul>
-            </div>
+                    <a href="./editprofile.html">
+                      <div>
+                        Edit Profile
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="sidebar-icons">
+                    <div>
+                      <box-icon name='cog' type='solid'></box-icon>
+                    </div>
+                    <div>
+                      Settings
+                    </div>
+                  </div>
+
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
-        </ul>
+      </ul>
 
-        <button class="btn-logout"> 
-          <div class="sidebar-icons">
-            <div>
-              <box-icon name='log-out'></box-icon></i> 
+      <button class="btn-logout">
+        <div class="sidebar-icons">
+          <div>
+            <box-icon name='log-out'></box-icon></i>
+          </div>
+          <div>
+            Logout
+          </div>
+        </div>
+      </button>
+    </section>
+
+    <section class="dashboard-interface">
+      <div class="top">
+        <div class="info-display">
+          <p>Make Report</p>
+        </div>
+        <div class="time">
+          <p class="time-one">MM : HH</p>
+          <p class="time-two">DD : MM : YYYY</p>
+        </div>
+      </div>
+      <div class="dashboard-container">
+        <h2>👋 Welcome Samuel❗</h2>
+
+        <div class="report-interface">
+          <p class="report-heading">Report Form</p>
+          <form class="report-form">
+            <div class="form-group">
+              <label for="sector">Which sector of the economy do you which to report?</label><br>
+              <select name="sector" required>
+                <option value="select" selected>Select Sector</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="sports">Sports</option>
+                <option value="health">Health</option>
+                <option value="energy">Energy</option>
+                <option value="transportation">Transportation</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="oil and gas">Oil and gas</option>
+                <option value="banking">Banking</option>
+                <option value="technology">Technology></option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
+              </select>
             </div>
-            <div>
-              Logout
-            </div>           
-          </div>
-        </button>
-      </section>
 
-      <section class="dashboard-interface">
-        <div class="top">
-          <div class="info-display">
-            <p>Make Report</p>
-          </div>
-          <div class="time">
-            <p class="time-one">MM : HH</p>
-            <p class="time-two">DD : MM : YYYY</p>
-          </div>
+            <div class="form-group">
+              <label for="agency">Kindly selected the agency you wish to report to</label><br>
+              <select name="agency" required>
+                <option value="select" selected>Select Agency</option>
+                <option value="frsc">Federal Road Safety Corps (FRSC)</option>
+                <option value="nps">Nigeria Prisons Service (NPS)</option>
+                <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
+                <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
+                <option value="nis">Nigeria Immigrations Service (NIS)</option>
+                <option value="nc">Nigeria Customs</option>
+                <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
+                <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="report-org">Which company, organization or individual is this about?</label>
+              <input class="form-input" type="text" id="report-org" name="report-org" />
+            </div>
+
+            <div class="form-group">
+              <label for="affiliation">Are you affiliated to the above selected?</label>
+              <select name="affiliation" required>
+                <option value="yes">Yes</option>
+                <option value="no" selected>No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="report-info">What do you want to report?</label>
+              <textarea id="report-info" name="report-info" required></textarea>
+            </div>
+
+            <div class="form-group report-anon">
+              <div class="anon-select">
+                <label for="anonymous">Do you wish to be Anonymous?</label>
+                <select name="anonymous" required>
+                  <option value="yes">Yes</option>
+                  <option value="no" selected>No</option>
+                </select>
+              </div>
+              <div class="upload">
+                <label for="upload">Upload document</label>
+                <input type="file" id="upload" name="upload" required />
+                <p>Docx, Image, Audio and Videos</p>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox">
+              <label for="checkbox">I affirm that the information provided is valid</label>
+            </div>
+
+            <button class="btn-form">SUBMIT</button>
+          </form>
         </div>
-        <div class="dashboard-container">
-          <h2>👋 Welcome Samuel❗</h2>
+      </div>
+    </section>
+  </div>
 
-          <div class="report-interface">
-            <p class="report-heading">Report Form</p>
-            <form class="report-form">
-                <div class="form-group">
-                    <label for="sector">Which sector of the economy do you which to report?</label><br>
-                    <select name="sector" required> 
-                        <option value="select" selected>Select Sector</option>
-                        <option value="finance">Finance</option>
-                        <option value="education">Education</option>
-                        <option value="sports">Sports</option>
-                        <option value="health">Health</option>
-                        <option value="energy">Energy</option>
-                        <option value="transportation">Transportation</option>
-                        <option value="agriculture">Agriculture</option>
-                        <option value="oil and gas">Oil and gas</option>
-                        <option value="banking">Banking</option>
-                        <option value="technology">Technology></option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="others">Others</option>
-                      </select>
-                </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-                <div class="form-group">
-                  <label for="agency">Kindly selected the agency you wish to report to</label><br>
-                  <select name="agency" required> 
-                    <option value="select" selected>Select Agency</option>
-                    <option value="frsc">Federal Road Safety Corps (FRSC)</option>
-                    <option value="nps">Nigeria Prisons Service (NPS)</option>
-                    <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
-                    <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
-                    <option value="nis">Nigeria Immigrations Service (NIS)</option>
-                    <option value="nc">Nigeria Customs</option>
-                    <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
-                    <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
-                    <option value="others">Others</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="report-org">Which company, organization or individual is this about?</label>
-                    <input class="form-input" type="text" id="report-org" name="report-org"/>
-                </div>
-
-                  <div class="form-group">
-                    <label for="affiliation">Are you affiliated to the above selected?</label>
-                    <select name="affiliation" required>
-                      <option value="yes">Yes</option>
-                      <option value="no" selected>No</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="report-info">What do you want to report?</label>
-                    <textarea id="report-info" name="report-info" required></textarea>
-                  </div>
-
-                  <div class="form-group report-anon">
-                    <div class="anon-select">
-                        <label for="anonymous">Do you wish to be Anonymous?</label>
-                        <select name="anonymous" required>
-                          <option value="yes">Yes</option>
-                          <option value="no" selected>No</option>
-                        </select>
-                    </div>
-                    <div class="upload">
-                        <label for="upload">Upload document</label>
-                        <input type="file" id="upload" name="upload" required/>
-                        <p>Docx, Image, Audio and Videos</p>
-                    </div>
-                  </div>
-
-                  <div class="checkbox">
-                    <input type="checkbox" name="checkbox">
-                    <label for="checkbox">I affirm that the information provided is valid</label>
-                  </div>    
-                  
-                  <button class="btn-form">SUBMIT</button>    
-            </form>
-          </div>
-        </div>
-      </section>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="ThanksSAYit"> Thanks for speaking Up! </div>
+      <div class="your_Report"> Your Report Has been Submitted </div>
+      <p class="agentID">ID: (AGENT CODE -S/N)</p>
+      <p class="takeNote">Please take note of your report ID</p>
+      <!-- don't forget to link btn back to home -->
+      <button class="returnHome">Dashboard</button>
     </div>
 
-     <!-- The Modal -->
-     <div id="myModal" class="modal">            
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="thanks"> Thanks for Speaking Up! </div> 
-        <div class="report-status"> Your Report Has been Submitted </div> 
-        <p class="id">ID: (AGENT CODE -S/N)</p> 
-        <p class="note">Please take note of your Report ID</p>
-       <!-- don't forget to link butn back to home -->
-       <button class='btn-modal'>Dashboard</button>      
-      </div>    
-    </div>
+  </div>
 
-    <script src="/js/common.js"></script>
-  </body>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // var retnHome = document.getElementsByClassName("returnHome");
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+
+  <script src="/js/common.js"></script>
+</body>
+
 </html>

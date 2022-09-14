@@ -1,159 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SayIT Website</title>
-    <link rel="stylesheet" href="/css/anonymousReport.css" />
-    <script
-      src="https://kit.fontawesome.com/ec08909fa5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- Adenigba Ahmed part starts from here -->
-    <!-- The navbar shouldn't be tampered with to ensure its uniformity across all webpages -->
-    <nav>
-      <section class="logoLogoHeading">
-        <div class="sayITLogo">
-          <img src="/Images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
-        </div>
-        <h1 class="logoHeading">
-          Say<span class="IT">IT</span>
-        </h1>
-      </section>
 
-      <label for="click" class="menu_button">
-        <i class="fas fa-bars"></i>
-      </label>
-      <input type="checkbox" id="click" />
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SayIT Website</title>
+  <link rel="stylesheet" href="/css/anonymousReport.css" />
+  <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+</head>
 
-      <ul class="navLinkWrapper">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="../index.html#whyUs">WHY US</a></li>
-        <li><a href="/pages/anonymousReport.html">REPORT</a></li>
-        <li><a href="/pages/blog-page.html">BLOG</a></li>
-        <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
-      </ul>
-    </nav>
+<body>
+  <!-- Adenigba Ahmed part starts from here -->
+  <!-- The navbar shouldn't be tampered with to ensure its uniformity across all webpages -->
+  <nav>
+    <section class="logoLogoHeading">
+      <div class="sayITLogo">
+        <img src="/Images/SAYIT.jpeg" height="80px" width="100px" alt="logo of the SayIT platform" />
+      </div>
+      <h1 class="logoHeading">
+        Say<span class="IT">IT</span>
+      </h1>
+    </section>
 
-     <!-- Anonymous Form  Section -->
+    <label for="click" class="menu_button">
+      <i class="fas fa-bars"></i>
+    </label>
+    <input type="checkbox" id="click" />
 
-     <main>
-      <div class="container">
-        <form>
-          <h2 class="welcome">Report Form</h2>
-          <div class="user-details">
-            <div class="form-box">
-              <label for="sector">Which sector of the economy do you which to report?</label><br>
-              <select name="sector" id="form-group" required> 
-                <option value="select"selected>Select</option>
-                <option value="finance">Finance</option>
-                <option value="education">Education</option>
-                <option value="sports">Sports</option>
-                <option value="health">Health</option>
-                <option value="energy">Energy</option>
-                <option value="transportation">Transportation</option>
-                <option value="agriculture">Agriculture</option>
-                <option value="oil and gas">Oil and gas</option>
-                <option value="banking">Banking</option>
-                <option value="technology">Technology></option>
-                <option value="entertainment">Entertainment</option>
-                <option value="others">Others</option>
-              </select>
+
+    <ul class="navLinkWrapper">
+      <li><a href="/index.html">HOME</a></li>
+      <li><a href="../index.html#whyUs">WHY US</a></li>
+      <li><a href="/pages/anonymousReport.html">REPORT</a></li>
+      <li><a href="/pages/blog-page.html">BLOG</a></li>
+      <li><a href="/pages/loginpage.html" class="active">SIGNUP/SIGNIN</a></li>
+    </ul>
+  </nav>
+
+  <!-- Anonymous Form  Section -->
+
+  <main>
+    <div class="container">
+      <form>
+        <h2 class="welcome">Report Form</h2>
+        <div class="user-details">
+          <div class="form-box">
+            <label for="sector">Which sector of the economy do you which to report?</label><br>
+            <select name="sector" id="form-group" required>
+              <option value="select" selected>Select</option>
+              <option value="finance">Finance</option>
+              <option value="education">Education</option>
+              <option value="sports">Sports</option>
+              <option value="health">Health</option>
+              <option value="energy">Energy</option>
+              <option value="transportation">Transportation</option>
+              <option value="agriculture">Agriculture</option>
+              <option value="oil and gas">Oil and gas</option>
+              <option value="banking">Banking</option>
+              <option value="technology">Technology></option>
+              <option value="entertainment">Entertainment</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="agency">Kindly selected the agency you wish to report to</label><br>
+            <select name="agency" required>
+              <option value="select" selected>Select Agency</option>
+              <option value="frsc">Federal Road Safety Corps (FRSC)</option>
+              <option value="nps">Nigeria Prisons Service (NPS)</option>
+              <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
+              <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
+              <option value="nis">Nigeria Immigrations Service (NIS)</option>
+              <option value="nc">Nigeria Customs</option>
+              <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
+              <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-box">
+            <label for="report-org">Which company, organization or individual is this about?</label>
+            <input class="form-input" type="text" id="report-org" name="report-org" />
+          </div>
+
+          <div class="form-box">
+            <label for="affiliation">Are you affiliated to the above selected?</label>
+            <select name="affiliation" id="form-group" required>
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+          </div>
+
+          <div class="form-box">
+            <label for="report-info">What do you want to report?</label>
+            <textarea id="report-infor" name="report-info" required></textarea>
+          </div>
+
+          <div class="form-box">
+            <label for="upload">Upload document</label>
+            <input type="file" id="upload" name="upload" required />
+            <p>Docx, Image, Audio and Videos</p>
+          </div>
+
+          <div class="form-box">
+            <input type="checkbox" name="checkbox">
+            <label for="checkbox">I affirm that the information provided is valid</label>
+          </div>
+
+          <!-- <button class="btn">SUBMIT</button>                 -->
+          <button id="myBtn">SUBMIT</button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="ThanksSAYit"> Thanks for speaking Up! </div>
+              <div class="your_Report"> Your Report Has been Submitted </div>
+              <p class="agentID">ID: (AGENT CODE -S/N)</p>
+              <p class="takeNote">Please take note of your report ID</p>
+              <!-- don't forget to link butn back to home -->
+              <button class="returnHome">Home</button>
+
             </div>
 
-            <div class="form-group">
-              <label for="agency">Kindly selected the agency you wish to report to</label><br>
-              <select name="agency" required> 
-                <option value="select" selected>Select Agency</option>
-                <option value="frsc">Federal Road Safety Corps (FRSC)</option>
-                <option value="nps">Nigeria Prisons Service (NPS)</option>
-                <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
-                <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
-                <option value="nis">Nigeria Immigrations Service (NIS)</option>
-                <option value="nc">Nigeria Customs</option>
-                <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
-                <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
-                <option value="others">Others</option>
-              </select>
-            </div>
+          </div>
 
-            <div class="form-box">
-              <label for="report-org">Which company, organization or individual is this about?</label>
-              <input class="form-input" type="text" id="report-org" name="report-org"/>
-            </div>
-
-            <div class="form-box">
-              <label for="affiliation">Are you affiliated to the above selected?</label>
-              <select name="affiliation" id="form-group" required>
-                <option value="yes">Yes</option>
-                <option value="no" selected>No</option>
-              </select>
-            </div>
-
-            <div class="form-box">
-              <label for="report-info">What do you want to report?</label>
-              <textarea id="report-infor" name="report-info" required></textarea>
-            </div>
-
-            <div class="form-box">
-              <label for="upload">Upload document</label>
-              <input type="file" id="upload" name="upload" required/>
-              <p>Docx, Image, Audio and Videos</p>
-            </div>
-
-            <div class="form-box">
-              <input type="checkbox" name="checkbox">
-              <label for="checkbox">I affirm that the information provided is valid</label>
-            </div>    
-
-            <!-- <button class="btn">SUBMIT</button>                 -->
-            <button id="myBtn">SUBMIT</button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-            
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="ThanksSAYit"> Thanks for speaking Up! </div> 
-                <div class="your_Report"> Your Report Has been Submitted </div> 
-                <p class="agentID">ID: (AGENT CODE -S/N)</p> 
-                <p class="takeNote">Please take note of your report ID</p>
-               <!-- don't forget to link butn back to home -->
-                <button class="returnHome">Home</button> 
-              
-              </div>
-            
-            </div>
-            
-            <script>
+          <script>
             // Get the modal
             var modal = document.getElementById("myModal");
-            
+
             // Get the button that opens the modal
             var btn = document.getElementById("myBtn");
-            
+
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
             // var retnHome = document.getElementsByClassName("returnHome");
-            
+
             // When the user clicks on the button, open the modal
-            btn.onclick = function() {
+            btn.onclick = function () {
               modal.style.display = "block";
             }
-            
+
             // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
+            span.onclick = function () {
               modal.style.display = "none";
             }
-            
+
             // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
+            window.onclick = function (event) {
               if (event.target == modal) {
                 modal.style.display = "none";
               }
@@ -162,13 +161,14 @@
             // retnHome.onclick = function(){
             //   window.location.href = 'https://www.figma.com/file/w44lgvHGdF2YveGTUyyq5o/SayIt-Platform?node-id=4%3A4';
             // }
-            
-            </script>
-            </div>
-          </div>
-        </form>
-      </div>
-     </main>
 
-  </body>
+          </script>
+        </div>
+    </div>
+    </form>
+    </div>
+  </main>
+
+</body>
+
 </html>

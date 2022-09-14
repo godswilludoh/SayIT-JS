@@ -168,6 +168,10 @@ a{
   font-weight: bold;
 }
 
+.other_links #sign-up a{
+  color: #ed4d02;
+}
+
 .admin-login{
   display: flex;
   gap: 4rem;

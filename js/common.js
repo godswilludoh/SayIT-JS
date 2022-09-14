@@ -43,6 +43,8 @@ if (month < 10) {
 }
 date.textContent = today + ':' + month + ':' + year;
 
+
+
 const searchInput = document.getElementById('search-input');
 const rows = document.querySelectorAll('.row');
 //console.log(rows);

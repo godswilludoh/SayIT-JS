@@ -10,11 +10,10 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     // calling the function to validate the form and add form info to Local storage
-    if(checkInputs() == true) {
-        createUserInfo()
+    if (checkInputs() == true) {
+        registerUsers()
         window.location.href = "registeredReport.html"
-
-    }else{
+    } else {
         checkInputs()
     }
 
@@ -31,68 +30,68 @@ function checkInputs() {
     const confirmPasswordValue = confirmPassword.value.trim()
 
     // conditional statement for the Email input
-   
-    if(emailValue === "") {
+
+    if (emailValue === "") {
         // show error and add error class
 
         setErrorFor(email, "Pls, enter your email address ")
 
-    }else if(isEmail(emailValue)) {
+    } else if (isEmail(emailValue)) {
 
         setErrorFor(email, "Invalid email")
-    }else{
-        setSuccessFor(email)  
+    } else {
+        setSuccessFor(email)
     }
 
     // conditional statement for the Phone Number input
-    if(phoneNumberValue === "") {
+    if (phoneNumberValue === "") {
         // show error and add error class
 
         setErrorFor(phoneNumber, "Pls, enter your phone number ")
 
-    }else if(!isPhoneNumber(phoneNumberValue)) {
+    } else if (!isPhoneNumber(phoneNumberValue)) {
         setErrorFor(phoneNumber, "Invalid phone number")
-    }else{
+    } else {
         setSuccessFor(phoneNumber)
 
-        
+
     }
 
     // conditional statement for the Username input
-    if(usernameValue === "") {
+    if (usernameValue === "") {
         // show error and add error class
 
         setErrorFor(username, "Pls, enter your username ")
 
-    }else{
+    } else {
         // add success class
         setSuccessFor(username)
 
-      
+
     }
 
     // conditional statement for the Password input
-    if(passwordValue === "") {
+    if (passwordValue === "") {
         // show error and add error class
         setErrorFor(password, "Pls, Enter your password ")
 
-    
-    }else if(!isPassword(passwordValue)) {
+
+    } else if (!isPassword(passwordValue)) {
         setErrorFor(password, "Your password should be alphanumeric and\nIt is should contain capital and small letters.\nE.g SayIT01")
 
-    }else{
+    } else {
         setSuccessFor(password)
     }
 
     // conditional statement for the Confirm Password input
-    if(confirmPasswordValue === "") {
+    if (confirmPasswordValue === "") {
         // show error and add error class
         setErrorFor(confirmPassword, "Pls, Enter your password again ")
-        
-    }else if(isPasswordConfirm(passwordValue, confirmPasswordValue)) {
+
+    } else if (isPasswordConfirm(passwordValue, confirmPasswordValue)) {
         setErrorFor(confirmPassword, "Confirm password does not match with password")
 
-    }else{
+    } else {
         setSuccessFor(confirmPassword)
 
         return true
@@ -104,7 +103,7 @@ function checkInputs() {
 // declaring the function that set error messages
 function setErrorFor(input, message) {
     const formControl = input.parentElement // .form-control class
-    const small  = formControl.querySelector("small")
+    const small = formControl.querySelector("small")
 
     // add the error message inside the small tag
     small.innerText = message;
@@ -139,7 +138,7 @@ function isPassword(password) {
 // declaring the function that validate Confirm Password
 function isPasswordConfirm(password, confirmPassword) {
 
-    if(password !== confirmPassword) {
+    if (password !== confirmPassword) {
         return true
     }
 
@@ -147,13 +146,19 @@ function isPasswordConfirm(password, confirmPassword) {
 
 // linking form to Local Storage
 
-function createUserInfo (){ 
-    var infoNew = {
-        password : document.getElementById("password").value,
-        username : document.getElementById("username").value,
-        email : document.getElementById("email").value,
-        number : document.getElementById("phone-number").value,
+function registerUsers() {
+    const users = JSON.parse(localStorage.getItem("createdUserInfo")) || [];
+
+
+    let infoNew = {
+        password: document.getElementById("password").value,
+        username: document.getElementById("username").value,
+        email: document.getElementById("email").value,
+        number: document.getElementById("phone-number").value,
     }
-    localStorage.setItem("createdUserInfo", JSON.stringify(infoNew));    
-      
-}
+
+    users.push(infoNew);
+
+    localStorage.setItem("createdUserInfo", JSON.stringify(users));
+
+};

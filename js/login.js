@@ -10,3 +10,7 @@ form.addEventListener('submit', (event) => {
 	window.location = 'registeredReport.html';
 	// }
 });
+
+// getting User Info from local storage
+
+// const loginInfo = JSON.parse(localStorage.getItem("sayItUserInfo"))

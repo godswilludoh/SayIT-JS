@@ -41,7 +41,7 @@
                 <box-icon name='message-square-edit'></box-icon>
               </div>
               <div>
-                Make Report
+                Reports
               </div>
             </div>
           </a>
@@ -55,7 +55,7 @@
                 <box-icon type='solid' name='message-square-dots'></box-icon>
               </div>
               <div>
-                Blog
+                Messages
               </div>
             </div>
           </a>
@@ -151,42 +151,60 @@
         <tr>
           <th>S/N</th>
           <th>Date reported</th>
-          <th>Sector</th>
-          <th>Anonymous</th>
-          <th>Attachment</th>
+          <th>Report ID</th>
+          <th>View Report</th>
           <th>Status</th>
+          <th>Action</th>
         </tr>
         <tr class="row">
           <td>1</td>
           <td>31/08/2022</td>
-          <td>Finance</td>
-          <td>Yes</td>
-          <td>Attachment 4</td>
-          <td>Pending</td>
+          <td>Report/0000001</td>
+          <td>Click to view</td>
+          <td>
+            <select>
+              <option value="select" selected>Select</option>
+              <option value="view">In View</option>
+              <option value="completed">Completed</option>
+            </select>
+          </td>
+          <td>Update</td>
         </tr>
         <tr class="row">
           <td>2</td>
           <td>28/08/2022</td>
-          <td>Finance</td>
-          <td>No</td>
-          <td>Attachment 3</td>
-          <td>Ongoing</td>
+          <td>Report/0000001</td>
+          <td>Click to view</td>
+          <td><select>
+              <option value="select" selected>Select</option>
+              <option value="view">In View</option>
+              <option value="completed">Completed</option>
+            </select></td>
+          <td>Update</td>
         </tr>
         <tr class="row">
           <td>3</td>
           <td>01/07/2022</td>
-          <td>Finance</td>
-          <td>No</td>
-          <td>Attachment 2</td>
-          <td>Concluded</td>
+          <td>Report/0000001</td>
+          <td>Click to view</td>
+          <td><select>
+              <option value="select" selected>Select</option>
+              <option value="view">In View</option>
+              <option value="completed">Completed</option>
+            </select></td>
+          <td>Update</td>
         </tr>
         <tr class="row">
           <td>4</td>
           <td>27/05/2022</td>
-          <td>Finance</td>
-          <td>No</td>
-          <td>Attachment 1</td>
-          <td>Concluded</td>
+          <td>Report/0000001</td>
+          <td>Click to view</td>
+          <td><select>
+              <option value="select" selected>Select</option>
+              <option value="view">In View</option>
+              <option value="completed">Completed</option>
+            </select></td>
+          <td>Update</td>
         </tr>
         <!-- <tr>
                 <td></td>
@@ -205,7 +223,6 @@
                 <td></td>
               </tr> -->
       </table>
-      <a class="report-button" href="/pages/makeReport.html">Make New Report</a>
   </div>
   </div>
   </section>

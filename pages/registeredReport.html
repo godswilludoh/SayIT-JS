@@ -1,215 +1,212 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>SayIT Website</title>
-      <link rel="stylesheet" href="/css/registeredReport.css" />
-      <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-      <script
-        src="https://kit.fontawesome.com/ec08909fa5.js"
-        crossorigin="anonymous"
-      ></script>
-    </head>
-    <body>
-      <div class="main-container">
-        <section class="sidebar-container">
-          <div class="logo">
-            <h2 class="heading">
-              <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo"/></div>
-              <h1 class="heading">Say<span class="it">IT</span></h1>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
 
-          <ul class="sidebar-lists">
-            <li class="sidebar-items">
-              <a href="#">
-                <div class="sidebar-icons">
-                    <div>
-                      <box-icon type='solid' name='dashboard'></box-icon>
-                    </div>              
-                    <div>
-                    Dashboard
-                    </div>
-                </div>             
-              </a>
-            </li>
-            
-            <li class="sidebar-items">
-              <a href="/pages/makeReport.html">
-                <div class="sidebar-icons">
-                  <div>
-                    <box-icon name='message-square-edit'></box-icon>
-                  </div>
-                  <div>
-                    Make Report
-                  </div>     
-                </div>
-              </a>
-            </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SayIT Website</title>
+  <link rel="stylesheet" href="/css/registeredReport.css" />
+  <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+  <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+</head>
 
-
-            <li class="sidebar-items">
-              <a href="/pages/blog-page.html">
-                <div class="sidebar-icons">
-                  <div>
-                    <box-icon type='solid' name='message-square-dots'></box-icon>
-                  </div>
-                  <div>
-                    Blog
-                  </div>         
-                </div>
-              </a>
-            </li>
-
-            <li class="sidebar-items">
-              <a href="#">
-                <div class="sidebar-icons">
-                  <div>
-                    <box-icon type='solid' name='user'></box-icon>
-                  </div>
-                <div>
-                  Profile
-                </div>       
-                <div>
-                  <box-icon name='chevron-down'></box-icon>    
-                </div>                  
-              </div>             
-            </a>
-              <div class="dropdown-menu">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <div class="sidebar-icons">
-                        <div>
-                          <box-icon type='solid' name='edit'></box-icon>
-                        </div>
-                        <a href="./editprofile.html">
-                          <div>
-                            Edit Profile
-                          </div>
-                        </a>                    
-                      </div>                   
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="sidebar-icons">
-                        <div>
-                          <box-icon name='cog' type='solid' ></box-icon>
-                        </div>
-                        <div>
-                          Settings
-                        </div>
-                      </div>
-                    
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <button class="btn"> 
-            <div class="sidebar-icons">
-              <div>
-                <box-icon name='log-out'></box-icon></i> 
-              </div>
-              <div>
-                Logout
-              </div>           
-            </div>
-          </button>
-        </section>
-
-        <section class="dashboard-interface">
-          <div class="top">
-            <div class="info-display">
-              <p>Dashboard</p>
-            </div>
-            <div class="time">
-              <p class="time-one"></p>
-              <p class="time-two"></p>
-            </div>
-          </div>
-            <div class="dashboard-container">
-              <h2>👋 Welcome Samuel❗ </h2>
-            <div class="user-table">
-              <div class="report-table">
-                <div class="report-text">
-                  <p>My Reports</p>
-                </div>             
-                <div class="report-id">
-                  <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID"/>
-                </div>
-              </div>
-          </div>       
-          
-          </div>
-              <table id="user-table">
-                <tr>
-                  <th>S/N</th>
-                  <th>Date reported</th>
-                  <th>Sector</th>
-                  <th>Anonymous</th>
-                  <th>Attachment</th>
-                  <th>Status</th>                
-                </tr>
-                <tr class="row">
-                  <td>1</td>
-                  <td>31/08/2022</td>
-                  <td>Finance</td>
-                  <td>Yes</td>
-                  <td>Attachment 4</td>
-                  <td>Pending</td>
-                </tr>
-                <tr class="row">
-                  <td>2</td>
-                  <td>28/08/2022</td>
-                  <td>Health</td>
-                  <td>No</td>
-                  <td>Attachment 3</td>
-                  <td>Ongoing</td>
-                </tr>
-                <tr class="row">
-                  <td>3</td>
-                  <td>01/07/2022</td>
-                  <td>Oil and Gas</td>
-                  <td>No</td>
-                  <td>Attachment 2</td>
-                  <td>Concluded</td>
-                </tr>
-                <tr class="row">
-                  <td>4</td>
-                  <td>27/05/2022</td>
-                  <td>Sport</td>
-                  <td>No</td>
-                  <td>Attachment 1</td>
-                  <td>Concluded</td>
-                </tr>
-                <!-- <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr> -->
-              </table>        
-              <a class="report-button" href="/pages/makeReport.html">Make New Report</a>    
-            </div>
-          </div>
-        </section>
+<body>
+  <div class="main-container">
+    <section class="sidebar-container">
+      <div class="logo">
+        <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
+        <h1 class="heading">Say<span class="it">IT</span></h1>
       </div>
 
-      <script src="/js/common.js"></script>
-    </body>
-  </html>
+      <ul class="sidebar-lists">
+        <li class="sidebar-items">
+          <a href="#">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='dashboard'></box-icon>
+              </div>
+              <div>
+                Dashboard
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="sidebar-items">
+          <a href="/pages/makeReport.html">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon name='message-square-edit'></box-icon>
+              </div>
+              <div>
+                Make Report
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+        <li class="sidebar-items">
+          <a href="/pages/blog-page.html">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='message-square-dots'></box-icon>
+              </div>
+              <div>
+                Blog
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="sidebar-items">
+          <a href="#">
+            <div class="sidebar-icons">
+              <div>
+                <box-icon type='solid' name='user'></box-icon>
+              </div>
+              <div>
+                Profile
+              </div>
+              <div>
+                <box-icon name='chevron-down'></box-icon>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="sidebar-icons">
+                    <div>
+                      <box-icon type='solid' name='edit'></box-icon>
+                    </div>
+                    <a href="./editprofile.html">
+                      <div>
+                        Edit Profile
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="sidebar-icons">
+                    <div>
+                      <box-icon name='cog' type='solid'></box-icon>
+                    </div>
+                    <div>
+                      Settings
+                    </div>
+                  </div>
+
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <button class="btn">
+        <div class="sidebar-icons">
+          <div>
+            <box-icon name='log-out'></box-icon></i>
+          </div>
+          <div>
+            Logout
+          </div>
+        </div>
+      </button>
+    </section>
+
+    <section class="dashboard-interface">
+      <div class="top">
+        <div class="info-display">
+          <p>Dashboard</p>
+        </div>
+        <div class="time">
+          <p class="time-one"></p>
+          <p class="time-two"></p>
+        </div>
+      </div>
+      <div class="dashboard-container">
+        <h2>👋 Welcome Samuel❗ </h2>
+        <div class="user-table">
+          <div class="report-table">
+            <div class="report-text">
+              <p>My Reports</p>
+            </div>
+            <div class="report-id">
+              <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table id="user-table">
+        <tr>
+          <th>S/N</th>
+          <th>Date reported</th>
+          <th>Sector</th>
+          <th>Anonymous</th>
+          <th>Attachment</th>
+          <th>Status</th>
+        </tr>
+        <tr class="row">
+          <td>1</td>
+          <td>31/08/2022</td>
+          <td>Finance</td>
+          <td>Yes</td>
+          <td>Attachment 4</td>
+          <td>Pending</td>
+        </tr>
+        <tr class="row">
+          <td>2</td>
+          <td>28/08/2022</td>
+          <td>Health</td>
+          <td>No</td>
+          <td>Attachment 3</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr class="row">
+          <td>3</td>
+          <td>01/07/2022</td>
+          <td>Oil and Gas</td>
+          <td>No</td>
+          <td>Attachment 2</td>
+          <td>Concluded</td>
+        </tr>
+        <tr class="row">
+          <td>4</td>
+          <td>27/05/2022</td>
+          <td>Sport</td>
+          <td>No</td>
+          <td>Attachment 1</td>
+          <td>Concluded</td>
+        </tr>
+        <!-- <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr> -->
+      </table>
+      <a class="report-button" href="/pages/makeReport.html">Make New Report</a>
+    </section>
+  </div>
+
+  <script src="/js/common.js"></script>
+</body>
+
+</html>

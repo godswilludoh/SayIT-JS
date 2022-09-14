@@ -46,7 +46,7 @@
         <h2 class="welcome">Report Form</h2>
         <div class="user-details">
           <div class="form-box">
-            <label for="sector">Which sector of the economy do you which to report?</label><br>
+            <label for="sector">Which sector of the economy do you wish to report?</label><br>
             <select name="sector" id="form-group" required>
               <option value="select" selected>Select</option>
               <option value="finance">Finance</option>
@@ -64,9 +64,9 @@
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="agency">Kindly selected the agency you wish to report to</label><br>
-            <select name="agency" required>
+          <div class="form-group agency">
+            <label for="agency">Kindly select the agency you wish to report to</label><br>
+            <select name="agency" id="form-group" required>
               <option value="select" selected>Select Agency</option>
               <option value="frsc">Federal Road Safety Corps (FRSC)</option>
               <option value="nps">Nigeria Prisons Service (NPS)</option>
@@ -131,15 +131,13 @@
 
           <script>
             // Get the modal
-            var modal = document.getElementById("myModal");
+            let modal = document.getElementById("myModal");
 
             // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
+            let btn = document.getElementById("myBtn");
 
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // var retnHome = document.getElementsByClassName("returnHome");
+            let span = document.getElementsByClassName("close")[0];
 
             // When the user clicks on the button, open the modal
             btn.onclick = function () {

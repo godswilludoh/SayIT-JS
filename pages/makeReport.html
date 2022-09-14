@@ -138,7 +138,7 @@
           <p class="report-heading">Report Form</p>
           <form class="report-form">
             <div class="form-group">
-              <label for="sector">Which sector of the economy do you which to report?</label><br>
+              <label for="sector">Which sector of the economy do you wish to report?</label><br>
               <select name="sector" required>
                 <option value="select" selected>Select Sector</option>
                 <option value="finance">Finance</option>
@@ -157,7 +157,7 @@
             </div>
 
             <div class="form-group">
-              <label for="agency">Kindly selected the agency you wish to report to</label><br>
+              <label for="agency">Kindly select the agency you wish to report to</label><br>
               <select name="agency" required>
                 <option value="select" selected>Select Agency</option>
                 <option value="frsc">Federal Road Safety Corps (FRSC)</option>
@@ -210,61 +210,30 @@
               <label for="checkbox">I affirm that the information provided is valid</label>
             </div>
 
-            <button class="btn-form">SUBMIT</button>
+            <button class="btn-form" id="myBtn">SUBMIT</button>
+            <!-- Prompt Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="thanks"> Thanks for speaking Up! </div>
+                <div class="report-status"> Your Report Has been Submitted </div>
+                <p class="id">ID: (AGENT CODE -S/N)</p>
+                <p class="note">Please take note of your report ID</p>
+                <!-- don't forget to link btn back to home -->
+                <a href="/pages/registeredReport.html" class="btn-modal">Dashboard</a>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="ThanksSAYit"> Thanks for speaking Up! </div>
-      <div class="your_Report"> Your Report Has been Submitted </div>
-      <p class="agentID">ID: (AGENT CODE -S/N)</p>
-      <p class="takeNote">Please take note of your report ID</p>
-      <!-- don't forget to link btn back to home -->
-      <button class="returnHome">Dashboard</button>
-    </div>
-
-  </div>
-
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // var retnHome = document.getElementsByClassName("returnHome");
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-  </script>
 
   <script src="/js/common.js"></script>
+  <script src="/js/promptModal.js"></script>
 </body>
 
 </html>

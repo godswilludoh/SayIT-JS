@@ -9,8 +9,6 @@ form.addEventListener('submit', (event) => {
 	// if (validatePassword(passwordField)) {
 	window.location = 'registeredReport.html';
 	// }
+
 });
 
-// getting User Info from local storage
-
-// const loginInfo = JSON.parse(localStorage.getItem("sayItUserInfo"))

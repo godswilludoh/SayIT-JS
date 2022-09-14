@@ -121,8 +121,9 @@ html {
 }
 
 .blog_sector-category{
-  font-weight: 700;
+  font-weight: bolder;
   font-size: 14px;
+  
 }
 
 .blog_brief{
@@ -155,7 +156,10 @@ html {
   border: none;
 }
 
-
+.read_more-button a{
+  text-decoration: none;
+  color: white;
+}
 
 @media (max-width: 680px) {
 

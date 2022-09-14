@@ -9,8 +9,9 @@ const confirmPassword = document.getElementById("confirm-password");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // calling the function to validate the form
+    // calling the function to validate the form and add form info to Local storage
     if(checkInputs() == true) {
+        createUserInfo()
         window.location.href = "registeredReport.html"
 
     }else{
@@ -142,4 +143,17 @@ function isPasswordConfirm(password, confirmPassword) {
         return true
     }
 
+}
+
+// linking form to Local Storage
+
+function createUserInfo (){ 
+    var infoNew = {
+        password : document.getElementById("password").value,
+        username : document.getElementById("username").value,
+        email : document.getElementById("email").value,
+        number : document.getElementById("phone-number").value,
+    }
+    localStorage.setItem("createdUserInfo", JSON.stringify(infoNew));    
+      
 }

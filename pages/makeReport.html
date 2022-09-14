@@ -139,10 +139,11 @@
             <p class="report-heading">Report Form</p>
             <form class="report-form">
                 <div class="form-group">
-                    <label for="sector">Sector</label><br>
+                    <label for="sector">Which sector of the economy do you which to report?</label><br>
                     <select name="sector" required> 
+                        <option value="select" selected>Select Sector</option>
                         <option value="finance">Finance</option>
-                        <option value="education" selected>Education</option>
+                        <option value="education">Education</option>
                         <option value="sports">Sports</option>
                         <option value="health">Health</option>
                         <option value="energy">Energy</option>
@@ -154,6 +155,22 @@
                         <option value="entertainment">Entertainment</option>
                         <option value="others">Others</option>
                       </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="agency">Kindly selected the agency you wish to report to</label><br>
+                  <select name="agency" required> 
+                    <option value="select" selected>Select Agency</option>
+                    <option value="frsc">Federal Road Safety Corps (FRSC)</option>
+                    <option value="nps">Nigeria Prisons Service (NPS)</option>
+                    <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
+                    <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
+                    <option value="nis">Nigeria Immigrations Service (NIS)</option>
+                    <option value="nc">Nigeria Customs</option>
+                    <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
+                    <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
+                    <option value="others">Others</option>
+                  </select>
                 </div>
 
                 <div class="form-group">
@@ -197,12 +214,24 @@
                   <button class="btn-form">SUBMIT</button>    
             </form>
           </div>
-
-
         </div>
       </section>
     </div>
 
-    <script src="/js/registeredReport.js"></script>
+     <!-- The Modal -->
+     <div id="myModal" class="modal">            
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="thanks"> Thanks for Speaking Up! </div> 
+        <div class="report-status"> Your Report Has been Submitted </div> 
+        <p class="id">ID: (AGENT CODE -S/N)</p> 
+        <p class="note">Please take note of your Report ID</p>
+       <!-- don't forget to link butn back to home -->
+       <button class='btn-modal'>Dashboard</button>      
+      </div>    
+    </div>
+
+    <script src="/js/common.js"></script>
   </body>
 </html>

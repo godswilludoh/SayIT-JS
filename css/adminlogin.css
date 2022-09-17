@@ -138,7 +138,8 @@ form {
 .overallContainer {
   padding-top: 50px;
   display: flex;
-  /* height: 100vh; */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .theLoginSide {
@@ -150,7 +151,7 @@ form {
 
 .innerContainer {
   margin-top: 100px;
-  max-width: 70%;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }

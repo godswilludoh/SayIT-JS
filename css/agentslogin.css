@@ -133,21 +133,20 @@ form {
 .overallContainer {
   padding-top: 50px;
   display: flex;
-  /* height: 100vh; */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .theLoginSide {
   flex: 2;
   max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
   background: #dc6b36;
   min-height: 100vh;
 }
 
 .innerContainer {
   margin-top: 100px;
-  max-width: 70%;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }

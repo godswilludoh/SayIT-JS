@@ -22,7 +22,7 @@ body {
 
 /* Sidebar CSS*/
 .sidebar-container {
-  width: 300px;
+  width: 280px;
   min-height: 100vh;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -122,7 +122,7 @@ button {
 
 /* Dashboard Interface */
 .dashboard-interface {
-  width: calc(100% - 300px);
+  width: calc(100% - 280px);
   padding: 30px;
   background: #D9D9D9;
 }
@@ -205,7 +205,7 @@ h2 {
 }
 
 .table-section {
-  background: #FFFFFF;
+  background: #6E66604D;
   border-radius: 8px;
   padding: 2rem;
   margin: 6rem auto 0; 
@@ -305,135 +305,36 @@ tr:nth-child(odd) {
   padding: .7rem 2rem;
 }
 
-
-/* Popup card modal */
-/* #popup-container {
-  z-index: 2;
-  background-color: rgba(110, 102, 96, 0.3);
-}
-
-.popup {
-  background-color: #6e6660;
-  width: 600px;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  text-align: center;
-  padding: 50px 100px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
-  visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
-}
-.open-popup {
-  visibility: visible;
-  top: 100%;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-#paraOne {
-  font-family: "Inter";
-  font-style: normal;
+.pagination {
+  display: flex;
+  width: 50%;
+  justify-content:center;
+  align-items: center;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(255, 255, 255, 0.623);
-  margin-bottom: 5px;
+  background: #D9D9D9;  
+  padding: 5px 0;
+  margin: 10px auto;
 }
 
-#paraTwo {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  color: rgba(237, 76, 2, 0.534);
-  margin-bottom: 5px;
+.pagination a{
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;  
 }
 
-#paraThree {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  color: #ffffff;
-  margin-bottom: 5px;
+.pagination-item{ 
+  background: rgba(0, 0, 0, 0.25);
+  color: #00000040; 
+  font-size: 18px;
 }
 
-#paraFour {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 15px;
-  color: rgba(255, 255, 255, 0.623);
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
-
-.dashBoardBtn a {
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  background: rgba(237, 77, 2, 0.7);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  padding: 20px 80px;
-}
-
-#dashBoardBtn a:hover {
-  background-color: rgba(237, 77, 2, 0.7);
-  font-size: 19px;
-}
-
-@media (max-width: 940px) {
-  .popup {
-    width: 400px;
-    padding: 30px 40px;
-   
-    
-  }
-  #paraOne {
-    font-size: 14px;
-    line-height: 12px;
-    margin-bottom: 10px;
-  }
-
-  #paraTwo {
-    font-size: 20px;
-    line-height: 25px;
-  
-   
- }
- #paraThree {
-  font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 8px;
-}
-
-#paraFour {
-  font-size: 14px;
-  line-height: 15px;
-  color: rgba(255, 255, 255, 0.623);
-  margin-top: 5px;
-  margin-bottom: 15px;
- 
-
-  }
-    .dashBoardBtn a {
-    padding: 15px 50px;
-    font-size: 15px;
-  }
-} 
-.btn{
-  background-color: #fff;
-  border: 1px solid #B4B1AF;
-  border-radius: 5px;
-  margin: 4rem 3rem 1.5rem 3rem;
-  font-size: 15px;
+.pagination-bracket{
+  color: #000;
+  font-size: 35px;
   font-weight: 500;
-  cursor: pointer;
-} */
+}
+
+.pagination-item:hover{
+  background: #ED4D02;
+  color: #FFFFFF;
+}

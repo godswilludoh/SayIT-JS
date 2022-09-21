@@ -131,78 +131,144 @@
         </div>
       </div>
       <div class="dashboard-container">
-        <h2>👋 Welcome Samuel❗ </h2>
-        <div class="user-table">
-          <div class="report-table">
-            <div class="report-text">
-              <p>My Reports</p>
-            </div>
-            <div class="report-id">
-              <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+        <h2>👋 Welcome Samuel </h2>
+
+        <div class="cards">
+          <div class="card-item">
+            <p class="p-top">Total</p><br>
+            <p class="p-bottom">5</p>
+          </div>
+          <div class="card-item">
+            <p class="p-top">Open Complaints</p><br>
+            <p class="p-bottom">5</p>
+          </div>
+          <div class="card-item">
+            <p class="p-top">Resolved complaints</p><br>
+            <p class="p-bottom">0</p>
+          </div>
+
+          <div class="button-container">
+            <a class="report-button" href="/pages/makeReport.html">Make New Report</a>
+          </div>
+
+        </div>
+
+        <div class="table-section">
+          <div class="user-table">
+            <div class="report-table">
+              <div class="report-text">
+                <p>Reports</p>
+              </div>
+              <div class="report-id">
+                <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <table id="user-table">
-        <tr>
-          <th>S/N</th>
-          <th>Date reported</th>
-          <th>Sector</th>
-          <th>Anonymous</th>
-          <th>Attachment</th>
-          <th>Status</th>
-        </tr>
-        <tr class="row">
-          <td>1</td>
-          <td>31/08/2022</td>
-          <td>Finance</td>
-          <td>Yes</td>
-          <td>Attachment 4</td>
-          <td>Pending</td>
-        </tr>
-        <tr class="row">
-          <td>2</td>
-          <td>28/08/2022</td>
-          <td>Health</td>
-          <td>No</td>
-          <td>Attachment 3</td>
-          <td>Ongoing</td>
-        </tr>
-        <tr class="row">
-          <td>3</td>
-          <td>01/07/2022</td>
-          <td>Oil and Gas</td>
-          <td>No</td>
-          <td>Attachment 2</td>
-          <td>Concluded</td>
-        </tr>
-        <tr class="row">
-          <td>4</td>
-          <td>27/05/2022</td>
-          <td>Sport</td>
-          <td>No</td>
-          <td>Attachment 1</td>
-          <td>Concluded</td>
-        </tr>
-        <!-- <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr> -->
-      </table>
-      <a class="report-button" href="/pages/makeReport.html">Make New Report</a>
+          <table id="user-table">
+            <tr>
+              <th>S/N</th>
+              <th>Date reported</th>
+              <th>Report ID</th>
+              <th>Sector</th>
+              <th>Action</th>
+            </tr>
+            <tr class="row">
+              <td>1.</td>
+              <td>DD/MM/YYYY MM:HH</td>
+              <td>Report/000001</td>
+              <td>Finance</td>
+              <td>
+                <div class="table-icons">
+                  <div>
+                    <a class="report-button view" href="#">View</a>
+                  </div>
+                  <div>
+                    <box-icon name='printer' type='solid'></box-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td>2.</td>
+              <td>DD/MM/YYYY MM:HH</td>
+              <td>Report/000002</td>
+              <td>Security</td>
+              <td>
+                <div class="table-icons">
+                  <div>
+                    <a class="report-button view" href="#">View</a>
+                  </div>
+                  <div>
+                    <box-icon name='printer' type='solid'></box-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td>3.</td>
+              <td>DD/MM/YYYY MM:HH</td>
+              <td>Report/000003</td>
+              <td>Finance</td>
+              <td>
+                <div class="table-icons">
+                  <div>
+                    <a class="report-button view" href="#">View</a>
+                  </div>
+                  <div>
+                    <box-icon name='printer' type='solid'></box-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="row">
+              <td>4.</td>
+              <td>DD/MM/YYYY MM:HH</td>
+              <td>Report/000004</td>
+              <td>Finance</td>
+              <td>
+                <div class="table-icons">
+                  <div>
+                    <a class="report-button view" href="#">View</a>
+                  </div>
+                  <div>
+                    <box-icon name='printer' type='solid'></box-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>5.</td>
+              <td>DD/MM/YYYY MM:HH</td>
+              <td>Report/000005</td>
+              <td>Security</td>
+              <td>
+                <div class="table-icons">
+                  <div>
+                    <a class="report-button view" href="#">View</a>
+                  </div>
+                  <div>
+                    <box-icon name='printer' type='solid'></box-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <div class="pagination">
+            <a class="pagination-bracket" href="#">&lsaquo;</a>
+            <a class="pagination-item" href="#">1</a>
+            <a class="pagination-item" href="#">2</a>
+            <a class="pagination-item" href="#">3</a>
+            <a class="pagination-item" href="#">4</a>
+            <a class="pagination-item" href="#">5</a>
+            <a class="pagination-bracket" href="#">&rsaquo;</a>
+          </div>
+        </div>
     </section>
   </div>
 

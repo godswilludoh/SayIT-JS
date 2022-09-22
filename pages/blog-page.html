@@ -47,12 +47,11 @@
 				<div class="category">Security</div>
 			</div>
 			<div class="blog_search-box">
-				<input type="text" placeholder="Search Here" />
+				<input type="text" id="search" placeholder="Search Here" onkeyup="searchBlogsBySector()" />
 			</div>
 		</header>
 
-		<section class="blog_grid-container">
-			<div class="blog_box-row">
+		<section id="blog_grid-container">
 				<div class="blog_box-wrapper">
 					<!-- <div class="blog_card"></div> -->
 					<div class="blog_description-label">
@@ -140,9 +139,6 @@
 					</h6>
 					<button class="read_more-button"><a href="./read-more.html">Read More</a></button>
 				</div>
-			</div>
-
-			<div class="blog_box-row">
 				<div class="blog_box-wrapper">
 					<!-- <div class="blog_card"></div> -->
 					<div class="blog_description-label">
@@ -234,9 +230,6 @@
 					</h6>
 					<button class="read_more-button"><a href="./read-more.html">Read More</a></button>
 				</div>
-			</div>
-
-			<div class="blog_box-row">
 				<div class="blog_box-wrapper">
 					<!-- <div class="blog_card"></div> -->
 					<div class="blog_description-label">
@@ -323,8 +316,7 @@
 						want to receive an education to improve their lives.
 					</h6>
 					<button class="read_more-button"><a href="./read-more.html">Read More</a></button>
-				</div>
-			</div>
+				</div>	
 		</section>
 	</section>
 
@@ -348,6 +340,9 @@
 			©2022. All rights Reserved | Designed by Tech Stars
 		</p>
 	</footer>
+
+
+	<script src="/js/searchBlog.js"></script>
 </body>
 
 </html>

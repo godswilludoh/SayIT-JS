@@ -47,11 +47,11 @@
 				<div class="category">Security</div>
 			</div>
 			<div class="blog_search-box">
-				<input type="text" placeholder="Search Here" />
+				<input type="text" id="search" placeholder="Search Here" onkeyup="searchBlogsBySector()" />
 			</div>
 		</header>
 
-		<section class="blog_grid-container">
+		<section id="blog_grid-container">
 			<div class="blog_box-row">
 				<div class="blog_box-wrapper">
 					<!-- <div class="blog_card"></div> -->
@@ -348,6 +348,9 @@
 			©2022. All rights Reserved | Designed by Tech Stars
 		</p>
 	</footer>
+
+
+	<script src="/js/searchBlog.js"></script>
 </body>
 
 </html>

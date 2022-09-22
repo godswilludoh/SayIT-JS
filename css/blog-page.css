@@ -15,7 +15,7 @@ html {
 
 .blog_wrapper {
   max-width: 90%;
-  margin: 25px auto;
+  margin: 0 auto;
   padding: 10rem 0;
 }
 
@@ -63,7 +63,7 @@ html {
   flex-direction: row;
   justify-content: space-between;
   margin: 0.5rem 0;
-  gap: 2.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -98,16 +98,18 @@ html {
 
 .blog_code {
   color: red;
-  font-weight: bolder;
+  font-weight: bold;
+  font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 .blog_sector-category {
-  font-weight: bolder;
+  font-weight: bold;
   font-style: normal;
+  font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 .blog_brief {
-
+  color: black;
   padding: 2px 2px;
   margin-bottom: 10px;
   font-size: 12px;
@@ -116,7 +118,7 @@ html {
 }
 
 .blog_summary {
-  color: #00000040;
+  color: #00000088;
   max-width: 250px;
   font-size: 12px;
   text-overflow: ellipsis;
@@ -124,6 +126,7 @@ html {
   overflow: hidden;
   max-height: 7rem;
   line-height: 1rem; 
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 8px;
 }
 

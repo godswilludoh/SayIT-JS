@@ -338,7 +338,7 @@ select {
   font-size: 30px;
 }
 
-.forMessageButton {
+.forNotificationButton {
   background-color: rgba(0, 0, 0, 0.25);
   /* background-color: rgba(142, 157, 198, 0.1); */
   color: #000000;
@@ -350,6 +350,18 @@ select {
   border-radius: 8px;
   width: 201px;
   margin-bottom: 25px;
+}
+
+#messageLink{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+#printReport{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
 }
 
 .forPrintButton {
@@ -404,6 +416,28 @@ select {
 
 /* ################################### */
 /* CSS FOR THE POP MODAL STRATS HERE */
+
+
+
+.theHeadingReportTitle{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.theHeadingReportSerialNumber{
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.form-group input{
+  height: 42px;
+  border: 1px solid #ED4D02;
+  margin-top: 10px;
+}
+
+
+
+
 #makeItryam{
   display: flex;
   justify-content: center;
@@ -473,7 +507,7 @@ select {
 }
 
 .form-group textarea {
-  border: 1px solid #19100f;
+  border: 1px solid #ED4D02;
   border-radius: 5px;
   padding: 10px;
   width: 100%;

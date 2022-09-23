@@ -11,12 +11,10 @@ form.addEventListener("submit", (e) => {
 
     // calling the function to validate the form and add form info to Local storage
     if (checkInputs() == true) {
-        registerUsers()
         window.location.href = "registeredReport.html"
     } else {
         checkInputs()
     }
-
 
 })
 
@@ -28,6 +26,13 @@ function checkInputs() {
     const usernameValue = username.value.trim()
     const passwordValue = password.value.trim()
     const confirmPasswordValue = confirmPassword.value.trim()
+
+    // validation boolean value declaration
+    let emailValidation = false
+    let phoneNumberValidation = false
+    let usernameValidation = false
+    let passwordValidation = false
+    let confirmPasswordValdation = false
 
     // conditional statement for the Email input
 
@@ -41,6 +46,8 @@ function checkInputs() {
         setErrorFor(email, "Invalid email")
     } else {
         setSuccessFor(email)
+
+        emailValidation = true
     }
 
     // conditional statement for the Phone Number input
@@ -54,7 +61,7 @@ function checkInputs() {
     } else {
         setSuccessFor(phoneNumber)
 
-
+        phoneNumberValidation = true
     }
 
     // conditional statement for the Username input
@@ -67,7 +74,7 @@ function checkInputs() {
         // add success class
         setSuccessFor(username)
 
-
+        usernameValidation = true
     }
 
     // conditional statement for the Password input
@@ -81,6 +88,8 @@ function checkInputs() {
 
     } else {
         setSuccessFor(password)
+
+        passwordValidation = true
     }
 
     // conditional statement for the Confirm Password input
@@ -94,10 +103,13 @@ function checkInputs() {
     } else {
         setSuccessFor(confirmPassword)
 
-        return true
+        confirmPasswordValdation = true
     }
 
-
+    // conditional statement for all the inputs
+    if(emailValidation === true && phoneNumberValidation === true && usernameValidation === true && passwordValidation === true && confirmPasswordValdation === true) {
+        return true
+    }
 }
 
 // declaring the function that set error messages
@@ -144,21 +156,22 @@ function isPasswordConfirm(password, confirmPassword) {
 
 }
 
+// daclaring an array for the local storage
+let users = []
+
 // linking form to Local Storage
-
 function registerUsers() {
-    const users = JSON.parse(localStorage.getItem("createdUserInfo")) || [];
-
 
     let infoNew = {
-        password: document.getElementById("password").value,
-        username: document.getElementById("username").value,
-        email: document.getElementById("email").value,
-        number: document.getElementById("phone-number").value,
+        "password": document.getElementById("password").value,
+        "username": document.getElementById("username").value,
+        "email": document.getElementById("email").value,
+        "number": document.getElementById("phone-number").value,
     }
 
     users.push(infoNew);
 
     localStorage.setItem("createdUserInfo", JSON.stringify(users));
-
 };
+
+

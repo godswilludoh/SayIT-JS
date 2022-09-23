@@ -1,4 +1,4 @@
-/*for the font importing from google*/
+/*for the font, importing from google*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * {
@@ -14,7 +14,7 @@ html {
 
 
 .blog_wrapper {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 10rem 0;
 }
@@ -24,6 +24,7 @@ html {
   justify-content: space-between;
   border-bottom: 1px solid red;
   align-items: center;
+  margin: 0 5px;
 }
 
 .sector_categories {
@@ -57,81 +58,84 @@ html {
 
 
 /* Blog Grid-Container section */
-.blog_grid-container {
+#blog_grid-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 2rem 0;
-  gap: 4rem;
+  margin: 0.5rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.blog_box-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
 
 .blog_box-wrapper {
-  text-align: justify;
+
+  text-align:justify;
   width: 250px;
   margin: 25px auto;
+
 }
 
-.blog_card {
+/* .blog_card {
   height: 140px;
   border-radius: 10px;
   background-color: bisque;
   margin: 4px auto 25px;
   box-shadow: 2px 4px 2px rgb(232, 232, 247);
 
-}
+} */
 
 .blog_description-label {
   background-color: rgb(207, 230, 231);
   display: flex;
   justify-content: space-between;
   border-radius: 4px;
-  padding: 25px 15px;
-  font-size: 16px;
-  font-weight: 700;
+  padding: 5px 5px;
+  font-size: 10px;
+  font-weight: bold;
   margin: 5px 0 10px;
 }
 
 .blog_code {
   color: red;
+  font-weight: bold;
+  font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 .blog_sector-category {
-  font-weight: bolder;
-  font-size: 14px;
-
+  font-weight: bold;
+  font-style: normal;
+  font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 .blog_brief {
+  color: black;
   padding: 2px 2px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 10px;
   max-width: 250px;
 }
 
 .blog_summary {
-  margin-bottom: 8px;
-  color: #00000040;
+  color: #00000088;
   max-width: 250px;
-  font-size: 13px;
+  font-size: 12px;
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
-  max-height: 15rem;
-  line-height: 1.3rem;
+  max-height: 7rem;
+  line-height: 1rem; 
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
 }
 
 .read_more-button {
+
   background-color: rgb(255, 140, 0);
   border-radius: 4px;
-  font-size: 15px;
-  padding: 10px 10px;
+  font-size: 10px;
+  padding: 5px 10px;
   color: white;
   font-weight: bolder;
   border: none;
@@ -144,7 +148,7 @@ html {
 
 @media (max-width: 680px) {
 
-  .blog_grid-container {
+  #blog_grid-container {
     display: block;
     margin: 10px 0;
   }

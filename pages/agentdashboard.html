@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SayIT Website || Agent Dasboard</title>
-  <link rel="stylesheet" href="/css/registeredReport.css" />
+  <link rel="stylesheet" href="/css/agentdashboard.css" />
   <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
   <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="main-container">
     <section class="sidebar-container">
       <div class="logo">
-        <h2 class="heading">
-          <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
-          <h1 class="heading">Say<span class="it">IT</span></h1>
+        <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
+        <h1 class="heading">Say<span class="it">IT</span></h1>
       </div>
 
       <ul class="sidebar-lists">
@@ -34,28 +34,15 @@
           </a>
         </li>
 
-        <li class="sidebar-items">
-          <a href="/pages/makeReport.html">
-            <div class="sidebar-icons">
-              <div>
-                <box-icon name='message-square-edit'></box-icon>
-              </div>
-              <div>
-                Reports
-              </div>
-            </div>
-          </a>
-        </li>
-
 
         <li class="sidebar-items">
-          <a href="/pages/blog-page.html">
+          <a href="/pages/notification.html">
             <div class="sidebar-icons">
               <div>
                 <box-icon type='solid' name='message-square-dots'></box-icon>
               </div>
               <div>
-                Messages
+                Notification
               </div>
             </div>
           </a>
@@ -83,7 +70,7 @@
                     <div>
                       <box-icon type='solid' name='edit'></box-icon>
                     </div>
-                    <a href="./editprofile.html">
+                    <a href="#">
                       <div>
                         Edit Profile
                       </div>
@@ -91,7 +78,7 @@
                   </div>
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#">
                   <div class="sidebar-icons">
                     <div>
@@ -103,13 +90,13 @@
                   </div>
 
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </li>
       </ul>
 
-      <button class="btn">
+      <button id="logout" class="btn">
         <div class="sidebar-icons">
           <div>
             <box-icon name='log-out'></box-icon></i>
@@ -120,114 +107,285 @@
         </div>
       </button>
     </section>
-
-    <section class="dashboard-interface">
+    
+    
+    <section class="dashboard-interface" id="theSecondSideOfThePage">
       <div class="top">
         <div class="info-display">
           <p class="text-display"></p>
         </div>
+
         <div class="time">
           <p class="time-one"></p>
           <p class="time-two"> 01 : 09 : 2022</p>
+        </div>
+
+        <div class="forTheprofileImage">
+          <div id="profile-container">
+              <image id="profileImage" src="/Images/newUser.png" />
+          </div>
+          <input
+              id="imageUpload"
+              type="file"
+              name="profile_photo"
+              placeholder="Photo"
+              required=""
+              capture
+            />
+            <span class="forTheAgentID">
+              Agent VIC-1415032
+            </span>
         </div>
       </div>
       <div class="dashboard-container">
         <h2>👋 Welcome Picaso.org </h2>
 
-        <div class="user-table">
-          <div class="report-table">
-            <div class="report-text">
-              <p>My Reports</p>
+        <section class="metricCardContainer">
+          <div class="coverForEachCard">
+            <div class="forCardWrapper">
+              <p class="cardWording">
+                Total
+              </p>
+              <a href="#" class="otherCardWording">+Add Report</a>
             </div>
-            <div class="report-id">
-              <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+            <div class="theMetricItself">
+              5
             </div>
           </div>
+
+          <div class="coverForEachCard">
+            <div class="forCardWrapper">
+              <p class="cardWording">
+                Open Complaints
+              </p>
+              <a href="#" class="otherCardWording">show</a>
+            </div>
+            <div class="theMetricItself">
+              5
+            </div>
+          </div>
+
+          <div class="coverForEachCard">
+            <div class="forCardWrapper">
+              <p class="cardWording">
+                Resolved Complaints
+              </p>
+                <a href="#" class="otherCardWording">show</a>
+            </div>
+            <div class="theMetricItself">
+              0
+            </div>
+          </div>
+          
+          
+          <div class="forTheNotification_Report">
+            <div class="forNotificationButton"><a href="#" id="messageLink">Notification</a></div>
+            <div class="forPrintButton"><a href="#" id="printReport">Print Report</a></div>
+          </div>
+        </section>
+
+        <section id="containerHousingTheTableData">
+          <div class="user-table">
+            <div class="report-table">
+              <div class="report-text">
+                <p>Reports</p>
+              </div>
+              <div class="report-id">
+                <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+              </div>
+            </div>
+          </div>
+          <table id="user-table">
+          <tr>
+            <th>S/N</th>
+            <th>Date reported</th>
+            <th>Report ID</th>
+            <th>View Report</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tr class="row">
+            <td>1</td>
+            <td>31/08/2022</td>
+            <td>Report/0000001</td>
+            <td><a href="#" class="toViewMoreLinke" onclick="openPopUp()">Click to view</a></td>
+            <td>
+              <select>
+                <option value="select" selected>Select</option>
+                <option value="view">In View</option>
+                <option value="completed">Completed</option>
+              </select>
+            </td>
+            <td><div class="forTheUpdateAndDownloadButton">
+              <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+            </div></td>
+          </tr>
+          <tr class="row">
+            <td>2</td>
+            <td>28/08/2022</td>
+            <td>Report/0000001</td>
+            <td><a href="#" class="toViewMoreLinke" onclick="openPopUp()">Click to view</a></td>
+            <td><select>
+                <option value="select" selected>Select</option>
+                <option value="view">In View</option>
+                <option value="completed">Completed</option>
+              </select></td>
+            <td><div class="forTheUpdateAndDownloadButton">
+              <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+            </div></td>
+          </tr>
+          <tr class="row">
+            <td>3</td>
+            <td>01/07/2022</td>
+            <td>Report/0000001</td>
+            <td><a href="#" class="toViewMoreLinke" onclick="openPopUp()">Click to view</a></td>
+            <td><select>
+                <option value="select" selected>Select</option>
+                <option value="view">In View</option>
+                <option value="completed">Completed</option>
+              </select></td>
+            <td><div class="forTheUpdateAndDownloadButton">
+              <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+            </div></td>
+          </tr>
+          <tr class="row">
+            <td>4</td>
+            <td>27/05/2022</td>
+            <td>Report/0000001</td>
+            <td><a href="#" class="toViewMoreLinke" onclick="openPopUp()">Click to view</a></td>
+            <td><select>
+                <option value="select" selected>Select</option>
+                <option value="view">In View</option>
+                <option value="completed">Completed</option>
+              </select></td>
+            <td><div class="forTheUpdateAndDownloadButton">
+              <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+            </div></td>
+          </tr>
+          <tr class="row">
+            <td>5</td>
+            <td>12/12/2022</td>
+            <td>Report/0000001</td>
+            <td><a href="#" class="toViewMoreLinke" onclick="openPopUp()">Click to view</a></td>
+            <td><select>
+                <option value="select" selected>Select</option>
+                <option value="view">In View</option>
+                <option value="completed">Completed</option>
+              </select></td>
+            <td><div class="forTheUpdateAndDownloadButton">
+              <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+            </div></td>
+          </tr>
+          </table>
+        </section>
+
+        <div id="makeItryam">
+          <div class="thePoPUpModal" id="popup">
+            <section class="theHeadings">
+              <h4 class="theHeadingReportTitle">REPORT</h4>
+              <p class="theHeadingReportSerialNumber">Report/0000001</p>
+              <a href="#" class="closeButton" onclick="closePopUp()">CLOSE</a>
+            </section>
+        
+            <form>
+              <div class="sourceAndDateToBeFlexed">
+                <div class="form-group">
+                  <label for="source">SOURCE</label>
+                  <input
+                    type="text"
+                    name="source"
+                    id="FullName"
+                    value="ANONYMOUS"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="datereported">DATE REPORTED</label>
+                  <input
+                    type="text"
+                    name="datereported"
+                    value="12/12/2022 || 12:00"
+                    
+                    required
+                  />
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="company">COMPANY/ORGANIZATION</label>
+                <input
+                  type="text"
+                  name="company"
+                  value="KASAPREKO INTERNATIONAL LIMITED"                
+                  required
+                />
+              </div>
+        
+              <div class="form-group">
+                <label for="subject">SUBJECT</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="FullName"
+                  value="MONEY LAUNDERING"
+                  required
+                />
+              </div>
+        
+              <div class="form-group">
+                <label for="message">MESSAGE</label>
+                <textarea
+                    id="message"
+                  ></textarea>
+              </div>
+        
+              <div class="form-group">
+                <label for="attachment">ATTACHMENT</label>
+                <div class="containerForViewFiles">
+                  <a href="#" class="veiwFilesButton">View Files</a>
+                </div>
+              </div>
+        
+            </form>
+        
+          </div>
         </div>
-
       </div>
-      </main>
-      <table id="user-table">
-        <tr>
-          <th>S/N</th>
-          <th>Date reported</th>
-          <th>Report ID</th>
-          <th>View Report</th>
-          <th>Status</th>
-          <th>Action</th>
-        </tr>
-        <tr class="row">
-          <td>1</td>
-          <td>31/08/2022</td>
-          <td>Report/0000001</td>
-          <td>Click to view</td>
-          <td>
-            <select>
-              <option value="select" selected>Select</option>
-              <option value="view">In View</option>
-              <option value="completed">Completed</option>
-            </select>
-          </td>
-          <td>Update</td>
-        </tr>
-        <tr class="row">
-          <td>2</td>
-          <td>28/08/2022</td>
-          <td>Report/0000001</td>
-          <td>Click to view</td>
-          <td><select>
-              <option value="select" selected>Select</option>
-              <option value="view">In View</option>
-              <option value="completed">Completed</option>
-            </select></td>
-          <td>Update</td>
-        </tr>
-        <tr class="row">
-          <td>3</td>
-          <td>01/07/2022</td>
-          <td>Report/0000001</td>
-          <td>Click to view</td>
-          <td><select>
-              <option value="select" selected>Select</option>
-              <option value="view">In View</option>
-              <option value="completed">Completed</option>
-            </select></td>
-          <td>Update</td>
-        </tr>
-        <tr class="row">
-          <td>4</td>
-          <td>27/05/2022</td>
-          <td>Report/0000001</td>
-          <td>Click to view</td>
-          <td><select>
-              <option value="select" selected>Select</option>
-              <option value="view">In View</option>
-              <option value="completed">Completed</option>
-            </select></td>
-          <td>Update</td>
-        </tr>
-        <!-- <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr> -->
-      </table>
-  </div>
-  </div>
-  </section>
+    </section>
   </div>
 
+  <script>
+    $("#profileImage").click(function (e) {
+      $("#imageUpload").click();
+    });
+
+    function fasterPreview(uploader) {
+      if (uploader.files && uploader.files[0]) {
+        $("#profileImage").attr(
+          "src",
+          window.URL.createObjectURL(uploader.files[0])
+        );
+      }
+    }
+
+    $("#imageUpload").change(function () {
+      fasterPreview(this);
+    });
+
+
+    // FOR THE POPUP
+    let popup = document.getElementById("popup");
+
+    function openPopUp(){
+      popup.classList.add("open-popup");
+
+    }
+
+    function closePopUp(){
+      popup.classList.remove("open-popup");
+
+    }
+  </script>
   <script src="/js/common.js"></script>
 </body>
 

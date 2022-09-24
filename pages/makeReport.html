@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SayIT Website</title>
+  <title>Make Report || SayIT Website</title>
   <link rel="stylesheet" href="/css/makeReport.css" />
   <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
   <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
@@ -134,12 +134,14 @@
       <div class="dashboard-container">
         <h2 class="report-greeting">👋 Welcome Samuel❗</h2>
 
+        <td class="sector">Report</td>
+
         <div class="report-interface">
           <p class="report-heading">Report Form</p>
-          <form class="report-form">
+          <form id="form" class="report-form" onSubmit="reportForm(event)">
             <div class="form-group">
               <label for="sector">Which sector of the economy do you wish to report?</label><br>
-              <select name="sector" required>
+              <select id="sector" name="sector" required>
                 <option value="select" selected>Select Sector</option>
                 <option value="finance">Finance</option>
                 <option value="education">Education</option>
@@ -158,7 +160,7 @@
 
             <div class="form-group">
               <label for="agency">Kindly select the agency you wish to report to</label><br>
-              <select name="agency" required>
+              <select id="agency" name="agency" required>
                 <option value="select" selected>Select Agency</option>
                 <option value="frsc">Federal Road Safety Corps (FRSC)</option>
                 <option value="nps">Nigeria Prisons Service (NPS)</option>
@@ -179,7 +181,7 @@
 
             <div class="form-group">
               <label for="affiliation">Are you affiliated to the above selected?</label>
-              <select name="affiliation" required>
+              <select name="affiliation" id="affiliation" required>
                 <option value="yes">Yes</option>
                 <option value="no" selected>No</option>
               </select>
@@ -193,7 +195,7 @@
             <div class="form-group report-anon">
               <div class="anon-select">
                 <label for="anonymous">Do you wish to be Anonymous?</label>
-                <select name="anonymous" required>
+                <select name="anonymous" id="anonymous" required>
                   <option value="yes">Yes</option>
                   <option value="no" selected>No</option>
                 </select>
@@ -209,31 +211,32 @@
               <input type="checkbox" name="checkbox">
               <label for="checkbox">I affirm that the information provided is valid</label>
             </div>
-
             <button class="btn-form" id="myBtn">SUBMIT</button>
-            <!-- Prompt Modal -->
+
+            <!-- Prompt Modal
             <div id="myModal" class="modal">
               <!-- Modal content -->
-              <div class="modal-content">
+            <!-- <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="thanks"> Thanks for speaking Up! </div>
                 <div class="report-status"> Your Report Has been Submitted </div>
                 <p class="id">ID: (AGENT CODE -S/N)</p>
-                <p class="note">Please take note of your report ID</p>
-                <!-- don't forget to link btn back to home -->
-                <a href="/pages/registeredReport.html" class="btn-modal">Dashboard</a>
-              </div>
-            </div>
-          </form>
+                <p class="note">Please take note of your report ID</p> -->
+            <!-- don't forget to link btn back to home -->
+            <!-- <a href="/pages/registeredReport.html" class="btn-modal">Dashboard</a> -->
         </div>
-      </div>
-    </section>
+      </div> -->
+      </form>
+  </div>
+  </div>
+  </section>
   </div>
 
 
 
   <script src="/js/common.js"></script>
-  <script src="/js/promptModal.js"></script>
+  <!-- <script src="/js/promptModal.js"></script> -->
+  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>

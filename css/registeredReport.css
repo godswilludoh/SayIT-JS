@@ -166,6 +166,17 @@ button {
   height: 42px;
 }
 
+.profile-image{
+}
+
+.profile-image img{
+  cursor: pointer;
+}
+
+#profile-image-upload{
+  display: hidde;
+}
+
 .dashboard-container {
   margin: 2rem;
 }

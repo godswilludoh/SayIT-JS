@@ -22,10 +22,12 @@ body {
 
 /* Sidebar CSS*/
 .sidebar-container {
-  width: 300px;
+  width: 230px;
   min-height: 100vh;
   background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-right: 0.5px solid #b4b1af;
+  position: fixed;
 }
 
 .sidebar-container .logo {
@@ -50,20 +52,24 @@ body {
 }
 
 .sidebar-lists {
-  margin: 2.5rem 0.5rem;
+  margin: 4rem 1rem;
 }
 
 .sidebar-lists li {
   list-style: none;
-  padding: 15px 0;
-  margin-bottom: 15px;
-  /* transition: 0.3s ease; */
+  padding: 8px 0;
+  margin-bottom: 1.5rem;
 }
 
 .sidebar-lists li:hover {
   cursor: pointer;
   background: rgba(153, 157, 173, 0.22);
-  border-radius: 5px;
+}
+
+.sidebar-items {
+  border: 1px solid #b4b1af;
+  background: rgba(217, 217, 217, 0.12);
+  border-radius: 8px;
 }
 
 .sidebar-icons {
@@ -72,15 +78,14 @@ body {
   justify-content: left;
   align-items: center;
   align-self: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .sidebar-lists li a {
   text-decoration: none;
   color: #000000;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
-  /* transition: 0.3s ease; */
 }
 
 .sidebar-lists li .dropdown-menu {
@@ -89,41 +94,45 @@ body {
 
 .sidebar-lists li:hover .dropdown-menu {
   display: block;
-  margin: 1rem;
+  margin: 1rem 0.5rem;
 }
-
 
 button {
   display: block;
-  width: 150px;
-  height: 2.5rem;
+  padding: 8px 20px;
   position: absolute;
-  bottom: 9%;
+  bottom: 0;
 }
 
 .btn {
-  background-color: #fff;
   border: 1px solid #b4b1af;
-  border-radius: 5px;
-  margin: 4rem 3rem 1.5rem 3rem;
-  font-size: 15px;
+  background: rgba(217, 217, 217, 0.12);
+  border-radius: 8px;
+  margin: 4rem 1rem;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(153, 157, 173, 0.22);
 }
 
 /* Dashboard Interface */
 
 .dashboard-interface {
-  width: calc(100% - 300px);
-  padding: 30px 0;
-  margin: 0 5rem;  
+  width: 100%;
+  padding: 30px;
+  /* margin: 0 5rem; */
+  background: #D9D9D9;
+  margin-left: 14rem;
+  overflow: hidden;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
 }
 
 .info-display {
@@ -162,7 +171,7 @@ button {
   margin: 2rem auto;
 }
 
-#containerHousingTheTableData{
+#containerHousingTheTableData {
   margin-top: 80px;
   border-radius: 10px;
   padding: 5px 30px 50px 30px;
@@ -225,7 +234,7 @@ tr:nth-child(odd) {
   background-color: rgba(110, 102, 96, 0.3);
 }
 
-.toViewMoreLinke{
+.toViewMoreLinke {
   padding: 5px;
   background: #ed4d02;
   border-radius: 5px;
@@ -233,14 +242,13 @@ tr:nth-child(odd) {
   text-decoration: none;
 }
 
-.forTheUPdateButton{
+.forTheUPdateButton {
   padding: 5px;
   background: #ed4d02;
   border-radius: 5px;
   color: #ffffff;
   text-decoration: none;
 }
-
 
 select {
   width: 90%;
@@ -250,7 +258,7 @@ select {
   font-size: 16px;
   font-weight: 400;
   border-color: #000000;
-  border: 1px solid #d9d9d9;;
+  border: 1px solid #d9d9d9;
   padding-left: 20px;
 }
 
@@ -274,22 +282,11 @@ select {
   border-radius: 8px;
 }
 
-.forTheUpdateAndDownloadButton{
+.forTheUpdateAndDownloadButton {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* CSS FOR THE CARDS METRICS START HERE */
 
@@ -352,13 +349,13 @@ select {
   margin-bottom: 25px;
 }
 
-#messageLink{
+#messageLink {
   text-decoration: none;
   color: #000000;
   font-weight: 700;
 }
 
-#printReport{
+#printReport {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
@@ -376,9 +373,6 @@ select {
   box-shadow: rgba(0, 0, 0, 0.25);
 }
 /* CSS FOR THE CARDS METRICS ENDS HERE */
-
-
-
 
 /* CSS FOR THE PROFILE IMAGE */
 #imageUpload {
@@ -405,7 +399,7 @@ select {
   height: 50px;
 }
 
-.forTheprofileImage{
+.forTheprofileImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -417,40 +411,34 @@ select {
 /* ################################### */
 /* CSS FOR THE POP MODAL STRATS HERE */
 
-
-
-.theHeadingReportTitle{
+.theHeadingReportTitle {
   font-size: 24px;
   font-weight: 700;
 }
 
-.theHeadingReportSerialNumber{
+.theHeadingReportSerialNumber {
   font-weight: 700;
   font-size: 14px;
 }
 
-.form-group input{
+.form-group input {
   height: 42px;
-  border: 1px solid #ED4D02;
+  border: 1px solid #ed4d02;
   margin-top: 10px;
 }
 
-
-
-
-#makeItryam{
+#makeItryam {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.form-group label{
+.form-group label {
   font-weight: 700;
   font-size: 16px;
 }
 
-.closeButton{
+.closeButton {
   text-decoration: none;
   padding: 10px 30px;
   background: #ed4d02;
@@ -458,38 +446,36 @@ select {
   border-radius: 5px;
 }
 
-.veiwFilesButton{
+.veiwFilesButton {
   text-decoration: none;
   padding: 10px 30px;
   background: #ed4d02;
   color: #fff;
   border-radius: 5px;
-
 }
 
-
-.thePoPUpModal{
+.thePoPUpModal {
   padding: 15px 25px;
   margin-top: 80px;
   height: 741px;
   width: 840px;
-  background: #D9D9D9;
+  background: #d9d9d9;
   position: absolute;
   border-radius: 10px;
   top: 0;
   left: 50%;
-  transform: translate(-50%,-50%)scale(0.1);
+  transform: translate(-50%, -50%) scale(0.1);
   visibility: hidden;
   transition: transform 0.4s;
 }
 
-.open-popup{
+.open-popup {
   visibility: visible;
   top: 50%;
-  transform: translate(-50%,-50%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.theHeadings{
+.theHeadings {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -497,17 +483,17 @@ select {
   margin-top: 20px;
 }
 
-.sourceAndDateToBeFlexed{
+.sourceAndDateToBeFlexed {
   display: flex;
   justify-content: space-between;
 }
 
-.form-group{
+.form-group {
   margin-bottom: 10px;
 }
 
 .form-group textarea {
-  border: 1px solid #ED4D02;
+  border: 1px solid #ed4d02;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -516,20 +502,9 @@ select {
   margin-bottom: 0px;
 }
 
-
-.containerForViewFiles{
+.containerForViewFiles {
   margin-top: 15px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Popup card modal */
 /* #popup-container {

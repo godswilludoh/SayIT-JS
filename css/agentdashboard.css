@@ -292,7 +292,7 @@ select {
 
 .metricCardContainer {
   display: flex;
-  gap: 10px;
+  justify-content: space-around;
   margin-top: 80px;
 }
 

@@ -134,14 +134,14 @@
       <div class="dashboard-container">
         <h2 class="report-greeting">👋 Welcome Samuel❗</h2>
 
-        <td class="sector">Report</td>
+        <!-- <p id="reportSector">Report</p> -->
 
         <div class="report-interface">
           <p class="report-heading">Report Form</p>
           <form id="form" class="report-form" onSubmit="reportForm(event)">
             <div class="form-group">
               <label for="sector">Which sector of the economy do you wish to report?</label><br>
-              <select id="sector" name="sector" required>
+              <select id="sector" name="sector">
                 <option value="select" selected>Select Sector</option>
                 <option value="finance">Finance</option>
                 <option value="education">Education</option>
@@ -160,7 +160,7 @@
 
             <div class="form-group">
               <label for="agency">Kindly select the agency you wish to report to</label><br>
-              <select id="agency" name="agency" required>
+              <select id="agency" name="agency">
                 <option value="select" selected>Select Agency</option>
                 <option value="frsc">Federal Road Safety Corps (FRSC)</option>
                 <option value="nps">Nigeria Prisons Service (NPS)</option>
@@ -181,7 +181,7 @@
 
             <div class="form-group">
               <label for="affiliation">Are you affiliated to the above selected?</label>
-              <select name="affiliation" id="affiliation" required>
+              <select name="affiliation" id="affiliation">
                 <option value="yes">Yes</option>
                 <option value="no" selected>No</option>
               </select>
@@ -189,20 +189,20 @@
 
             <div class="form-group">
               <label for="report-info">What do you want to report?</label>
-              <textarea id="report-info" name="report-info" required></textarea>
+              <textarea id="report-info" name="report-info"></textarea>
             </div>
 
             <div class="form-group report-anon">
               <div class="anon-select">
                 <label for="anonymous">Do you wish to be Anonymous?</label>
-                <select name="anonymous" id="anonymous" required>
+                <select name="anonymous" id="anonymous">
                   <option value="yes">Yes</option>
                   <option value="no" selected>No</option>
                 </select>
               </div>
               <div class="upload">
                 <label for="upload">Upload document</label>
-                <input type="file" id="upload" name="upload" required />
+                <input type="file" id="upload" name="upload" />
                 <p>Docx, Image, Audio and Videos</p>
               </div>
             </div>
@@ -233,10 +233,9 @@
   </div>
 
 
-
+  <script src="/js/localStorage.js"></script>
   <script src="/js/common.js"></script>
   <!-- <script src="/js/promptModal.js"></script> -->
-  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>

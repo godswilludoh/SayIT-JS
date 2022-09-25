@@ -11,7 +11,7 @@
   <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload='userTable()'>
   <div class="main-container">
     <section class="sidebar-container">
       <div class="logo">
@@ -169,7 +169,7 @@
             </div>
           </div>
 
-          <table id="user-table">
+          <!-- <table id="user-table">
             <tr>
               <th>S/N</th>
               <th>Date reported</th>
@@ -249,7 +249,7 @@
               <td>5.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000005</td>
-              <td class="sector"></td>
+              <td id="reportSector"></td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -261,6 +261,10 @@
                 </div>
               </td>
             </tr>
+          </table> -->
+
+          <table class="user-table">
+
           </table>
 
           <div class="pagination">

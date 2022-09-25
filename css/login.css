@@ -134,7 +134,19 @@ input::placeholder{
 /* styling for error message */
 small{
   color: #f00;
-  font-size: small;
+  font-size: 20px;
+  text-align: center;
+  visibility: hidden;
+  margin: 0;
+}
+
+.showError{
+  color: #f00;
+  font-size: 20px;
+  text-align: center;
+  visibility: visible;
+  margin: 0;
+
 }
 
 

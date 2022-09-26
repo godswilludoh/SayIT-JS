@@ -1,38 +1,3 @@
-// /** DOM elements **/
-// const reportForm = document.getElementById('form');
-// const sectorDetails = reportForm['sector'];
-// const agencyDetails = reportForm['agency'];
-// const companyName = reportForm['report-org'];
-// const reportAffiliation = reportForm['affiliation'];
-// const reportInfo = reportForm['report-info'];
-// const anonReport = reportForm['anonymous'];
-// const upload = reportForm['upload'];
-
-// const reports = [];
-
-// const addReport = (sector, agency, affiliation, anonymous, upload) => {
-// 	reports.push({
-// 		sector,
-// 		agency,
-// 	});
-
-// 	localStorage.setItem('reports', JSON.stringify(reports));
-
-// 	return { sector, agency };
-// };
-
-// // const createReport = () => {};
-
-// // reports.forEach((report) => {
-// // 	console.log(report);
-// // });
-
-// // reportForm.onsubmit = (e) => {
-// // 	e.preventDefault();
-
-// // 	const newReport = addReport(sectorInput.value, agencyInput.value);
-// // };
-
 const reportForm = (e) => {
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
 	let reports = {
@@ -90,6 +55,7 @@ function userTable() {
               </td>`;
 		table.appendChild(newRow);
 	});
+	// init();
 }
 
 function dateReported() {
@@ -106,3 +72,11 @@ function dateReported() {
 		currentdate.getMinutes()
 	);
 }
+
+// function init() {
+// 	if (userTable == 0) {
+// 		return 'Make your first report';
+// 	} else {
+// 		userTable();
+// 	}
+// }

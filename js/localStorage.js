@@ -90,3 +90,10 @@ let prevPage = document.querySelector('#prev-button');
 let nextPage = document.querySelector('#next-button');
 
 let next = document.getElementsByClassName('pagination');
+
+document
+	.querySelector('#nextButton')
+	.addEventListener('click', nextPage, false);
+document
+	.querySelector('#prevButton')
+	.addEventListener('click', previousPage, false);

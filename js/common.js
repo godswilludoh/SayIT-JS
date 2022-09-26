@@ -1,15 +1,3 @@
-// export function setData(key, value) {
-// 	localStorage.setItem(key, value);
-// }
-
-// export function getData(key) {
-// 	localStorage.getItem(key);
-// }
-
-// export function removeData(key) {
-// 	localStorage.removeItem(key);
-// }
-
 //Working on time
 setInterval(() => {
 	const time = document.querySelector('.time-one');
@@ -43,21 +31,8 @@ if (month < 10) {
 }
 date.textContent = today + ':' + month + ':' + year;
 
-
-
-const searchInput = document.getElementById('search-input');
-const rows = document.querySelectorAll('.row');
-//console.log(rows);
-
-/*adding event listener*/
-searchInput.addEventListener('keyup', (e) => {
-	const textDetails = e.target.value;
-	//console.log(textDetails);
-
-	/* Looping through the table rows */
-	rows.forEach((row) => {
-		row.querySelector('td').textContent.toLowerCase().startsWith(textDetails)
-			? (row.style.display = 'table-row')
-			: (row.style.display = 'none');
-	});
+//logout
+let logout = document.getElementById('logout');
+logout.addEventListener('click', () => {
+	window.location = 'loginpage.html';
 });

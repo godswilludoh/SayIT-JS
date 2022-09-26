@@ -1,4 +1,5 @@
 const reportForm = (e) => {
+	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
 	let reports = {
 		sectorDetails: document.getElementById('sector').value,
@@ -80,3 +81,12 @@ function dateReported() {
 // 		userTable();
 // 	}
 // }
+
+function pagination() {}
+const pageSize = 3;
+let currPage = 1;
+
+let prevPage = document.querySelector('#prev-button');
+let nextPage = document.querySelector('#next-button');
+
+let next = document.getElementsByClassName('pagination');

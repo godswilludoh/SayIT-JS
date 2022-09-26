@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReportsInformation</title>
+    <link rel="stylesheet" href="/css/adminReport.css">
+
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+    <div class="main-container">
+        <section class="sidebar-container">
+            <div class="logo">
+                <h2 class="heading">
+                    <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
+                    <h1 class="heading">Say<span class="it">IT</span></h1>
+            </div>
+
+            <ul class="sidebar-lists">
+                <li class="sidebar-items">
+                    <a href="/pages/adminDashboard.html">
+                        <div class="sidebar-icons">
+                            <div>
+                                <box-icon type='solid' name='dashboard'></box-icon>
+                            </div>
+                            <div>
+                                Dashboard
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="sidebar-items">
+                    <a href="/pages/makeReport.html">
+                        <div class="sidebar-icons">
+                            <div>
+                                <box-icon name='message-square-edit'></box-icon>
+                            </div>
+                            <div>
+                                Reports
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="sidebar-items">
+                    <a href="/pages/blog-page.html">
+                        <div class="sidebar-icons">
+                            <div>
+                                <box-icon type='solid' name='message-square-dots'></box-icon>
+                            </div>
+                            <div>
+                                Messages
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="sidebar-items">
+                    <a href="#">
+                        <div class="sidebar-icons">
+                            <div>
+                                <box-icon type='solid' name='user'></box-icon>
+                            </div>
+                            <div>
+                                Profile
+                            </div>
+                            <div>
+                                <box-icon name='chevron-down'></box-icon>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="sidebar-icons">
+                                        <div>
+                                            <box-icon type='solid' name='edit'></box-icon>
+                                        </div>
+                                        <a href="./editprofile.html">
+                                            <div>
+                                                Edit Profile
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="sidebar-icons">
+                                        <div>
+                                            <box-icon name='cog' type='solid'></box-icon>
+                                        </div>
+                                        <div>
+                                            Settings
+                                        </div>
+                                    </div>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="btn">
+                <div class="sidebar-icons">
+                    <div>
+                        <box-icon name='log-out'></box-icon></i>
+                    </div>
+                    <div>
+                        Logout
+                    </div>
+                </div>
+            </button>
+        </section>
+        <div class="report_interface">
+            <div>
+                <div class="time">
+                    <p class="time-one"></p>
+                    <p class="time-two"></p>
+                </div>
+                <div>
+                    <ul class="admin_Dash_Nav">
+                        <li>
+                            <h4 id="dashBar">REPORTS</h4>
+                        </li>
+
+                        <li>
+                            <div class="forTheprofileImage">
+                                <div id="profile-container">
+                                    <image id="profileImage" src="/Images/newUser.png" />
+                                </div>
+                                <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
+                                    capture />
+                                <span class="forTheAgentID">
+                                    Admin1-00001
+                                </span>
+                            </div>
+                        </li>
+                        <!-- <li><h4 id="adminIcon" >Icon</h4></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                <div id="taable_sec">
+                    <div id="search-input">
+                        <input type="text" placeholder="Enter Report ID">
+                    </div>
+                    <div id="user-table">
+                        <table id="user-table">
+                            <tr>
+                                <th>S/N</th>
+                                <th>Agency Charged</th>
+                                <th>Report ID</th>
+                                <th>Sector</th>
+                                <th>View Report</th>
+                                <th>Status</th>
+                                <th>Admin Charged</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr class="row">
+                                <td>1.</td>
+                                <td>EFCC</td>
+                                <td>Report/14423</td>
+                                <td>Finance</td>
+                                <td>
+                                    <div class="table-icons">
+                                        <div>
+                                            <a class="report-button view" href="#">View</a>
+                                        </div>
+                                        <div>
+                                            <box-icon name='printer' type='solid'></box-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>In-View</td>
+                                <td>Admin1</td>
+                                <div class="table-del">
+                                    <div>
+                                        <td><a class="report-button-del" href="#">DELETE</a>
+
+                                    </div>
+
+                                    </td>
+                                </div>
+                            </tr>
+
+                            <tr class="row">
+                                <td>2.</td>
+                                <td>Police</td>
+                                <td>Report/000002</td>
+                                <td>Security</td>
+                                <td>
+                                    <div class="table-icons">
+                                        <div>
+                                            <a class="report-button view" href="#">View</a>
+                                        </div>
+                                        <div>
+                                            <box-icon name='printer' type='solid'></box-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>On-going</td>
+                                <td>Admin 4</td>
+                                <div class="table-del">
+                                    <div>
+                                        <td><a class="report-button-del" href="#">DELETE</a>
+
+                                    </div>
+
+                                    </td>
+                                </div>
+                            </tr>
+
+                            <tr class="row">
+                                <td>3.</td>
+                                <td>NDLEA</td>
+                                <td>Report/000003</td>
+                                <td>Health</td>
+                                <td>
+                                    <div class="table-icons">
+                                        <div>
+                                            <a class="report-button view" href="#">View</a>
+                                        </div>
+                                        <div>
+                                            <box-icon name='printer' type='solid'></box-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>In-view</td>
+                                <td>Admin 2</td>
+                                <div class="table-del">
+                                    <div>
+                                        <td><a class="report-button-del" href="#">DELETE</a>
+
+                                    </div>
+
+                                    </td>
+                                </div>
+                            </tr>
+
+                            <tr class="row">
+                                <td>4.</td>
+                                <td>EFCC</td>
+                                <td>Report/000004</td>
+                                <td>Finance</td>
+                                <td>
+                                    <div class="table-icons">
+                                        <div>
+                                            <a class="report-button view" href="#">View</a>
+                                        </div>
+                                        <div>
+                                            <box-icon name='printer' type='solid'></box-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Closed</td>
+                                <td>Admin 8</td>
+                                <div class="table-del">
+                                    <div>
+                                        <td><a class="report-button-del" href="#">DELETE</a>
+
+                                    </div>
+
+                                    </td>
+                                </div>
+                            </tr>
+
+                            <tr class="row">
+                                <td>5.</td>
+                                <td>Police</td>
+                                <td>Report/000005</td>
+                                <td>Security</td>
+                                <td>
+                                    <div class="table-icons">
+                                        <div>
+                                            <a class="report-button view" href="#">View</a>
+                                        </div>
+                                        <div>
+                                            <box-icon name='printer' type='solid'></box-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Completed</td>
+                                <td>Admin 5</td>
+                                <div class="table-del">
+                                    <div>
+                                        <td><a class="report-button-del" href="#">DELETE</a>
+
+                                    </div>
+
+                                    </td>
+                                </div>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="/js/common.js"></script>
+        <script src="/js/searchFunct.js"></script>
+        <script src="/js/admin.js"></script>
+</body>
+
+</html>

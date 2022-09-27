@@ -38,7 +38,7 @@ let currentlyRegisteredAgent = [
     Agent_Phone_Number: "080600012478",
     Gender: "female",
     Agent_ID: "#VIOFunmiBankole",
-    Agent_Login_Password: "councilsofvehicleinspectionofficers",
+    Agent_Login_Password: "vioagency",
   },
 
   {

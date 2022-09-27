@@ -4,36 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SayIT Website||Edit page</title>
+    <title>SayIT Website || Edit page</title>
     <link rel="stylesheet" href="/css/editprofile.css" />
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/ec08909fa5.js"
       crossorigin="anonymous"
-    ></script>
-    <script src="/js/editprofile.js"></script>
+    ></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <script src="/js/editprofile.js"></script> -->
   </head>
   <body>
     <div class="main-container">
       <section class="sidebar-container">
         <div class="logo">
-          <h2 class="heading"><img src="/Images/SAYIT.jpeg" alt="logo"/>Say<span class="it">IT</span></h2>
+          <div class="image-logo"><img src="/Images/SAYIT.jpeg" alt="logo" /></div>
+          <h1 class="heading">Say<span class="it">IT</span></h1>
         </div>
-        
+  
         <ul class="sidebar-lists">
           <li class="sidebar-items">
             <a href="/pages/registeredReport.html">
               <div class="sidebar-icons">
-                  <div>
-                    <box-icon type='solid' name='dashboard'></box-icon>
-                  </div>              
-                  <div>
-                   Dashboard
-                  </div>
-              </div>             
+                <div>
+                  <box-icon type='solid' name='dashboard'></box-icon>
+                </div>
+                <div>
+                  Dashboard
+                </div>
+              </div>
             </a>
           </li>
-           
+  
           <li class="sidebar-items">
             <a href="/pages/makeReport.html">
               <div class="sidebar-icons">
@@ -42,12 +44,12 @@
                 </div>
                 <div>
                   Make Report
-                </div>     
+                </div>
               </div>
             </a>
           </li>
-
-
+  
+  
           <li class="sidebar-items">
             <a href="/pages/blog-page.html">
               <div class="sidebar-icons">
@@ -56,25 +58,25 @@
                 </div>
                 <div>
                   Blog
-                </div>         
+                </div>
               </div>
             </a>
           </li>
-
+  
           <li class="sidebar-items">
             <a href="#">
               <div class="sidebar-icons">
                 <div>
                   <box-icon type='solid' name='user'></box-icon>
                 </div>
-              <div>
-                Profile
-              </div>       
-              <div>
-                <box-icon name='chevron-down'></box-icon>    
-              </div>                  
-            </div>             
-          </a>
+                <div>
+                  Profile
+                </div>
+                <div>
+                  <box-icon name='chevron-down'></box-icon>
+                </div>
+              </div>
+            </a>
             <div class="dropdown-menu">
               <ul>
                 <li>
@@ -83,101 +85,138 @@
                       <div>
                         <box-icon type='solid' name='edit'></box-icon>
                       </div>
-                      <div>
-                        Edit Profile
-                      </div>                    
-                    </div>                   
+                      <a href="./editprofile.html">
+                        <div>
+                          Edit Profile
+                        </div>
+                      </a>
+                    </div>
                   </a>
                 </li>
                 <!-- <li>
                   <a href="#">
                     <div class="sidebar-icons">
                       <div>
-                        <box-icon name='cog' type='solid' ></box-icon>
+                        <box-icon name='cog' type='solid'></box-icon>
                       </div>
                       <div>
                         Settings
                       </div>
                     </div>
-                   
+  
                   </a>
                 </li> -->
               </ul>
             </div>
-        </li>
+          </li>
         </ul>
-
-        <button class="btn btn-logout"> 
+  
+        <button id="logout" class="btn">
           <div class="sidebar-icons">
             <div>
-              <box-icon name='log-out'></box-icon></i> 
+              <box-icon name='log-out'></box-icon></i>
             </div>
             <div>
               Logout
-            </div>           
+            </div>
           </div>
         </button>
       </section>
 
       <section class="usersEditSection">
-        <h1 class="editSectionTitle">
+        <div class="editContentWrapper">
+          <h1 class="editSectionTitle">
             Edit Profile
-        </h1>
-        
-        <!-- form section of the page -->
-        <section class="formSection">
-        <form>
-          <!-- FOR USERNAME -->
-          <h3 class="formTitle">User Name</h3>
-          <div class="formGroup">
-            <input type="text" placeholder="Please Input Your New Username" id="name" required />
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-                ></path>
-              </svg>
-            </span>
+          </h1>
+
+          <div class="forTheprofileImage">
+            <div id="profile-container">
+                <image id="profileImage" src="/Images/newUser.png" />
+            </div>
+            <input
+                id="imageUpload"
+                type="file"
+                name="profile_photo"
+                placeholder="Photo"
+                required=""
+                capture
+              />
           </div>
+          
+          <!-- form section of the page -->
+          <section class="formSection">
+          <form>
+            <!-- FOR USERNAME -->
+            <h3 class="formTitle">User Name</h3>
+            <div class="formGroup">
+              <input type="text" placeholder="Please Input Your New Username" id="name" required />
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+                    ></path>
+                </svg>
+                </span>
+            </div>
 
-          <!-- FOR EMAIL -->
-          <h3 class="formTitle">Email</h3>
-          <div class="formGroup">
-            <input type="email" placeholder="Please Enter Your Email" id="mail" required />
-          </div>
+            <!-- FOR EMAIL -->
+            <h3 class="formTitle">Email</h3>
+            <div class="formGroup">
+              <input type="email" placeholder="Please Enter Your Email" id="mail" required />
+            </div>
 
-          <!-- FOR PHONE NUMBER -->
-          <h3 class="formTitle">Change Phone Number</h3>
-          <div class="formGroup">
-            <input type="text" placeholder="Enter your new number" id="number" required/>
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-                ></path>
-              </svg>
-            </span>
-          </div>
+            <!-- FOR PHONE NUMBER -->
+            <h3 class="formTitle">Change Phone Number</h3>
+            <div class="formGroup">
+              <input type="text" placeholder="Enter your new number" id="number" required/>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
 
-          <!-- FOR PASSWORD -->
-          <h3 class="formTitle">Account Password</h3>
-          <div class="formGroup">
-            <input type="password" placeholder="Please enter your account password" id="password" required />
-          </div>
+            <!-- FOR PASSWORD -->
+            <h3 class="formTitle">Account Password</h3>
+            <div class="formGroup">
+              <input type="password" placeholder="Please enter your account password" id="password" required />
+            </div>
 
 
-          <!-- FOR THE UPDATE PROFILE AND BACK TO DASHBOARD BUTTON -->
-          <div class="buttonContainer">
-            <button class="butn" onclick="submitUsers()">Update Profile</button>
+            <!-- FOR THE UPDATE PROFILE AND BACK TO DASHBOARD BUTTON -->
+            <div class="buttonContainer">
+              <a href="#" class="butn" onclick="submitUsers()">Save Changes</a>
 
-            <a href="/pages/registeredReport.html" class="butn active backToDashBoard">
-              Back to Dashboard
-            </a>
-          </div>
-        </form>
-        </section>       
+              <a href="/pages/registeredReport.html" class="butn active backToDashBoard">
+                Back to Dashboard
+              </a>
+            </div>
+          </form>
+          </section>
+        </div>     
       </section>
     </div>
+
+    <script>
+      $("#profileImage").click(function (e) {
+        $("#imageUpload").click();
+      });
+  
+      function fasterPreview(uploader) {
+        if (uploader.files && uploader.files[0]) {
+          $("#profileImage").attr(
+            "src",
+            window.URL.createObjectURL(uploader.files[0])
+          );
+        }
+      }
+  
+      $("#imageUpload").change(function () {
+        fasterPreview(this);
+      });
+    </script>
   </body>
 </html>
 

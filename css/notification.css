@@ -118,9 +118,8 @@ button {
   background: rgba(153, 157, 173, 0.22);
 }
 
-/* ADENIGBA CSS STARTS HERE */
-
-.usersEditSection {
+/* Dashboard Interface */
+.dashboard-interface {
   width: 100%;
   padding: 30px;
   background: #d9d9d9;
@@ -128,18 +127,125 @@ button {
   overflow: hidden;
 }
 
-/* CSS FOR THE PROFILE IMAGE */
-#profile-container img {
-  width: 150px;
-  height: 150px;
+.notificationContainer {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 80px;
+  border-radius: 8px;
 }
 
-.forTheprofileImage {
+.container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding: 90px 15px 15px 15px;
+  border-bottom: 1px solid #b4b1af;
+  height: 56px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
+.info-display {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 1rem 2rem;
+}
+
+.info-display p {
+  font-weight: 700;
+}
+
+.time {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-left: 300px;
+}
+
+.time-one {
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px;
+  width: 92px;
+  height: 42px;
+}
+
+.time-two {
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px;
+  width: 150px;
+  height: 42px;
+}
+
+.dashboard-container {
+  margin: 2rem;
+}
+
+.p-top {
+  padding: 1rem;
+  border-bottom: 1px solid #b4b1af;
+  color: #60616e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.p-bottom {
+  color: #000000;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.forTheAgentID {
+  font-weight: 700;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 100px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+.linksContainer li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.linksContainer li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.notificationAmountAll {
+  padding: 10px;
+  background: #ed4d02;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.notificationAmount {
+  padding: 10px;
+  background: #000000;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+
+/* CSS FOR THE PROFILE IMAGE */
 #imageUpload {
   display: none;
 }
@@ -149,8 +255,8 @@ button {
 }
 
 #profile-container {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -159,92 +265,51 @@ button {
   border-radius: 50%;
 }
 
-/* CSS FOR THE PROFILE IMAGE ENDS HERE*/
-
-.editContentWrapper {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+#profile-container img {
+  width: 50px;
+  height: 50px;
 }
 
-.editSectionTitle {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.formTitle {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.formGroup {
-  position: relative;
+.forTheprofileImage {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 10px auto;
-  margin-bottom: 20px;
-}
-
-.formGroup Input {
-  border: 1px solid red;
-  height: 55px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  width: 100%;
-  padding: 15px;
-  font-size: 15px;
-  outline: none;
-  /* background: #B4B1AF;; */
-  /* opacity: 90%; */
-}
-
-.icon {
-  position: absolute;
-  right: 15px;
-  top: 0;
-  font-size: 20px;
-  height: 80%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: flex-end;
   gap: 15px;
 }
 
-.buttonContainer a {
-  text-decoration: none;
-  text-align: center;
-  color: #000000;
+/* CSS FOR THE PROFILE IMAGE ENDS HERE*/
+
+
+
+/* FOR THE NOTIFICATION LIST STYLING */
+.theNotifications{
+    margin-top: 10px;
+    padding: 10px 30px;
 }
 
-button {
-  height: 50px;
-  font-weight: 700;
+.listWrapper{
+    list-style: none;
 }
 
-.butn {
-  padding: 15px;
-  color: #ed4d02;
-  cursor: pointer;
-  width: 195px;
-  border: 1px solid #b4b1af;
-  font-size: 14px;
-  background: #fff;
-  border-radius: 8px;
+.listWrapper .usersReportListEntries{
+    display: flex;
+    gap: 10px;
 }
 
-.active {
-  background: #ed4d02;
-  color: #fff;
+.usersReportListEntries{
+    margin-bottom: 15px;
+
 }
 
-.butn:hover {
-  background: #da4804;
-  color: #fff;
+.unread{
+    background: #D9D9D9;
+}
+
+.usersIdentity{
+    /* font-size: 13px; */
+    font-weight: 700;
+}
+
+.usersTimeOfReport{
+    font-size: 13px;
 }

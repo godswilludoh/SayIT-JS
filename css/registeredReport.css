@@ -7,6 +7,11 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root{
+  --side-icon-width: 50px;
+  --side-border-width: 8px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -137,7 +142,7 @@ button {
 .info-display {
   font-size: 26px;
   font-weight: 400;
-  margin: 1rem 2rem;
+  margin: 1.5rem;
 }
 
 .time {
@@ -166,8 +171,19 @@ button {
   height: 42px;
 }
 
+.profile-image{
+}
+
+.profile-image img{
+  cursor: pointer;
+}
+
+#profile-image-upload{
+  display: hidde;
+}
+
 .dashboard-container {
-  margin: 2rem;
+  margin: 2rem 1rem;
 }
 
 h2 {
@@ -339,4 +355,43 @@ tr:nth-child(odd) {
 .pagination-item:hover{
   background: #ED4D02;
   color: #FFFFFF;
+}
+
+/* CSS FOR THE PROFILE IMAGE */
+#imageUpload {
+  display: none;
+}
+
+#profile-container #profileImage {
+  cursor: pointer;
+}
+
+#profile-container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#profile-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.forTheprofileImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* CSS FOR THE PROFILE IMAGE ENDS HERE*/
+
+/* Collapsible sidebar */
+.sidebar-collapse {
+  width: var(--side-icon-width)
 }

@@ -14,7 +14,7 @@ const reportForm = (e) => {
 
 	reportData.push(reports);
 	localStorage.setItem('reportData', JSON.stringify(reportData));
-
+	// card();
 	sectorOutput();
 	e.preventDefault();
 };
@@ -35,6 +35,13 @@ function userTable() {
 	//console.log(dateReported, reportID, sectorDetails);
 	//getting the whole report data details
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
+
+	//incrementing cards
+	let card = document.querySelector('.p-bottom');
+	let card2 = document.querySelector('.bottom2');
+	card.innerHTML = `${reportData.length}`;
+	card2.innerHTML = `${reportData.length}`;
+
 	console.log(reportData);
 	let i = 1;
 
@@ -56,7 +63,35 @@ function userTable() {
               </td>`;
 		table.appendChild(newRow);
 	});
-	// init();
+
+	function pagination() {
+		const pageSize = 3;
+		let currPage = 1;
+
+		let pageCount = Math.ceil(reportData.length / pageSize);
+		console.log(reportData.length);
+		console.log(pageCount);
+
+		let prevPage = document.querySelector('#prev-button');
+		let nextPage = document.querySelector('#next-button');
+		console.log(prevPage, nextPage);
+
+		let next = document.getElementsByClassName('pagination');
+
+		document
+			.querySelector('#nextButton')
+			.addEventListener('click', nextPage, false);
+		document
+			.querySelector('#prevButton')
+			.addEventListener('click', prevPage, false);
+	}
+	pagination();
+
+	const selectPage = (pageNum) => {
+		currPage = pageNum;
+		const prevRange = pageNum * pageSize;
+		const nextRange = (pageNum + 1) * pageSize;
+	};
 }
 
 function dateReported() {
@@ -78,28 +113,4 @@ function dateReported() {
 // 	} else {
 // 		userTable();
 // 	}
-// }
-
-function card() {
-	let card = document.querySelectorAll('.p-bottom');
-	card.innerHTML = '7';
-	console.log(card);
-}
-card();
-
-// function pagination() {
-// 	const pageSize = 3;
-// 	let currPage = 1;
-
-// 	let prevPage = document.querySelector('#prev-button');
-// 	let nextPage = document.querySelector('#next-button');
-
-// 	let next = document.getElementsByClassName('pagination');
-
-// 	document
-// 		.querySelector('#nextButton')
-// 		.addEventListener('click', nextPage, false);
-// 	document
-// 		.querySelector('#prevButton')
-// 		.addEventListener('click', prevPage, false);
 // }

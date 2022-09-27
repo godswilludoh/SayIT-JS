@@ -92,10 +92,10 @@ body {
   display: none;
 }
 
-.sidebar-lists li:hover .dropdown-menu {
+/* .sidebar-lists li:hover .dropdown-menu {
   display: block;
   margin: 1rem 0.5rem;
-}
+} */
 
 button {
   display: block;
@@ -408,6 +408,10 @@ select {
 
 /* CSS FOR THE PROFILE IMAGE ENDS HERE*/
 
+
+
+
+
 /* ################################### */
 /* CSS FOR THE POP MODAL STRATS HERE */
 
@@ -427,11 +431,11 @@ select {
   margin-top: 10px;
 }
 
-#makeItryam {
+/* #makeItryam {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .form-group label {
   font-weight: 700;
@@ -457,7 +461,7 @@ select {
 .thePoPUpModal {
   padding: 15px 25px;
   margin-top: 80px;
-  height: 741px;
+  height: 741px;  
   width: 840px;
   background: #d9d9d9;
   position: absolute;

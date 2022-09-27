@@ -8,9 +8,11 @@
   <title>SayIT Admin Login Page</title>
   <link rel="stylesheet" href="/css/adminlogin.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
 </head>
 
 <body>
+
   <!-- Navbar Section -->
   <!-- The navbar shouldnt be tampered with to ensure it uniformality across all webpages -->
   <nav>
@@ -33,7 +35,7 @@
       <li><a href="../index.html#whyUs">WHY US</a></li>
       <li><a href="../pages/anonymousReport.html">REPORT</a></li>
       <li><a href="/pages/blog-page.html">BLOG</a></li>
-      <li><a href="./loginpage.html" class="active">SIGNIN</a></li>
+      <li><a href="./loginpage.html" class="active">SIGN IN</a></li>
     </ul>
   </nav>
 
@@ -44,7 +46,7 @@
       <div class="innerContainer">
         <h3 class="agentTitle">ADMIN LOGIN</h3>
 
-        <form>
+        <form id="admin_Form">
           <!--FIELD FOR THE AGENT ID -->
           <div class="formGroup">
             <span class="icon">
@@ -66,7 +68,7 @@
                 </path>
               </svg>
             </span>
-            <input type="text" name="password" placeholder="Password" required />
+            <input type="password" name="password" placeholder="Password" required />
           </div>
 
           <!--FIELD FOR SUBMIT-->
@@ -87,7 +89,8 @@
     </section>
   </section>
 
-  <script src="/js/login.js"></script>
+  <script src="/js/admin.js"></script>
+  
 </body>
 
 </html>

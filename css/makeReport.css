@@ -121,7 +121,7 @@ body {
 .dashboard-interface {
   width: 100%;
   padding: 5px;
-  background: #FFFFFF;
+  background: #D9D9D9;
   margin-left: 13rem;
   overflow: hidden;
 }
@@ -130,12 +130,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #D9D9D9;
 }
 
 .info-display {
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 1rem 10rem;
 }
 
@@ -213,6 +213,7 @@ select,
   border-color: #000000;
   border-width: 2px;
   padding-left: 20px;
+  background: #D9D9D9;
 }
 
 textarea {
@@ -223,6 +224,7 @@ textarea {
   padding: 1.5rem;
   border-color: #000000;
   border-width: 2px;
+  background: #D9D9D9;
 }
 
 

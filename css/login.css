@@ -85,7 +85,7 @@ header {
   flex-direction: row-reverse;
   justify-content: space-around; 
   align-items: center;
-  padding:15rem 0 2rem 0;
+  padding:7rem 0 2rem 0;
 }
 
 .login-heading{

@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SayIT Website</title>
+  <title>SayIT Website || Registered Users</title>
   <link rel="stylesheet" href="/css/registeredReport.css" />
   <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
   <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload='userTable()'>
   <div class="main-container">
     <section class="sidebar-container">
       <div class="logo">
@@ -129,6 +130,15 @@
           <p class="time-one"></p>
           <p class="time-two"></p>
         </div>
+        <div class="forTheprofileImage">
+          <div id="profile-container">
+            <image id="profileImage" src="/Images/newUser.png" />
+          </div>
+          <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture />
+          <span class="forTheAgentID">
+            Samuel
+          </span>
+        </div>
       </div>
       <div class="dashboard-container">
         <h2>👋 Welcome Samuel </h2>
@@ -165,7 +175,7 @@
             </div>
           </div>
 
-          <table id="user-table">
+          <!-- <table id="user-table">
             <tr>
               <th>S/N</th>
               <th>Date reported</th>
@@ -177,7 +187,7 @@
               <td>1.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000001</td>
-              <td>Finance</td>
+              <td class="sector">Finance</td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -194,7 +204,7 @@
               <td>2.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000002</td>
-              <td>Security</td>
+              <td class="sector">Security</td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -211,7 +221,7 @@
               <td>3.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000003</td>
-              <td>Finance</td>
+              <td class="sector">Finance</td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -228,7 +238,7 @@
               <td>4.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000004</td>
-              <td>Finance</td>
+              <td class="sector">Finance</td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -245,7 +255,7 @@
               <td>5.</td>
               <td>DD/MM/YYYY MM:HH</td>
               <td>Report/000005</td>
-              <td>Security</td>
+              <td id="reportSector"></td>
               <td>
                 <div class="table-icons">
                   <div>
@@ -257,23 +267,48 @@
                 </div>
               </td>
             </tr>
+          </table> -->
+
+          <table class="user-table">
+
           </table>
 
           <div class="pagination">
-            <a class="pagination-bracket" href="#">&lsaquo;</a>
+            <a id="prev-button" class="pagination-bracket" href="#">&lsaquo;</a>
             <a class="pagination-item" href="#">1</a>
             <a class="pagination-item" href="#">2</a>
             <a class="pagination-item" href="#">3</a>
             <a class="pagination-item" href="#">4</a>
             <a class="pagination-item" href="#">5</a>
-            <a class="pagination-bracket" href="#">&rsaquo;</a>
+            <a id="next-button" class="pagination-bracket" href="#">&rsaquo;</a>
           </div>
         </div>
     </section>
   </div>
 
+
+  <script>
+    $("#profileImage").click(function (e) {
+      $("#imageUpload").click();
+    });
+
+    function fasterPreview(uploader) {
+      if (uploader.files && uploader.files[0]) {
+        $("#profileImage").attr(
+          "src",
+          window.URL.createObjectURL(uploader.files[0])
+        );
+      }
+    }
+
+    $("#imageUpload").change(function () {
+      fasterPreview(this);
+    });
+  </script>
+
   <script src="/js/common.js"></script>
   <script src="/js/searchFunct.js"></script>
+  <script src="/js/localStorage.js"></script
 </body>
 
 </html>

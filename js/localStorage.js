@@ -61,17 +61,15 @@ function userTable() {
 
 function dateReported() {
 	let currentdate = new Date();
-	return (
-		currentdate.getDate() +
-		'/' +
-		currentdate.getMonth() +
-		'/' +
-		currentdate.getFullYear() +
-		' ' +
-		currentdate.getHours() +
-		':' +
-		currentdate.getMinutes()
-	);
+	let date = currentdate.getDate();
+	let month = currentdate.getMonth() + 1;
+	let year = currentdate.getFullYear();
+	let hours = currentdate.getHours();
+	let minutes = currentdate.getMinutes();
+	if (month < 10) {
+		month = '0' + month;
+	}
+	return date + '/' + month + '/' + year + ' ' + hours + ':' + minutes;
 }
 
 // function init() {
@@ -82,18 +80,26 @@ function dateReported() {
 // 	}
 // }
 
-function pagination() {}
-const pageSize = 3;
-let currPage = 1;
+function card() {
+	let card = document.querySelectorAll('.p-bottom');
+	card.innerHTML = '7';
+	console.log(card);
+}
+card();
 
-let prevPage = document.querySelector('#prev-button');
-let nextPage = document.querySelector('#next-button');
+// function pagination() {
+// 	const pageSize = 3;
+// 	let currPage = 1;
 
-let next = document.getElementsByClassName('pagination');
+// 	let prevPage = document.querySelector('#prev-button');
+// 	let nextPage = document.querySelector('#next-button');
 
-document
-	.querySelector('#nextButton')
-	.addEventListener('click', nextPage, false);
-document
-	.querySelector('#prevButton')
-	.addEventListener('click', previousPage, false);
+// 	let next = document.getElementsByClassName('pagination');
+
+// 	document
+// 		.querySelector('#nextButton')
+// 		.addEventListener('click', nextPage, false);
+// 	document
+// 		.querySelector('#prevButton')
+// 		.addEventListener('click', prevPage, false);
+// }

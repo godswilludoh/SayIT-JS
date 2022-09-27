@@ -13,17 +13,19 @@ btn.onclick = function () {
     var agency=document.getElementById('formGroupAgency').value;
     var organization=document.getElementById('reportOrg').value;
     var affiliation=document.getElementById('yesOrNo').value;
+    var upload=document.getElementById('upload').value;
     var report=document.getElementById('reportInfo').value;
 
     var checkbox=document.getElementById('Affirm').checked?document.getElementById('Affirm').value:'';
 
-    console.log(sector, agency, organization, affiliation, report, checkbox)
+    console.log(sector, agency, organization, affiliation, upload, report, checkbox)
    
     let anonymousReport={
       sector:sector,
       agency:agency,
       organization:organization,
       affiliation:affiliation,
+      upload:upload,
       report:report,
       checkbox:checkbox,
     }

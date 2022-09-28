@@ -1,7 +1,10 @@
 const reportForm = (e) => {
 	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
-	// let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| []
+	let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| []
+
+	console.log(currentUser[0].username)
+
 	let reports = {
 		sectorDetails: document.getElementById('sector').value,
 		agencyDetails: document.getElementById('agency').value,
@@ -11,7 +14,7 @@ const reportForm = (e) => {
 		uploadDetails: document.getElementById('upload').value,
 		dateReported: dateReported(),
 		reportID: Math.floor(Math.random() * Date.now()),
-		// reportBy: currentUser.username 
+		reportBy: currentUser[0].username 
 	};
 
 	reportData.push(reports);
@@ -37,6 +40,7 @@ function userTable() {
 	//console.log(dateReported, reportID, sectorDetails);
 	//getting the whole report data details
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
+	reportData = reportData.filter((userData) => userData.reportBy !== "anonymous")
 
 	//incrementing cards
 	let card = document.querySelector('.p-bottom');

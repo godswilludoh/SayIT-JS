@@ -9,41 +9,32 @@ let span = document.getElementsByClassName('close')[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
-	var sector = document.getElementById('formGroupSector').value;
-	var agency = document.getElementById('formGroupAgency').value;
-	var organization = document.getElementById('reportOrg').value;
-	var affiliation = document.getElementById('yesOrNo').value;
-	var upload = document.getElementById('upload').value;
-	var report = document.getElementById('reportInfo').value;
+  var sector=document.getElementById('formGroupSector').value;
+  var agency=document.getElementById('formGroupAgency').value;
+  var organization=document.getElementById('reportOrg').value;
+  var affiliation=document.getElementById('yesOrNo').value;
+  var upload=document.getElementById('upload').value;
+  var report=document.getElementById('reportInfo').value;
 
-	var checkbox = document.getElementById('Affirm').checked
-		? document.getElementById('Affirm').value
-		: '';
+  var checkbox=document.getElementById('Affirm').checked?document.getElementById('Affirm').value:'';
 
-	console.log(
-		sector,
-		agency,
-		organization,
-		affiliation,
-		upload,
-		report,
-		checkbox
-	);
+  console.log(sector, agency, organization, affiliation, upload, report, checkbox)
+  
+  let anonymousReport={
+    sector:sector,
+    agency:agency,
+    organization:organization,
+    affiliation:affiliation,
+    upload:upload,
+    report:report,
+    checkbox:checkbox,
+    // reportBy: "anonymous"
+  }
 
-	let anonymousReport = {
-		sector: sector,
-		agency: agency,
-		organization: organization,
-		affiliation: affiliation,
-		upload: upload,
-		report: report,
-		checkbox: checkbox,
-	};
+  console.log(anonymousReport);
+  localStorage.setItem('anonymousReport_data',JSON.stringify(anonymousReport))
 
-	console.log(anonymousReport);
-	localStorage.setItem('anonymousReport_data', JSON.stringify(anonymousReport));
-
-	modal.style.display = 'block';
+  modal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal

@@ -8,7 +8,6 @@ const errorMessage = document.getElementById('ErrorMessage');
 // Getting data from the localStorage
 let localStorageData =
 	JSON.parse(localStorage.getItem('createdUserInfo')) || [];
-localStorageData = JSON.parse(localStorageData);
 
 form.addEventListener('submit', (event) => {
 	//Preventing the login form from submitting.
@@ -19,8 +18,8 @@ form.addEventListener('submit', (event) => {
 		window.location.href = 'registeredReport.html';
 	} else {
 		setErrorMessage('Invalid Username or Password');
-		verifyUser();
 	}
+	verifyUser();
 });
 
 // Login Verification

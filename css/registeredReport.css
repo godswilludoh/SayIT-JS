@@ -171,15 +171,12 @@ button {
   height: 42px;
 }
 
-.profile-image{
-}
-
 .profile-image img{
   cursor: pointer;
 }
 
 #profile-image-upload{
-  display: hidde;
+  display: hidden;
 }
 
 .dashboard-container {
@@ -190,6 +187,13 @@ h2 {
   font-weight: 700;
   font-size: 26px;
   margin: 2rem auto;
+}
+
+.secure{
+  font-weight: 700;
+  font-size: 18px;
+  color: #ce5707;
+  margin: 2rem;
 }
 
 .cards {

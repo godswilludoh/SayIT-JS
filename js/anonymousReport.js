@@ -19,20 +19,24 @@ btn.onclick = function () {
   var checkbox=document.getElementById('Affirm').checked?document.getElementById('Affirm').value:'';
 
   console.log(sector, agency, organization, affiliation, upload, report, checkbox)
+
+  let anonymousUser = JSON.parse(localStorage.getItem("reportData")) || []
   
   let anonymousReport={
-    sector:sector,
-    agency:agency,
-    organization:organization,
-    affiliation:affiliation,
-    upload:upload,
-    report:report,
-    checkbox:checkbox,
-    // reportBy: "anonymous"
+    sector,
+    agency,
+    organization,
+    affiliation,
+    upload,
+    report,
+    checkbox,
+    reportBy: "anonymous"
   }
 
+  anonymousUser.push(anonymousReport)
+
   console.log(anonymousReport);
-  localStorage.setItem('anonymousReport_data',JSON.stringify(anonymousReport))
+  localStorage.setItem('reportData',JSON.stringify(anonymousUser))
 
   modal.style.display = "block";
 };

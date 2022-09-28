@@ -275,3 +275,7 @@ footer{
 }
 
 
+/* Eye icon styling */
+.fa-eye{
+  cursor: pointer;
+}

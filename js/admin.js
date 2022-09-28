@@ -2,15 +2,23 @@
 const adminform = document.getElementById("admin_Form");
 adminform.addEventListener('submit', (e) => {
 	e.preventDefault();
-// 	window.location.href = "adminDashboard.html";
 
-//LOGOUT
-// const logout = document.getElementById('logout');
-// logout.addEventListener('click', (e) => {
-//     e.preventDefault();
-// 	window.location = 'loginpage.html';
-// });
+const adminLoginID = document.getElementById("adminID").value;
+const adminPaswrd = document.getElementById("adminpassword").value;
 
+
+let AdminsLoginData = JSON.parse(localStorage.getItem("AdminsLoginData"));
+
+// 2) Checking and comapring the input with the database
+let checkAgent = agentsData.some(info => info.Agent_ID == agentID && info.Agent_Login_Password == agentpassword)
+// alert(JSON.stringify(checkAgent));
+
+if(!checkAgent){
+	alert("Unrecognised Login");
+}
+else{
+	window.location.href = "adminDashboard.html";
+}
 });
 
 // ADMINS INFO TO BE STORED ON LOCAL STORAGE

@@ -1,9 +1,13 @@
 const reportForm = (e) => {
+	try {
+		
+		e.preventDefault();
+	
+	alert("i'm here")
 	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
-	let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| []
+	let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| {};
 
-	console.log(currentUser[0].username)
 
 	let reports = {
 		sectorDetails: document.getElementById('sector').value,
@@ -14,14 +18,16 @@ const reportForm = (e) => {
 		uploadDetails: document.getElementById('upload').value,
 		dateReported: dateReported(),
 		reportID: Math.floor(Math.random() * Date.now()),
-		reportBy: currentUser[0].username 
+		reportBy: currentUser.username 
 	};
 
 	reportData.push(reports);
 	localStorage.setItem('reportData', JSON.stringify(reportData));
 	// card();
-	sectorOutput();
-	e.preventDefault();
+	// sectorOutput();
+} catch (error) {
+		console.log(error)
+}
 };
 
 function userTable() {

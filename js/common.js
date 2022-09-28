@@ -39,7 +39,7 @@ logout.addEventListener('click', () => {
 
 // testing the dynamic username
 let localStorageUsername =
-	JSON.parse(localStorage.getItem('currentUser')) || [];
+	JSON.parse(localStorage.getItem('currentUser')) || {};
 
 let username = (document.getElementById('username').innerText =
 	localStorageUsername.username);

@@ -69,6 +69,9 @@
               </svg>
             </span>
             <input type="password" name="password" placeholder="Password" required />
+            <!-- <i class="far fa-eye" id="togglePassword"></i> -->
+            <!-- Error Message -->
+            <!-- <br /> -->
           </div>
 
           <!--FIELD FOR SUBMIT-->
@@ -88,6 +91,18 @@
       <img src="../Images/SAYIT.jpeg" alt="sayITimage" width="550px" />
     </section>
   </section>
+  <!-- <script>
+		const togglePassword = document.querySelector('#togglePassword');
+		const password = document.querySelector('#password');
+
+		togglePassword.addEventListener('click', function (e) {
+			// toggle the type attribute
+			const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+			password.setAttribute('type', type);
+			// toggle the eye slash icon
+			this.classList.toggle('fa-eye-slash');
+		});
+	</script> -->
 
   <script src="/js/admin.js"></script>
 

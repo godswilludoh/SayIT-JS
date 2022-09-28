@@ -38,9 +38,11 @@ logout.addEventListener('click', () => {
 });
 
 // testing the dynamic username
-let localStorageUsername = JSON.parse(localStorage.getItem('currentUser'));
+let localStorageUsername =
+	JSON.parse(localStorage.getItem('currentUser')) || [];
 
-let username = document.getElementById('username').innerText =
-localStorageUsername[0].username;
-let profilename = document.getElementById('profilename').innerText =
-localStorageUsername[0].username;
+let username = (document.getElementById('username').innerText =
+	localStorageUsername.username);
+console.log(username);
+let profilename = (document.getElementById('profilename').innerText =
+	localStorageUsername.username);

@@ -6,8 +6,8 @@ const password = document.getElementById('password');
 const errorMessage = document.getElementById('ErrorMessage');
 
 // Getting data from the localStorage
-let registeredUserData = JSON.parse(localStorage.getItem("createdUserInfo"))
-
+let registeredUserData =
+	JSON.parse(localStorage.getItem('createdUserInfo')) || [];
 
 form.addEventListener('submit', (event) => {
 	//Preventing the login form from submitting.
@@ -15,14 +15,12 @@ form.addEventListener('submit', (event) => {
 	let isValidUser = verifyUser();
 	// Verification Conditional Statement
 	if (isValidUser) {
-		setCurrentUser(isValidUser)
-        window.location.href = "registeredReport.html"
-    } else {
-		setErrorMessage("Invalid Username or Password")
-        // verifyUser()
-    }
-
-
+		setCurrentUser(isValidUser);
+		window.location.href = 'registeredReport.html';
+	} else {
+		setErrorMessage('Invalid Username or Password');
+		// verifyUser()
+	}
 });
 
 // Login Verification
@@ -31,11 +29,12 @@ function verifyUser() {
 	let usernameValue = username.value.trim();
 	let passwordValue = password.value.trim();
 
-	let validUser = registeredUserData.filter((userData) => 
-		usernameValue === userData.username && passwordValue === userData.password
-	)
-	console.log(validUser)
-	return validUser
+	let validUser = registeredUserData.filter(
+		(userData) =>
+			usernameValue === userData.username && passwordValue === userData.password
+	);
+	console.log(validUser);
+	return validUser[0];
 }
 
 function setErrorMessage(message) {
@@ -45,8 +44,5 @@ function setErrorMessage(message) {
 }
 
 function setCurrentUser(userData) {
-
-	localStorage.setItem("currentUser", JSON.stringify(userData))
-
+	localStorage.setItem('currentUser', JSON.stringify(userData));
 }
-

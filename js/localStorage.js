@@ -64,6 +64,23 @@ function userTable() {
 		table.appendChild(newRow);
 	});
 
+	const searchInput = document.getElementById('search-input');
+	const rows = document.querySelectorAll('.row');
+	//console.log(rows);
+
+	/*adding event listener*/
+	searchInput.addEventListener('keyup', (e) => {
+		const textDetails = e.target.value;
+		//console.log(textDetails);
+
+		/* Looping through the table rows */
+		rows.forEach((row) => {
+			row.querySelector('td').textContent.toLowerCase().startsWith(textDetails)
+				? (row.style.display = 'table-row')
+				: (row.style.display = 'none');
+		});
+	});
+
 	function pagination() {
 		const pageSize = 3;
 		let currPage = 1;

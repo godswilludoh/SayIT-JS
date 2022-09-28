@@ -1,6 +1,7 @@
 const reportForm = (e) => {
 	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
+	// let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| []
 	let reports = {
 		sectorDetails: document.getElementById('sector').value,
 		agencyDetails: document.getElementById('agency').value,
@@ -10,6 +11,7 @@ const reportForm = (e) => {
 		uploadDetails: document.getElementById('upload').value,
 		dateReported: dateReported(),
 		reportID: Math.floor(Math.random() * Date.now()),
+		// reportBy: currentUser.username 
 	};
 
 	reportData.push(reports);

@@ -6,20 +6,20 @@ const password = document.getElementById("password");
 const errorMessage = document.getElementById("ErrorMessage");
 
 // Getting data from the localStorage
-let localStorageData = localStorage.getItem("createdUserInfo")
-localStorageData = JSON.parse(localStorageData)
+let registeredUserData = JSON.parse(localStorage.getItem("createdUserInfo"))
 
 
 form.addEventListener('submit', (event) => {
 	//Preventing the login form from submitting.
 	event.preventDefault();
-	
+	let isValidUser = verifyUser();
 	// Verification Conditional Statement
-	if (verifyUser() == true) {
+	if (isValidUser) {
+		setCurrentUser(isValidUser)
         window.location.href = "registeredReport.html"
     } else {
 		setErrorMessage("Invalid Username or Password")
-        verifyUser()
+        // verifyUser()
     }
 
 
@@ -32,16 +32,22 @@ function verifyUser() {
 	let usernameValue = username.value.trim();
 	let passwordValue = password.value.trim();
 
-
-	let result = localStorageData.some((userData) => 
+	let validUser = registeredUserData.filter((userData) => 
 		usernameValue === userData.username && passwordValue === userData.password
 	)
-	return result
+	console.log(validUser)
+	return validUser
 }
 
 function setErrorMessage(message) {
 	errorMessage.innerHTML = message
 
 	errorMessage.className = "showError"
+}
+
+function setCurrentUser(userData) {
+
+	localStorage.setItem("currentUser", JSON.stringify(userData))
+
 }
 

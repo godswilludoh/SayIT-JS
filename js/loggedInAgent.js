@@ -29,14 +29,14 @@ let currentlyRegisteredAgent = [
     },
   ];
 
-// FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN USER NAME
+// FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT NAME
 const currrentLoggedIn = document.querySelector(".forTheAgentID");
-currrentLoggedIn.textContent = currentlyRegisteredAgent[0].Agent_ID;
-console.log(currrentLoggedIn);
+currrentLoggedIn.textContent = currentlyRegisteredAgent[0].Agent_Name;
 
-// // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN USER AGENCY
-// const currrentLoggedIn = document.querySelector(".forTheAgentID");
-// currrentLoggedIn.textContent = currentlyRegisteredAgent[0].Agent_ID;
+
+// FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT COMPANY NAME
+const currrentLoggedInAgency = document.querySelector(".registeredAgencyName");
+currrentLoggedInAgency.textContent = currentlyRegisteredAgent[0].Agency_Name;
 // console.log(currrentLoggedIn);
 
 

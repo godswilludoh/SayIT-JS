@@ -171,6 +171,15 @@ button {
   margin: 2rem auto;
 }
 
+
+.registeredAgencyName{
+  padding-left: 20px;
+}
+
+.forTheAgentID{
+  font-weight: 700;
+}
+
 #containerHousingTheTableData {
   margin-top: 80px;
   border-radius: 10px;

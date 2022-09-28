@@ -17,13 +17,9 @@ if(!checkAgent){
 	alert("Invalid login");
 }
 else{
-	alert("Welcome");
 	window.location.href = "agentdashboard.html"
 }
 });
-
-
-
 
 //local storage containing list of registered agents
 // YOU WILL BE NEEDING THEIR ID AND LOGINPASSWORD TO ACCESS THEIR DASHBOARD

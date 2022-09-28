@@ -44,7 +44,12 @@ function checkInputs() {
     } else if (isEmail(emailValue)) {
 
         setErrorFor(email, "Invalid email")
-    } else {
+    } 
+    // else if (userDataVerification(emailValue)) {
+
+    //     setErrorFor(email, "This email has already been used")
+    // } 
+     else {
         setSuccessFor(email)
 
         emailValidation = true
@@ -108,6 +113,7 @@ function checkInputs() {
 
     // conditional statement for all the inputs
     if(emailValidation === true && phoneNumberValidation === true && usernameValidation === true && passwordValidation === true && confirmPasswordValdation === true) {
+        registerUsers()
         return true
     }
 }
@@ -156,18 +162,30 @@ function isPasswordConfirm(password, confirmPassword) {
 
 }
 
-// daclaring an array for the local storage
-let users = []
+// function userDataVerification(data) {
+//     let localStorageData = JSON.parse(localStorage.getItem("createdUserInfo"))
+
+//     let result = localStorageData.some((userData) => 
+//         data === userData.username || userData.email || userData.phoneNumber
+// 	)
+
+    
+// 	return false
+// }
 
 // linking form to Local Storage
 function registerUsers() {
+
+    // daclaring an array for the local storage
+    let users = JSON.parse(localStorage.getItem("createdUserInfo")) || [];
 
     let infoNew = {
         "password": document.getElementById("password").value,
         "username": document.getElementById("username").value,
         "email": document.getElementById("email").value,
-        "number": document.getElementById("phone-number").value,
+        "phoneNumber": document.getElementById("phone-number").value,
     }
+
 
     users.push(infoNew);
 

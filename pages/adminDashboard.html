@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SayIT Website || Admin Dasboard</title>
+    <title>SayIT Website || Admin Dashboard</title>
     <link rel="stylesheet" href="/css/adminDashboard.css">
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 </head>
 
@@ -175,7 +176,7 @@
                             </div>
                             <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
                                 capture />
-                            <span class="forTheAgentID">
+                            <span class="forTheAgentID" id="profilename">
                                 Admin1-00001
                             </span>
                         </div>
@@ -187,20 +188,20 @@
             <div>
                 <ul class="Report_Cards">
                     <li id="report_cards">Open Reports <span class="cardIcons">
-                        <i class="fa-solid fa-folder-open"></i>
-                    </span>
+                            <i class="fa-solid fa-folder-open"></i>
+                        </span>
                         <hr>
                         <div id="cardNum">7</div>
                     </li>
                     <li id="report_cards">New Reports <span class="cardIcons">
-                        <i class="fa-solid fa-file-circle-exclamation"></i>
-                    </span>
+                            <i class="fa-solid fa-file-circle-exclamation"></i>
+                        </span>
                         <hr>
                         <div id="cardNum">2</div>
                     </li>
                     <li id="report_cards">Report Progress <span class="cardIcons">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </span>
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
                         <hr>
                         <div id="cardNum">5</div>
                     </li>
@@ -266,7 +267,24 @@
     </div>
     </section>
     </div>
+    <script>
+        $("#profileImage").click(function (e) {
+            $("#imageUpload").click();
+        });
 
+        function fasterPreview(uploader) {
+            if (uploader.files && uploader.files[0]) {
+                $("#profileImage").attr(
+                    "src",
+                    window.URL.createObjectURL(uploader.files[0])
+                );
+            }
+        }
+
+        $("#imageUpload").change(function () {
+            fasterPreview(this);
+        });
+    </script>
     <!-- <script src="/js/admin.js"></script> -->
     <script src="/js/common.js"></script>
 </body>

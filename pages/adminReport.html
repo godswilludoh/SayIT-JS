@@ -10,6 +10,7 @@
 
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="https://kit.fontawesome.com/ec08909fa5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 </head>
 
@@ -141,7 +142,7 @@
                                 </div>
                                 <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
                                     capture />
-                                <span class="forTheAgentID">
+                                <span class="forTheAgentID" id="profilename">
                                     Admin1-00001
                                 </span>
                             </div>
@@ -307,6 +308,24 @@
                 </div>
             </section>
         </div>
+        <script>
+            $("#profileImage").click(function (e) {
+                $("#imageUpload").click();
+            });
+
+            function fasterPreview(uploader) {
+                if (uploader.files && uploader.files[0]) {
+                    $("#profileImage").attr(
+                        "src",
+                        window.URL.createObjectURL(uploader.files[0])
+                    );
+                }
+            }
+
+            $("#imageUpload").change(function () {
+                fasterPreview(this);
+            });
+        </script>
         <script src="/js/common.js"></script>
         <script src="/js/searchFunct.js"></script>
         <script src="/js/admin.js"></script>

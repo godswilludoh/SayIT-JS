@@ -135,22 +135,22 @@
             <image id="profileImage" src="/Images/newUser.png" />
           </div>
           <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture />
-          <span class="forTheAgentID">
+          <span class="forTheAgentID" id="profilename">
             Samuel
           </span>
         </div>
       </div>
       <div class="dashboard-container">
-        <h2>👋 Welcome Samuel </h2>
-
+        <h2>👋 Welcome <span id="username">Samuel</span></h2>
+        <p class="secure">Your data is secure with us 🔐</p>
         <div class="cards">
           <div class="card-item">
             <p class="p-top">Total</p><br>
-            <p class="p-bottom">5</p>
+            <p class="p-bottom">0</p>
           </div>
           <div class="card-item">
             <p class="p-top">Open Complaints</p><br>
-            <p class="p-bottom">5</p>
+            <p class="p-bottom bottom2">0</p>
           </div>
           <div class="card-item">
             <p class="p-top">Resolved complaints</p><br>
@@ -269,7 +269,7 @@
             </tr>
           </table> -->
 
-          <table class="user-table">
+          <table id="user-table" class="user-table">
 
           </table>
 
@@ -307,7 +307,7 @@
   </script>
 
   <script src="/js/common.js"></script>
-  <script src="/js/searchFunct.js"></script>
+  <!-- <script src="/js/searchFunct.js"></script> -->
   <script src="/js/localStorage.js"></script
 </body>
 

@@ -57,9 +57,9 @@
               <div>
                 Profile
               </div>
-              <div>
+              <!-- <div>
                 <box-icon name='chevron-down'></box-icon>
-              </div>
+              </div> -->
             </div>
           </a>
           <div class="dropdown-menu">
@@ -68,13 +68,13 @@
                 <a href="#">
                   <div class="sidebar-icons">
                     <div>
-                      <box-icon type='solid' name='edit'></box-icon>
+                      <!-- <box-icon type='solid' name='edit'></box-icon> -->
                     </div>
-                    <a href="#">
+                    <!-- <a href="#">
                       <div>
                         Edit Profile
                       </div>
-                    </a>
+                    </a> -->
                   </div>
                 </a>
               </li>
@@ -107,7 +107,7 @@
         </div>
       </button>
     </section>
-    
+
     <section class="dashboard-interface" id="theSecondSideOfThePage">
       <div class="top">
         <div class="info-display">
@@ -121,19 +121,11 @@
 
         <div class="forTheprofileImage">
           <div id="profile-container">
-              <image id="profileImage" src="/Images/newUser.png" />
+            <image id="profileImage" src="/Images/newUser.png" />
           </div>
-          <input
-              id="imageUpload"
-              type="file"
-              name="profile_photo"
-              placeholder="Photo"
-              required=""
-              capture
-            />
-            <span class="forTheAgentID">
-              Agent VIC-1415032
-            </span>
+          <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture />
+          <span class="forTheAgentID">
+          </span>
         </div>
       </div>
       <div class="dashboard-container">
@@ -148,7 +140,7 @@
               <a href="#" class="otherCardWording">+Add Report</a>
             </div>
             <div class="theMetricItself">
-              5
+              0
             </div>
           </div>
 
@@ -160,7 +152,7 @@
               <a href="#" class="otherCardWording">show</a>
             </div>
             <div class="theMetricItself">
-              5
+              0
             </div>
           </div>
 
@@ -169,16 +161,17 @@
               <p class="cardWording">
                 Resolved Complaints
               </p>
-                <a href="#" class="otherCardWording">show</a>
+              <a href="#" class="otherCardWording">show</a>
             </div>
             <div class="theMetricItself">
               0
             </div>
           </div>
-          
-          
+
+
           <div class="forTheNotification_Report">
-            <div class="forNotificationButton"><a href="/pages/notification.html" id="messageLink">Notification</a></div>
+            <div class="forNotificationButton"><a href="/pages/notification.html" id="messageLink">Notification</a>
+            </div>
             <div class="forPrintButton"><a href="#" id="printReport">Print Report</a></div>
           </div>
         </section>
@@ -190,20 +183,20 @@
                 <p>Reports</p>
               </div>
               <div class="report-id">
-                <input id="search-input" data-table="user-table" type="text" placeholder="Enter Report ID" />
+                <input id="search-input" data-table="user-table" type="text" placeholder="Search Report by ID" />
               </div>
             </div>
           </div>
-          <table id="user-table">
-          <tr>
-            <th>S/N</th>
-            <th>Date reported</th>
-            <th>Report ID</th>
-            <th>View Report</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-          <tr class="row">
+          <table id="user-table" class="user-table">
+            <tr>
+              <th>S/N</th>
+              <th>Date reported</th>
+              <th>Report ID</th>
+              <th>View Report</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <!-- <tr class="row">
             <td>1</td>
             <td>31/08/2022</td>
             <td>Report/0000001</td>
@@ -261,7 +254,7 @@
               <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
             </div></td>
           </tr>
-          <tr class="row">
+          <tr class="row"> 
             <td>5</td>
             <td>12/12/2022</td>
             <td>Report/0000001</td>
@@ -274,11 +267,11 @@
             <td><div class="forTheUpdateAndDownloadButton">
               <a href="#" class="forTheUPdateButton">Update</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
             </div></td>
-          </tr>
+          </tr>-->
           </table>
         </section>
 
-        <div id="makeItryam">
+        <!-- <div id="makeItryam">
           <div class="thePoPUpModal" id="popup">
             <section class="theHeadings">
               <h4 class="theHeadingReportTitle">REPORT</h4>
@@ -348,7 +341,7 @@
             </form>
         
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
@@ -375,18 +368,20 @@
     // FOR THE POPUP
     let popup = document.getElementById("popup");
 
-    function openPopUp(){
+    function openPopUp() {
       popup.classList.add("open-popup");
 
     }
 
-    function closePopUp(){
+    function closePopUp() {
       popup.classList.remove("open-popup");
 
     }
   </script>
+  <script src="/js/loggedInAgent.js"></script>
   <script src="/js/common.js"></script>
   <script src="/js/searchFunct.js"></script>
+  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>

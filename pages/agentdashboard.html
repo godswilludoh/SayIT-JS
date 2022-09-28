@@ -107,7 +107,7 @@
         </div>
       </button>
     </section>
-    
+
     <section class="dashboard-interface" id="theSecondSideOfThePage">
       <div class="top">
         <div class="info-display">
@@ -121,18 +121,11 @@
 
         <div class="forTheprofileImage">
           <div id="profile-container">
-              <image id="profileImage" src="/Images/newUser.png" />
+            <image id="profileImage" src="/Images/newUser.png" />
           </div>
-          <input
-              id="imageUpload"
-              type="file"
-              name="profile_photo"
-              placeholder="Photo"
-              required=""
-              capture
-            />
-            <span class="forTheAgentID">
-            </span>
+          <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture />
+          <span class="forTheAgentID">
+          </span>
         </div>
       </div>
       <div class="dashboard-container">
@@ -168,16 +161,17 @@
               <p class="cardWording">
                 Resolved Complaints
               </p>
-                <a href="#" class="otherCardWording">show</a>
+              <a href="#" class="otherCardWording">show</a>
             </div>
             <div class="theMetricItself">
               0
             </div>
           </div>
-          
-          
+
+
           <div class="forTheNotification_Report">
-            <div class="forNotificationButton"><a href="/pages/notification.html" id="messageLink">Notification</a></div>
+            <div class="forNotificationButton"><a href="/pages/notification.html" id="messageLink">Notification</a>
+            </div>
             <div class="forPrintButton"><a href="#" id="printReport">Print Report</a></div>
           </div>
         </section>
@@ -193,16 +187,16 @@
               </div>
             </div>
           </div>
-          <table id="user-table">
-          <tr>
-            <th>S/N</th>
-            <th>Date reported</th>
-            <th>Report ID</th>
-            <th>View Report</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-          <!-- <tr class="row">
+          <table id="user-table" class="user-table">
+            <tr>
+              <th>S/N</th>
+              <th>Date reported</th>
+              <th>Report ID</th>
+              <th>View Report</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <!-- <tr class="row">
             <td>1</td>
             <td>31/08/2022</td>
             <td>Report/0000001</td>
@@ -374,12 +368,12 @@
     // FOR THE POPUP
     let popup = document.getElementById("popup");
 
-    function openPopUp(){
+    function openPopUp() {
       popup.classList.add("open-popup");
 
     }
 
-    function closePopUp(){
+    function closePopUp() {
       popup.classList.remove("open-popup");
 
     }
@@ -387,6 +381,7 @@
   <script src="/js/loggedInAgent.js"></script>
   <script src="/js/common.js"></script>
   <script src="/js/searchFunct.js"></script>
+  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>

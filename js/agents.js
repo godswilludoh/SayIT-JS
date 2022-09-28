@@ -17,13 +17,9 @@ if(!checkAgent){
 	alert("Invalid login");
 }
 else{
-	alert("Welcome");
 	window.location.href = "agentdashboard.html"
 }
 });
-
-
-
 
 //local storage containing list of registered agents
 // YOU WILL BE NEEDING THEIR ID AND LOGINPASSWORD TO ACCESS THEIR DASHBOARD
@@ -38,7 +34,7 @@ let currentlyRegisteredAgent = [
     Agent_Phone_Number: "080600012478",
     Gender: "female",
     Agent_ID: "#VIOFunmiBankole",
-    Agent_Login_Password: "councilsofvehicleinspectionofficers",
+    Agent_Login_Password: "vioagency",
   },
 
   {

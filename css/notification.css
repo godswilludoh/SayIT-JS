@@ -92,10 +92,10 @@ body {
   display: none;
 }
 
-.sidebar-lists li:hover .dropdown-menu {
+/* .sidebar-lists li:hover .dropdown-menu {
   display: block;
   margin: 1rem 0.5rem;
-}
+} */
 
 button {
   display: block;
@@ -132,6 +132,7 @@ button {
   background-color: #ffffff;
   margin-top: 80px;
   border-radius: 8px;
+  height: 100vh;
 }
 
 .container {
@@ -154,9 +155,6 @@ button {
   margin: 1rem 2rem;
 }
 
-.info-display p {
-  font-weight: 700;
-}
 
 .time {
   display: flex;

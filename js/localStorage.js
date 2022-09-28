@@ -16,7 +16,7 @@ const reportForm = (e) => {
 
 	reportData.push(reports);
 	localStorage.setItem('reportData', JSON.stringify(reportData));
-
+	// card();
 	sectorOutput();
 	e.preventDefault();
 };
@@ -37,6 +37,13 @@ function userTable() {
 	//console.log(dateReported, reportID, sectorDetails);
 	//getting the whole report data details
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
+
+	//incrementing cards
+	let card = document.querySelector('.p-bottom');
+	let card2 = document.querySelector('.bottom2');
+	card.innerHTML = `${reportData.length}`;
+	card2.innerHTML = `${reportData.length}`;
+
 	console.log(reportData);
 	let i = 1;
 
@@ -58,22 +65,65 @@ function userTable() {
               </td>`;
 		table.appendChild(newRow);
 	});
-	// init();
+
+	const searchInput = document.getElementById('search-input');
+	const rows = document.querySelectorAll('.row');
+	//console.log(rows);
+
+	/*adding event listener*/
+	searchInput.addEventListener('keyup', (e) => {
+		const textDetails = e.target.value;
+		//console.log(textDetails);
+
+		/* Looping through the table rows */
+		rows.forEach((row) => {
+			row.querySelector('td').textContent.toLowerCase().startsWith(textDetails)
+				? (row.style.display = 'table-row')
+				: (row.style.display = 'none');
+		});
+	});
+
+	function pagination() {
+		const pageSize = 3;
+		let currPage = 1;
+
+		let pageCount = Math.ceil(reportData.length / pageSize);
+		console.log(reportData.length);
+		console.log(pageCount);
+
+		let prevPage = document.querySelector('#prev-button');
+		let nextPage = document.querySelector('#next-button');
+		console.log(prevPage, nextPage);
+
+		let next = document.getElementsByClassName('pagination');
+
+		document
+			.querySelector('#nextButton')
+			.addEventListener('click', nextPage, false);
+		document
+			.querySelector('#prevButton')
+			.addEventListener('click', prevPage, false);
+	}
+	pagination();
+
+	const selectPage = (pageNum) => {
+		currPage = pageNum;
+		const prevRange = pageNum * pageSize;
+		const nextRange = (pageNum + 1) * pageSize;
+	};
 }
 
 function dateReported() {
 	let currentdate = new Date();
-	return (
-		currentdate.getDate() +
-		'/' +
-		currentdate.getMonth() +
-		'/' +
-		currentdate.getFullYear() +
-		' ' +
-		currentdate.getHours() +
-		':' +
-		currentdate.getMinutes()
-	);
+	let date = currentdate.getDate();
+	let month = currentdate.getMonth() + 1;
+	let year = currentdate.getFullYear();
+	let hours = currentdate.getHours();
+	let minutes = currentdate.getMinutes();
+	if (month < 10) {
+		month = '0' + month;
+	}
+	return date + '/' + month + '/' + year + ' ' + hours + ':' + minutes;
 }
 
 // function init() {
@@ -83,19 +133,3 @@ function dateReported() {
 // 		userTable();
 // 	}
 // }
-
-function pagination() {}
-const pageSize = 3;
-let currPage = 1;
-
-let prevPage = document.querySelector('#prev-button');
-let nextPage = document.querySelector('#next-button');
-
-let next = document.getElementsByClassName('pagination');
-
-document
-	.querySelector('#nextButton')
-	.addEventListener('click', nextPage, false);
-document
-	.querySelector('#prevButton')
-	.addEventListener('click', previousPage, false);

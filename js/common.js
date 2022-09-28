@@ -41,3 +41,5 @@ logout.addEventListener('click', () => {
 let localStorageUsername = JSON.parse(localStorage.getItem('createdUserInfo'));
 let username = (document.getElementById('username').innerText =
 	localStorageUsername[localStorageUsername.length - 1].username);
+let profilename = (document.getElementById('profilename').innerText =
+	localStorageUsername[localStorageUsername.length - 1].username);

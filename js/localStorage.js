@@ -3,7 +3,7 @@ const reportForm = (e) => {
 		
 		e.preventDefault();
 	
-	alert("i'm here")
+	// alert("i'm here")
 	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
 	let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| {};

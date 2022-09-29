@@ -9,11 +9,10 @@ const adminPaswrd = document.getElementById("adminpassword").value;
 
 let AdminsLoginData = JSON.parse(localStorage.getItem("AdminsLoginData"));
 
-// 2) Checking and comapring the input with the database
-let checkAgent = agentsData.some(info => info.Agent_ID == agentID && info.Agent_Login_Password == agentpassword)
-// alert(JSON.stringify(checkAgent));
+//  Checking and comapring the input with the database
+let checkAdmin = AdminsLoginData.some(info => info.Admin_Name == adminLoginID && info.Admin_paswrd == adminPaswrd)
 
-if(!checkAgent){
+if(!checkAdmin){
 	alert("Unrecognised Login");
 }
 else{
@@ -49,4 +48,4 @@ let AdminsInfo = [
     },
 ];
 localStorage.setItem("AdminsLoginData", JSON.stringify(AdminsInfo));
-// AdminsInfo.push(AdminsLoginData)
+

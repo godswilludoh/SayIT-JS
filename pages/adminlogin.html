@@ -44,10 +44,10 @@
   <section class="overallContainer">
     <section class="theLoginSide">
       <div class="innerContainer">
-        <h3 class="agentTitle">ADMIN LOGIN</h3>
+        <h3 class="adminTitle">ADMIN LOGIN</h3>
 
         <form id="admin_Form">
-          <!--FIELD FOR THE AGENT ID -->
+          <!--FIELD FOR THE Admin ID -->
           <div class="formGroup">
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(137, 134, 133);">
@@ -59,7 +59,7 @@
             <input type="text" name="adminlogin" placeholder="Admin ID" required id="adminID" />
           </div>
 
-          <!--FIELD FOR THE AGENT PASSWORD-->
+          <!--FIELD FOR THE Admin PASSWORD-->
           <div class="formGroup">
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(137, 134, 133);">
@@ -68,8 +68,8 @@
                 </path>
               </svg>
             </span>
-            <input type="password" name="password" placeholder="Password" required id="adminpassword" />
-            <!-- <i class="far fa-eye" id="togglePassword"></i> -->
+            <input type="password" name="password" placeholder="Password" required id="adminpassword" /> 
+            <i class="far fa-eye" id="togglePassword"></i> 
             <!-- Error Message -->
             <!-- <br /> -->
           </div>
@@ -77,32 +77,33 @@
           <!--FIELD FOR SUBMIT-->
           <button class="logInButton">LOGIN</button>
         </form>
-
-        <footer>
-          <p class="privacyPolicy">Privacy Policy | Terms of use</p>
-          <p class="copRight">
-            &copy;2022 All Rights Reserved | Designed By Tech Stars
-          </p>
-        </footer>
       </div>
-    </section>
+      <footer>
+        <p class="privacyPolicy">Privacy Policy | Terms of use</p>
+        <p class="copRight">
+          &copy;2022 All Rights Reserved | Designed By Tech Stars
+        </p>
+      </footer>
 
-    <section class="theImageSide">
-      <img src="../Images/SAYIT.jpeg" alt="sayITimage" width="550px" />
     </section>
+    <div class="ImageSideDiv">
+      <section class="theImageSide">
+        <img src="../Images/SAYIT.jpeg" alt="sayITimage" width="550px" id="adminLoginImg" />
+      </section>
+    </div>
   </section>
-  <!-- <script>
-		const togglePassword = document.querySelector('#togglePassword');
-		const password = document.querySelector('#password');
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#adminpassword');
 
-		togglePassword.addEventListener('click', function (e) {
-			// toggle the type attribute
-			const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-			password.setAttribute('type', type);
-			// toggle the eye slash icon
-			this.classList.toggle('fa-eye-slash');
-		});
-	</script> -->
+    togglePassword.addEventListener('click', function (e) {
+      // toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      // toggle the eye slash icon
+      this.classList.toggle('fa-eye-slash');
+    });
+  </script>
 
   <script src="/js/admin.js"></script>
 

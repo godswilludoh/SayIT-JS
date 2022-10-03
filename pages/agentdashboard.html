@@ -279,6 +279,72 @@
         
       </div>
     </section>
+
+    <section class="modal">
+      <div class="modal-content">
+        <div class="reportHeadingContainer">
+          <p class="reportHeading">
+            REPORT
+          </p>
+
+          <p class="reportID">
+            
+          </p>
+
+          <a href="#" class="formButton close-button">Close</a>
+        </div>
+
+        <form>
+          <div class="sourceAndDateReported">
+            <div class="form-group">
+              <label for="source">SOURCE</label>
+              <input
+                type="text"
+                id="reportSource"
+                value="Anonymous"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="dateReported">DATE REPORTED</label>
+              <input
+                id="reportedDateandTime"
+                value="DD/MM/YYYY || MM:HH"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="companyAnddOrgansitaion">COMPANY / ORGANISATION</label>
+            <input
+              id="companyAnddOrgansitaion"
+              value="ASHRU FUNDS"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">SUBJECT</label>
+            <input
+              id="subject"
+              value="MONEY LAUNDERING"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="textMessages">MESSAGE</label>
+            <textarea name="textMessages"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="attachment">ATTACHMENT</label>
+            <div class="viewFileButtonContainer">
+              <a href="#" class="formButton">VIEW FILES</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
   </div>
 
   <script>
@@ -298,12 +364,6 @@
     $("#imageUpload").change(function () {
       fasterPreview(this);
     });
-
-
-    // FOR THE POPUP
-    // Prompt Modal
-
-
   </script>
   <!-- <script src="/js/agents.js"></script> -->
   <script src="/js/loggedInAgent.js"></script>

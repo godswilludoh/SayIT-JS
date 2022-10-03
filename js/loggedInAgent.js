@@ -1,9 +1,9 @@
-
 // FOR DYNAMICALLY DISPLAYING CURRENT LOGGED IN AGENT
 
 //local storage containing list of registered agents
-let currentlyRegisteredAgent = JSON.parse(localStorage.getItem("AgentDatabase"));
-
+let currentlyRegisteredAgent = JSON.parse(
+  localStorage.getItem("AgentDatabase")
+);
 
 // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT NAME
 const currrentLoggedIn = document.querySelector(".forTheAgentID");
@@ -41,9 +41,7 @@ function agentsTable() {
   let card2 = document.querySelector(".openComplaint");
   card.innerHTML = `${reportData.length}`;
   card2.innerHTML = `${reportData.length}`;
-  
- 
-  
+
   let i = 1;
   // WRITING INTO THE TABLE
   reportData.forEach(function (report) {
@@ -51,7 +49,7 @@ function agentsTable() {
     newRow.innerHTML = `<td>${i++}</td> 
         <td>${report.dateReported}</td> 
         <td>${report.reportID}</td> 
-        <td><a href="#" class="toViewMoreLinke">Click to view</a>    
+        <td><a href="#" class="toViewMoreLinke trigger">Click to view</a>    
         </td>
         <td>
               <select>
@@ -66,4 +64,32 @@ function agentsTable() {
         </td>`;
     table.appendChild(newRow);
   });
+
+  // Prompt Modal
+  const modal = document.querySelector(".modal");
+  const trigger = document.querySelector(".trigger");
+  const closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+    if (event.target === modal) {
+      toggleModal();
+    }
+  }
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+
+  //WRITING INTO THE MODAL
+  // let reportData = JSON.parse(localStorage.getItem("reportData"));
+  let paragraph1 = document.querySelector(".reportID");
+  // let paragraph2 = document.getElementById("#reportedDateandTime").value;
+
+  paragraph1.textContent = reportData[0].reportID;
+  // paragraph2 = reportData.dateReported;
+  // paragraph2.textContent = reportData[0].
 }

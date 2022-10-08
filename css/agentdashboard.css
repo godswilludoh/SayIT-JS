@@ -450,6 +450,7 @@ select {
   padding: 1rem 1.5rem;
   /* width: 24rem; */
   width: 70%;
+  height: 90%;
   border-radius: 0.5rem;
 }
 
@@ -486,12 +487,17 @@ select {
   margin-bottom: 0.5rem;
 }
 
-.form-group input{
+
+.form-group .InputField{
   margin-top: 10px;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 10px 10px 10px 5px;
   border:  red;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+
 }
+
 
 .form-group label{
   margin-bottom: 15px;

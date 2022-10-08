@@ -7,6 +7,7 @@ const reportForm = (e) => {
 	// create an empty array to store the reports
 	let reportData = JSON.parse(localStorage.getItem('reportData')) || [];
 	let currentUser = JSON.parse(localStorage.getItem("currentUser"))|| {};
+	
 
 
 	let reports = {

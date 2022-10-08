@@ -2,20 +2,35 @@
 
 //local storage containing list of registered agents
 let currentlyRegisteredAgent = JSON.parse(
-  localStorage.getItem("AgentDatabase")
+  localStorage.getItem("agencyLoggedSession")
 );
+
+let currentAgencyShortHand = currentlyRegisteredAgent.Agency_shortHand;
+
+
 
 // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT NAME
 const currrentLoggedIn = document.querySelector(".forTheAgentID");
-currrentLoggedIn.textContent = currentlyRegisteredAgent[0].Agent_Name;
+currrentLoggedIn.textContent = currentlyRegisteredAgent.Agent_Name;
 
 // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT COMPANY NAME
 const currrentLoggedInAgency = document.querySelector(".registeredAgencyName");
-currrentLoggedInAgency.textContent = currentlyRegisteredAgent[0].Agency_Name;
+currrentLoggedInAgency.textContent = currentlyRegisteredAgent.Agency_Name;
 // console.log(currrentLoggedIn);
 
 // FOR THE AGENTS TABLE DYNAMISM
 let reportData = JSON.parse(localStorage.getItem("reportData"));
+// console.log(reportData);
+
+
+function viewModalContent(reportID){
+  let reportData = JSON.parse(localStorage.getItem("reportData"));
+  let forEachUniqueId = reportData.find((e) => e.reportID === reportID);
+
+  document.getElementById("uniqueReportId").innerHTML = forEachUniqueId.reportID;
+}
+
+
 
 function agentsTable() {
   let table = document.querySelector("table");
@@ -30,15 +45,13 @@ function agentsTable() {
 
   reportData = reportData.filter(
     (info) =>
-      info.sectorDetails == "VIO" ||
-      info.sectorDetails == "transportation" ||
-      info.sectorDetails == "vehicle inspection officer" ||
-      info.reportDetails == "VIO"
+      info.agencyDetails === currentAgencyShortHand 
   );
-
+  
   //incrementing cards
   let card = document.querySelector(".theMetricItself");
   let card2 = document.querySelector(".openComplaint");
+
   card.innerHTML = `${reportData.length}`;
   card2.innerHTML = `${reportData.length}`;
 
@@ -49,7 +62,7 @@ function agentsTable() {
     newRow.innerHTML = `<td>${i++}</td> 
         <td>${report.dateReported}</td> 
         <td>${report.reportID}</td> 
-        <td><a href="#" class="toViewMoreLinke trigger">Click to view</a>    
+        <td><a href="#" class="toViewMoreLinke trigger" onclick="viewModalContent(${report.reportID})">Click to view</a>    
         </td>
         <td>
               <select>
@@ -63,7 +76,13 @@ function agentsTable() {
             </div>
         </td>`;
     table.appendChild(newRow);
+  
   });
+
+
+
+
+
 
   // Prompt Modal
   const modal = document.querySelector(".modal");
@@ -80,16 +99,13 @@ function agentsTable() {
     }
   }
 
+
+
+
   trigger.addEventListener("click", toggleModal);
   closeButton.addEventListener("click", toggleModal);
   window.addEventListener("click", windowOnClick);
+  
 
-  //WRITING INTO THE MODAL
-  // let reportData = JSON.parse(localStorage.getItem("reportData"));
-  let paragraph1 = document.querySelector(".reportID");
-  // let paragraph2 = document.getElementById("#reportedDateandTime").value;
 
-  paragraph1.textContent = reportData[0].reportID;
-  // paragraph2 = reportData.dateReported;
-  // paragraph2.textContent = reportData[0].
 }

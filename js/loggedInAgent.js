@@ -7,8 +7,6 @@ let currentlyRegisteredAgent = JSON.parse(
 
 let currentAgencyShortHand = currentlyRegisteredAgent.Agency_shortHand;
 
-
-
 // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT NAME
 const currrentLoggedIn = document.querySelector(".forTheAgentID");
 currrentLoggedIn.textContent = currentlyRegisteredAgent.Agent_Name;
@@ -22,15 +20,12 @@ currrentLoggedInAgency.textContent = currentlyRegisteredAgent.Agency_Name;
 let reportData = JSON.parse(localStorage.getItem("reportData"));
 // console.log(reportData);
 
+// function viewModalContent(reportID){
+//   let reportData = JSON.parse(localStorage.getItem("reportData"));
+//   let forEachUniqueId = reportData.find((e) => e.reportID === reportID);
 
-function viewModalContent(reportID){
-  let reportData = JSON.parse(localStorage.getItem("reportData"));
-  let forEachUniqueId = reportData.find((e) => e.reportID === reportID);
-
-  document.getElementById("uniqueReportId").innerHTML = forEachUniqueId.reportID;
-}
-
-
+//   document.getElementById("uniqueReportId").innerHTML = forEachUniqueId.reportID;
+// }
 
 function agentsTable() {
   let table = document.querySelector("table");
@@ -44,10 +39,9 @@ function agentsTable() {
   table.appendChild(headerRow);
 
   reportData = reportData.filter(
-    (info) =>
-      info.agencyDetails === currentAgencyShortHand 
+    (info) => info.agencyDetails === currentAgencyShortHand
   );
-  
+
   //incrementing cards
   let card = document.querySelector(".theMetricItself");
   let card2 = document.querySelector(".openComplaint");
@@ -62,7 +56,7 @@ function agentsTable() {
     newRow.innerHTML = `<td>${i++}</td> 
         <td>${report.dateReported}</td> 
         <td>${report.reportID}</td> 
-        <td><a href="#" class="toViewMoreLinke trigger" onclick="viewModalContent(${report.reportID})">Click to view</a>    
+        <td><a href="#" class="toViewMoreLinke trigger" onclick="renderModalContent()")>Click to view</a>    
         </td>
         <td>
               <select>
@@ -76,13 +70,7 @@ function agentsTable() {
             </div>
         </td>`;
     table.appendChild(newRow);
-  
   });
-
-
-
-
-
 
   // Prompt Modal
   const modal = document.querySelector(".modal");
@@ -99,13 +87,73 @@ function agentsTable() {
     }
   }
 
-
-
-
   trigger.addEventListener("click", toggleModal);
   closeButton.addEventListener("click", toggleModal);
   window.addEventListener("click", windowOnClick);
-  
-
-
 }
+
+
+const renderModalContent = () => {
+  const modalContainer = document.querySelector(".modal-content");
+
+  const modalContainerInfo = reportData.map((e) => {
+    const {
+      reportID,
+      reportBy,
+      dateReported,
+      agencyDetails,
+      reportDetails,
+      reportInfoDetails,
+    } = e;
+    return `
+    <div class="reportHeadingContainer">
+          <p class="reportHeading">
+            REPORT
+          </p>
+
+          <p class="reportID">
+            ${reportID}
+          </p>
+
+          <a href="#" class="formButton close-button">Close</a>
+        </div>
+
+        <form>
+          <div class="sourceAndDateReported">
+            <div class="form-group">
+              <label for="source">SOURCE</label>
+              <p class="InputField">${reportBy}</p>
+            </div>
+
+            <div class="form-group">
+              <label for="dateReported">DATE REPORTED</label>
+              <p class="InputField">${dateReported}</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="companyAnddOrgansitaion">COMPANY / ORGANISATION</label>
+            <p class="InputField">${agencyDetails}</p>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">SUBJECT</label>
+            <p class="InputField">${reportDetails}</p>
+          </div>
+
+          <div class="form-group">
+            <label for="textMessages">MESSAGE</label>
+            <p class="InputField">${reportInfoDetails}</p>
+          </div>
+
+          <div class="form-group">
+            <label for="attachment">ATTACHMENT</label>
+            <div class="viewFileButtonContainer">
+              <a href="#" class="formButton">VIEW FILES</a>
+            </div>
+          </div>
+        </form>
+    `;
+  }).join("");
+  modalContainer.innerHTML = modalContainerInfo;
+};

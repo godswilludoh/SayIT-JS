@@ -5,6 +5,8 @@ let currentlyRegisteredAgent = JSON.parse(
   localStorage.getItem("agencyLoggedSession")
 );
 
+
+
 let currentAgencyShortHand = currentlyRegisteredAgent.Agency_shortHand;
 
 // FOR GETTING AND DISPLAYING THE CURRENTLY LOGGED IN AGENT NAME
@@ -56,7 +58,7 @@ function agentsTable() {
     newRow.innerHTML = `<td>${i++}</td> 
         <td>${report.dateReported}</td> 
         <td>${report.reportID}</td> 
-        <td><a href="#" class="toViewMoreLinke trigger" onclick="renderModalContent()")>Click to view</a>    
+        <td><a href="#" class="toViewMoreLinke trigger" onclick="renderModalContent(${report.reportID})")>Click to view</a>    
         </td>
         <td>
               <select>
@@ -66,7 +68,7 @@ function agentsTable() {
               </select>
         </td>
         <td><div class="forTheUpdateAndDownloadButton">
-              <a href="#" class="forTheDeleteButton">Delete</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
+              <a href="#" class="forTheDeleteButton triggerToDelete" onclick="deleteReport(${report.reportID})")">Delete</a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z"></path></svg></a>
             </div>
         </td>`;
     table.appendChild(newRow);
@@ -74,8 +76,9 @@ function agentsTable() {
 
   // Prompt Modal
   const modal = document.querySelector(".modal");
-  const trigger = document.querySelector(".trigger");
+  const trigger = document.querySelectorAll(".trigger");
   const closeButton = document.querySelector(".close-button");
+ 
 
   function toggleModal() {
     modal.classList.toggle("show-modal");
@@ -87,73 +90,37 @@ function agentsTable() {
     }
   }
 
-  trigger.addEventListener("click", toggleModal);
+
+  // FOr rendering each report on click of the click to view
+ trigger.forEach((e) => {
+  e.addEventListener("click", toggleModal);
+ }
+ );
   closeButton.addEventListener("click", toggleModal);
   window.addEventListener("click", windowOnClick);
 }
 
 
-const renderModalContent = () => {
-  const modalContainer = document.querySelector(".modal-content");
+// Render function
+const renderModalContent = (reportIDParam) => {
+  const modalContainerInfo = reportData
+    .find((e) => e.reportID === reportIDParam);
+    // console.log(modalContainerInfo);
+    // console.log(modalContainerInfo.reportID);
 
-  const modalContainerInfo = reportData.map((e) => {
-    const {
-      reportID,
-      reportBy,
-      dateReported,
-      agencyDetails,
-      reportDetails,
-      reportInfoDetails,
-    } = e;
-    return `
-    <div class="reportHeadingContainer">
-          <p class="reportHeading">
-            REPORT
-          </p>
+    document.getElementById("uniqueReportId").innerHTML = modalContainerInfo.reportID;
+    document.getElementById("uniqueReportSource").innerHTML = modalContainerInfo.reportBy;
+    document.getElementById("uniqueReportDateAndTime").innerHTML = modalContainerInfo.dateReported;
+    document.getElementById("uniquecompanyAnddOrgansitaion").innerHTML = modalContainerInfo.agencyDetails;
+    document.getElementById("uniquesubject").innerHTML = modalContainerInfo.reportDetails;
+    document.getElementById("uniquemessage").innerHTML = modalContainerInfo.reportInfoDetails;
+ 
+};
 
-          <p class="reportID">
-            ${reportID}
-          </p>
 
-          <a href="#" class="formButton close-button">Close</a>
-        </div>
-
-        <form>
-          <div class="sourceAndDateReported">
-            <div class="form-group">
-              <label for="source">SOURCE</label>
-              <p class="InputField">${reportBy}</p>
-            </div>
-
-            <div class="form-group">
-              <label for="dateReported">DATE REPORTED</label>
-              <p class="InputField">${dateReported}</p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="companyAnddOrgansitaion">COMPANY / ORGANISATION</label>
-            <p class="InputField">${agencyDetails}</p>
-          </div>
-
-          <div class="form-group">
-            <label for="subject">SUBJECT</label>
-            <p class="InputField">${reportDetails}</p>
-          </div>
-
-          <div class="form-group">
-            <label for="textMessages">MESSAGE</label>
-            <p class="InputField">${reportInfoDetails}</p>
-          </div>
-
-          <div class="form-group">
-            <label for="attachment">ATTACHMENT</label>
-            <div class="viewFileButtonContainer">
-              <a href="#" class="formButton">VIEW FILES</a>
-            </div>
-          </div>
-        </form>
-    `;
-  }).join("");
-  modalContainer.innerHTML = modalContainerInfo;
+// delete function
+const deleteReport = (reportIDParam) => {
+  const deletedReport = reportData.filter((e) => e.reportID !== reportIDParam);
+  console.log(deletedReport)
+  localStorage.setItem(reportData, JSON.stringify(deletedReport));
 };

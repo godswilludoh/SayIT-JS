@@ -6,6 +6,10 @@ let currentlyRegisteredAgent = JSON.parse(
 );
 
 
+const pageReload =()=>{
+  window.location.reload();
+};
+
 
 let currentAgencyShortHand = currentlyRegisteredAgent.Agency_shortHand;
 
@@ -121,6 +125,6 @@ const renderModalContent = (reportIDParam) => {
 // delete function
 const deleteReport = (reportIDParam) => {
   const deletedReport = reportData.filter((e) => e.reportID !== reportIDParam);
-  console.log(deletedReport)
-  localStorage.setItem(reportData, JSON.stringify(deletedReport));
+  localStorage.setItem("reportData", JSON.stringify(deletedReport));
+  pageReload();
 };
